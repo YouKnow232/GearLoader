@@ -1307,6 +1307,7 @@ typedef struct GGXXACPR_SurvivalExtra {
     uint32_t survival_exp;
     int32_t survival_nextexp;
     int16_t survival_level;
+    int16_t cpu_lv;
     uint16_t boss_flg;
     int16_t boss_cnt;
     int16_t boss_beat;
