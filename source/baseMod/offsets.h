@@ -105,6 +105,20 @@ constexpr intptr_t REPLAY_FRAME_COUNT = 0x7D57D8;
 // Program flow
 constexpr intptr_t JOB_MODE = 0x7109EC;
 
+// Survival Mode
+constexpr intptr_t SURVIVAL_SHADOW_BOSS_CHECK = 0x5F9070;
+constexpr intptr_t SURVIVAL_GOLDEN_BOSS_CHECK = 0x5F9264;
+constexpr intptr_t SURVIVAL_UPGRADE_WEIGHTS = 0x5F94D8;
+constexpr intptr_t SURVIVAL_ATTACKLV_MAX = 0x5F9534;
+constexpr intptr_t SURVIVAL_DEFENSELV_MAX = 0x5F9538;
+constexpr intptr_t SURVIVAL_SPEEDLV_MAX = 0x5F953C;
+constexpr intptr_t SURVIVAL_TENSIONLV_MAX = 0x5F9540;
+constexpr intptr_t SURVIVAL_STENSIONLV_MAX = 0x5F9544;
+constexpr intptr_t SURVIVAL_BURSTLV_MAX = 0x5F9548;
+constexpr intptr_t SURVIVAL_ADASHLV_MAX = 0x5F954C;
+constexpr intptr_t SURVIVAL_AJUMPLV_MAX = 0x5F9550;
+constexpr intptr_t SURVIVAL_INFO = 0x6A6F60;
+
 // Mod Menu
 // Globals
 constexpr intptr_t PAUSE_MENU_SELECTION = 0x875F68;

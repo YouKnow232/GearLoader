@@ -463,6 +463,40 @@ enum GGXXACPR_Language {
     ACPR_LANG_KOR
 };
 
+enum GGXXACPR_SurvivalUpgrades {
+    UPGRADE_NONE,
+    UPGRADE_LIFE_MAX,
+    UPGRADE_ATTACK_UP,
+    UPGRADE_DEFENSE_UP,
+    UPGRADE_SPEED_UP,
+    UPGRADE_TENSION_RATE_UP,
+    UPGRADE_START_TENSION_UP,
+    UPGRADE_BURST_RATE_UP,
+    UPGRADE_AIR_DASH_UP,
+    UPGRADE_AIR_JUMP_UP,
+    UPGRADE_LIFE_RECOVERY,
+    UPGRADE_TENSION_INCREASE,
+    UPGRADE_EASY_FRC,
+    UPGRADE_BONUS_UP,
+    UPGRADE_EXPERIENCE_UP,
+    UPGRADE_THUNDER_ATTACK,
+    UPGRADE_FLAME_ATTACK,
+    UPGRADE_GUARD_THUNDER,
+    UPGRADE_GUARD_FLAME,
+    UPGRADE_GUARD_BEAT,
+    UPGRADE_LIMIT_BREAK,
+    UPGRADE_CHAOS_ROMAN_CANCEL,
+    UPGRADE_YELLOW_ROMAN_CANCEL,
+    UPGRADE_HUNTER_SAVING,
+    UPGRADE_BERSERK_MODE,
+    UPGRADE_SOUL_OF_ZEPP,
+    UPGRADE_GUARD_MIST_FINER,
+    UPGRADE_TIME_TRAVELING,
+    UPGRADE_MAYS_FIST,
+    UPGRADE_VAMPIRE_FORM,
+    UPGRADE_SHEER_HEART_ATTACK
+};
+
 /* ========== #STRUCTS ========== */
 
 typedef struct GGXXACPR_LocaleState {
@@ -1262,6 +1296,77 @@ static_assert(offsetof(GGXXACPR_DrawSpriteParams, z) == 0x0C);
 static_assert(offsetof(GGXXACPR_DrawSpriteParams, v0) == 0x1C);
 static_assert(offsetof(GGXXACPR_DrawSpriteParams, v1) == 0x24);
 static_assert(sizeof(GGXXACPR_DrawSpriteParams) == 0x48);
+
+/*
+    Extra Survival Mode data struct
+*/
+//TODO: Come up with better field names
+typedef struct GGXXACPR_SurvivalExtra {
+    int32_t Enemy;
+    uint32_t survival_totaltime;
+    uint32_t survival_exp;
+    int32_t survival_nextexp;
+    int16_t survival_level;
+    uint16_t boss_flg;
+    int16_t boss_cnt;
+    int16_t boss_beat;
+    int16_t Palette;
+    int16_t battle;
+    int16_t allclear;
+    int16_t isEx;
+    int16_t UNKNOWN_FIELD(0x22);
+    int16_t ResultFinalLevel;
+    int16_t ResultWinCount;
+    int32_t UpgradesEnabled;
+    int32_t Attack_LV;
+    int32_t Defense_LV;
+    int32_t Speed_LV;
+    int32_t Tension_LV;
+    int32_t S_Tension_LV;
+    int32_t Burst_LV;
+    int32_t A_Dash_LV;
+    int32_t A_Jump_LV;
+    int32_t Equip1;
+    int32_t Equip2;
+    int32_t Equip3;
+    int16_t TimeTravelLv;
+    int16_t TimeTravelCnt;
+    float UNKNOWN_FIELD(0x5C);
+} GGXXACPR_SurvivalExtra;
+/* Struct layout sanity checks */
+static_assert(sizeof(GGXXACPR_SurvivalExtra) == 0x60);
+
+/*
+    Basic Survival Mode information struct
+*/
+//TODO: Come up with better field names
+typedef struct GGXXACPR_SurvivalInfo {
+    int32_t ply;
+    int32_t win;
+    int16_t hitpoint;
+    int8_t  time_cnt;
+    int8_t  hoimi;
+    int16_t enetb[26]; //see enum GGXXACPR_EntityId
+    int32_t index;
+    int32_t oldhp;
+    GGXXACPR_SurvivalExtra sv_ext;
+} GGXXACPR_SurvivalInfo;
+/* Struct layout sanity checks */
+static_assert(sizeof(GGXXACPR_SurvivalInfo) == 0xA8);
+
+/*
+    Survival Mode entries for bosses in the boss table
+*/
+//TODO: Come up with better field names
+typedef struct GGXXACPR_SurvivalBossEntry {
+    int32_t idno; //see enum GGXXACPR_EntityId
+    int32_t LevelReq;
+    int32_t CPU_Lv;
+    int32_t isEx;
+    int32_t Palette;
+} GGXXACPR_SurvivalBossEntry;
+/* Struct layout sanity checks */
+static_assert(sizeof(GGXXACPR_SurvivalBossEntry) == 0x14);
 
 #undef UNKNOWN_FIELD
 #undef PAD

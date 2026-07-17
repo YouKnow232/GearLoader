@@ -457,6 +457,39 @@ namespace ggxxacpr {
         PRACTICE_UNUSED = ACPR_TRAINING_STATE_PRACTICE_UNUSED,
     };
 
+    enum class SurvivalUpgrades : uint32_t {
+        NONE = UPGRADE_NONE,
+        LIFE_MAX = UPGRADE_LIFE_MAX,
+        ATTACK_UP = UPGRADE_ATTACK_UP,
+        DEFENSE_UP = UPGRADE_DEFENSE_UP,
+        SPEED_UP = UPGRADE_SPEED_UP,
+        TENSION_RATE_UP = UPGRADE_TENSION_RATE_UP,
+        START_TENSION_UP = UPGRADE_START_TENSION_UP,
+        BURST_RATE_UP = UPGRADE_BURST_RATE_UP,
+        AIR_DASH_UP = UPGRADE_AIR_DASH_UP,
+        AIR_JUMP_UP = UPGRADE_AIR_JUMP_UP,
+        LIFE_RECOVERY = UPGRADE_LIFE_RECOVERY,
+        TENSION_INCREASE = UPGRADE_TENSION_INCREASE,
+        EASY_FRC = UPGRADE_EASY_FRC,
+        BONUS_UP = UPGRADE_BONUS_UP,
+        EXPERIENCE_UP = UPGRADE_EXPERIENCE_UP,
+        THUNDER_ATTACK = UPGRADE_THUNDER_ATTACK,
+        FLAME_ATTACK = UPGRADE_FLAME_ATTACK,
+        GUARD_THUNDER = UPGRADE_GUARD_THUNDER,
+        GUARD_FLAME = UPGRADE_GUARD_FLAME,
+        GUARD_BEAT = UPGRADE_GUARD_BEAT,
+        LIMIT_BREAK = UPGRADE_LIMIT_BREAK,
+        CHAOS_ROMAN_CANCEL = UPGRADE_CHAOS_ROMAN_CANCEL,
+        YELLOW_ROMAN_CANCEL = UPGRADE_YELLOW_ROMAN_CANCEL,
+        HUNTER_SAVING = UPGRADE_HUNTER_SAVING,
+        BERSERK_MODE = UPGRADE_BERSERK_MODE,
+        SOUL_OF_ZEPP = UPGRADE_SOUL_OF_ZEPP,
+        GUARD_MIST_FINER = UPGRADE_GUARD_MIST_FINER,
+        TIME_TRAVELING = UPGRADE_TIME_TRAVELING,
+        MAYS_FIST = UPGRADE_MAYS_FIST,
+        VAMPIRE_FORM = UPGRADE_VAMPIRE_FORM,
+        SHEER_HEART_ATTACK = UPGRADE_SHEER_HEART_ATTACK,
+    };
 
     // bitflag operators
     template<typename E>
@@ -517,6 +550,9 @@ namespace ggxxacpr {
     using Color = GGXXACPR_Color;
     using ColorVertex = GGXXACPR_ColorVertex;
     using DrawSpriteParams = GGXXACPR_DrawSpriteParams;
+    using SurvivalExtra = GGXXACPR_SurvivalExtra;
+    using SurvivalInfo = GGXXACPR_SurvivalInfo;
+    using SurvivalBossEntry = GGXXACPR_SurvivalBossEntry;
     using ReversalRecordingState = GGXXACPR_ReversalRecordingState;
     using DummyRecordingState = GGXXACPR_DummyRecordingState;
 
