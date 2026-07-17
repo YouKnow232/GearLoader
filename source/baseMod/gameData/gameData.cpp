@@ -65,8 +65,8 @@ GGXXACPR_PlayerInput* BASEMOD_CALL GetPlayerInputStructArr() {
 GGXXACPR_LocaleState* BASEMOD_CALL GetLocaleState() {
     return reinterpret_cast<GGXXACPR_LocaleState*>(getBaseAddress() + offsets::CURRENT_LOCALE_MODE);
 }
-GGXXACPR_SurvivalInfo BASEMOD_CALL GetSurvivalInfo() {
-    return reinterpret_cast<GGXXACPR_SurvivalInfo>(getBaseAddress() + offsets::SURVIVAL_INFO);
+GGXXACPR_SurvivalInfo* BASEMOD_CALL GetSurvivalInfo() {
+    return reinterpret_cast<GGXXACPR_SurvivalInfo*>(getBaseAddress() + offsets::SURVIVAL_INFO);
 }
 GGXXACPR_SurvivalBossEntry* BASEMOD_CALL GetShadowBossCheck() {
     return reinterpret_cast<GGXXACPR_SurvivalBossEntry*>(getBaseAddress() + offsets::SURVIVAL_SHADOW_BOSS_CHECK);

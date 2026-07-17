@@ -366,7 +366,7 @@ struct BaseMod_GameDataApi {
      *  \brief Gets a pointer to the game's locale state. see `GGXXACPR_LocaleState`.
      */
     GGXXACPR_LocaleState* BASEMOD_CALL (*GetLocaleState)();
-    GGXXACPR_SurvivalInfo BASEMOD_CALL (*GetSurvivalInfo)();
+    GGXXACPR_SurvivalInfo* BASEMOD_CALL (*GetSurvivalInfo)();
     GGXXACPR_SurvivalBossEntry* BASEMOD_CALL (*GetShadowBossCheck)();
     GGXXACPR_SurvivalBossEntry* BASEMOD_CALL (*GetGoldenBossCheck)();
 };
