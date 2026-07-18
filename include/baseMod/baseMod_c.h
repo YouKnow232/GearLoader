@@ -366,8 +366,17 @@ struct BaseMod_GameDataApi {
      *  \brief Gets a pointer to the game's locale state. see `GGXXACPR_LocaleState`.
      */
     GGXXACPR_LocaleState* BASEMOD_CALL (*GetLocaleState)();
+    /**
+     *  \brief Gets a pointer to the survival information struct. see `GGXXACPR_SurvivalInfo`.
+     */
     GGXXACPR_SurvivalInfo* BASEMOD_CALL (*GetSurvivalInfo)();
+    /**
+     *  \brief Gets a pointer to survival mode's boss check table for the shadow bosses.
+     */
     GGXXACPR_SurvivalBossEntry* BASEMOD_CALL (*GetShadowBossCheck)();
+    /**
+     *  \brief Gets a pointer to survival mode's boss check table for the golden bosses.
+     */
     GGXXACPR_SurvivalBossEntry* BASEMOD_CALL (*GetGoldenBossCheck)();
 };
 

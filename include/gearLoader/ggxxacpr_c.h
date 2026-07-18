@@ -1300,17 +1300,16 @@ static_assert(sizeof(GGXXACPR_DrawSpriteParams) == 0x48);
 /*
     Extra Survival Mode data struct
 */
-//TODO: Come up with better field names
 typedef struct GGXXACPR_SurvivalExtra {
     int32_t Enemy;
-    uint32_t survival_totaltime;
-    uint32_t survival_exp;
-    int32_t survival_nextexp;
-    int16_t survival_level;
-    int16_t cpu_lv;
-    uint16_t boss_flg;
-    int16_t boss_cnt;
-    int16_t boss_beat;
+    uint32_t TotalTimeSurvived;
+    uint32_t Experience;
+    int32_t ExperienceForNextLevel;
+    int16_t Level;
+    int16_t CPULevel;
+    uint16_t BossFlag;
+    int16_t BossesFought;
+    int16_t BossesBeaten;
     int16_t Palette;
     int16_t battle;
     int16_t allclear;
@@ -1340,17 +1339,16 @@ static_assert(sizeof(GGXXACPR_SurvivalExtra) == 0x60);
 /*
     Basic Survival Mode information struct
 */
-//TODO: Come up with better field names
 typedef struct GGXXACPR_SurvivalInfo {
-    int32_t ply;
-    int32_t win;
-    int16_t hitpoint;
+    int32_t Player;
+    int32_t Wins;
+    int16_t Hitpoints;
     int8_t  time_cnt;
     int8_t  hoimi;
-    int16_t enetb[26]; //see enum GGXXACPR_EntityId
-    int32_t index;
+    int16_t EnemyTable[26]; //see enum GGXXACPR_EntityId
+    int32_t EnemyTableIndex;
     int32_t oldhp;
-    GGXXACPR_SurvivalExtra sv_ext;
+    GGXXACPR_SurvivalExtra SurvivalExtra;
 } GGXXACPR_SurvivalInfo;
 /* Struct layout sanity checks */
 static_assert(sizeof(GGXXACPR_SurvivalInfo) == 0xA8);
@@ -1358,13 +1356,12 @@ static_assert(sizeof(GGXXACPR_SurvivalInfo) == 0xA8);
 /*
     Survival Mode entries for bosses in the boss table
 */
-//TODO: Come up with better field names
 typedef struct GGXXACPR_SurvivalBossEntry {
-    int32_t idno; //see enum GGXXACPR_EntityId
+    int32_t CharId; //see enum GGXXACPR_EntityId
     int32_t LevelReq;
-    int32_t CPU_Lv;
+    int32_t CPULevel;
     int32_t isEx;
-    int32_t Palette;
+    int32_t Palette; //0: Random, 1: Golden, 2: Shadow
 } GGXXACPR_SurvivalBossEntry;
 /* Struct layout sanity checks */
 static_assert(sizeof(GGXXACPR_SurvivalBossEntry) == 0x14);
