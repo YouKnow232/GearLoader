@@ -191,6 +191,14 @@ enum GGXXACPR_EntityId {
     ENTITY_ID_JUSTICE_ENTITY_1 = 0x6E, // Everything but nukes
     ENTITY_ID_JUSTICE_ENTITY_2 = 0x6F, // Nukes
     ENTITY_ID_BURST_ENTITY = 0x84,
+    ENTITY_ID_STAGE_ENTITY_1 = 0xB0,
+    ENTITY_ID_STAGE_ENTITY_2 = 0xB1,
+    ENTITY_ID_STAGE_ENTITY_3 = 0xB2,
+    ENTITY_ID_STAGE_ENTITY_4 = 0xB3,
+    ENTITY_ID_STAGE_ENTITY_5 = 0xB4,
+    ENTITY_ID_STAGE_ENTITY_6 = 0xB5, // Stages can have up to 8 objects, but vanilla game only registers up to 5
+    ENTITY_ID_STAGE_ENTITY_7 = 0xB6,
+    ENTITY_ID_STAGE_ENTITY_8 = 0xB7,
 };
 
 enum GGXXACPR_StageId {
