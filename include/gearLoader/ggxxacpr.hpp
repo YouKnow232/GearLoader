@@ -190,6 +190,14 @@ namespace ggxxacpr {
         JUSTICE_ENTITY_1 = ENTITY_ID_JUSTICE_ENTITY_1, // Everything but nukes
         JUSTICE_ENTITY_2 = ENTITY_ID_JUSTICE_ENTITY_2, // Nukes
         BURST_ENTITY = ENTITY_ID_BURST_ENTITY,
+        STAGE_ENTITY_1 = ENTITY_ID_STAGE_ENTITY_1,
+        STAGE_ENTITY_2 = ENTITY_ID_STAGE_ENTITY_2,
+        STAGE_ENTITY_3 = ENTITY_ID_STAGE_ENTITY_3,
+        STAGE_ENTITY_4 = ENTITY_ID_STAGE_ENTITY_4,
+        STAGE_ENTITY_5 = ENTITY_ID_STAGE_ENTITY_5,
+        STAGE_ENTITY_6 = ENTITY_ID_STAGE_ENTITY_6, // Stages can have up to 8 objects, but vanilla game only registers up to 5
+        STAGE_ENTITY_7 = ENTITY_ID_STAGE_ENTITY_7,
+        STAGE_ENTITY_8 = ENTITY_ID_STAGE_ENTITY_8,
     };
 
     enum class StageId : uint32_t {
