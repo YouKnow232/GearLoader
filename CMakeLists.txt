@@ -18,7 +18,7 @@ endif()
 add_library(${GEARLOADER_TARGET_NAME} INTERFACE)
 add_library(${PROJECT_NAME}::${GEARLOADER_TARGET_NAME} ALIAS ${GEARLOADER_TARGET_NAME})
 target_include_directories(GearLoader INTERFACE
-    CMAKE_CURRENT_SOURCE_DIR/include/
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/
 )
 
 # Main cmake project
