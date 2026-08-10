@@ -9,12 +9,20 @@ project(GearLoader
 
 option(GEARLOADER_INCLUDE_ONLY "Only create the GearLoader includes interface" OFF)
 
-if (GEARLOADER_INCLUDE_ONLY)
-    add_library(GearLoader INTERFACE)
-    target_include_directories(GearLoader INTERFACE
-        CMAKE_CURRENT_SOURCE_DIR/include/
-    )
-else()
+if (NOT DEFINED GEARLOADER_TARGET_NAME)
+    # Allow overriding the target name when using FetchContent / add_subdirectory.
+    set(GEARLOADER_TARGET_NAME ${PROJECT_NAME})
+endif()
+
+## create exportable include target
+add_library(${GEARLOADER_TARGET_NAME} INTERFACE)
+add_library(${PROJECT_NAME}::${GEARLOADER_TARGET_NAME} ALIAS ${GEARLOADER_TARGET_NAME})
+target_include_directories(GearLoader INTERFACE
+    CMAKE_CURRENT_SOURCE_DIR/include/
+)
+
+# Main cmake project
+if (NOT GEARLOADER_INCLUDE_ONLY)
 
     set(CMAKE_CXX_STANDARD 20)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
