@@ -31,6 +31,36 @@ Additional launch options include:
 ## Making a Mod
 See the tutorial and documentation [here!](https://youknow232.github.io/GearLoader/doxygen/md_docs_2_modding_instructions.html)
 
+### Including GearLoader via CMake
+The include headers from GearLoader can be made available through CMake using either FetchContent for add_subdirectory. Make sure to set the `GEARLOADER_INCLUDE_ONLY` variable to `ON` to avoid adding the entire project. When specifying the `GIT_TAG`, you can use version tags after v.1.1.1 (e.g. `GIT_TAG v1.2.0`). CMake support was added after v1.1.1's initial release so you'll need to use a slightly different tag for that version: `GIT_TAG v1.1.1-CMake`.
+
+Example using FetchContent:
+```cmake
+set(GEARLOADER_INCLUDE_ONLY ON)
+FetchContent_Declare(
+    GearLoader
+    GIT_REPOSITORY https://github.com/youknow232/GearLoader.git
+    GIT_TAG v1.1.1-CMake
+)
+FetchContent_MakeAvailable(GearLoader)
+
+# ...
+
+target_link_libraries(MyBuildTarget PUBLIC
+    GearLoader::GearLoader
+)
+```
+
+Source example:
+```C
+#include gearLoader/gearLoader_c.h
+// C++ alternative:
+// #include gearLoader/gearLoader.hpp
+
+GEARLOADER_EXPORT void GEARLOADER_CALL Init(GearLoaderContext* ctx, GearLoaderApi* api) {
+    // Init code goes here
+}
+```
 
 ## Build Instructions
 ### Prerequisites
