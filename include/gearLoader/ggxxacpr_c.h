@@ -290,7 +290,7 @@ enum GGXXACPR_ColliderId {
     COLLIDER_ID_ADJUST_PUSH,
     // Defines a spawn location for a sub-entity
     COLLIDER_ID_SPAWN,
-    COLLIDER_ID_UNKNOWN_6,
+    COLLIDER_ID_FRONT_REGION,
 };
 
 enum GGXXACPR_ActionState {
@@ -613,7 +613,7 @@ typedef struct GGXXACPR_DamageParam {
     uint16_t UNKNOWN_FIELD(0xA);
     uint32_t downFlag;
     int16_t kezuri; /* chip damage? */
-    int16_t damageHosei; /* some scaling thing */
+    int16_t damageHosei; /* proration/guard balance */
     uint16_t hitSetParamNo;
     uint16_t hitSetParamFlag;
     uint16_t GuardSetParamNo;
@@ -1216,6 +1216,8 @@ typedef struct GGXXACPR_Entity {
 
     /* OFFSET 0x100 -------------------------------------------------- */
 
+	uint8_t actHitCount;
+	uint8_t maxHitCount;
     uint8_t trans;
     uint8_t trans2;
     uint16_t dashFlags;
@@ -1223,7 +1225,7 @@ typedef struct GGXXACPR_Entity {
     uint16_t airDashFlags2;
     PAD(24, 0x108);
     uint32_t throwFlags; /* bitfield */
-    PAD(12, 0x124);
+    PAD(10, 0x124);
 } GGXXACPR_Entity;
 
 /* Struct layout sanity checks */
