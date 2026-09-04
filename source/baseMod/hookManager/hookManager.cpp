@@ -208,12 +208,62 @@ inline void InstallSaveGameHook() {
     );
 }
 
+// TEMP
+#include <iostream>
+
+static const void* NativeGetResourcePath = getBaseAddress() + 0x365440;
+char* __stdcall ResourceLookUpWrapper(void* redirect_map, void* reserve_1) {
+    // Save register params
+    void* reserve_0;
+    char* path;
+    asm(
+        "" // no asm
+        : "=c" (reserve_0)
+        , "=d" (path)
+    );
+
+    std::cout << "[DEBUG] Resource Lookup: " << path << std::endl;
+
+    // Invoke original function
+    char* output;
+    asm(
+        "push %[aReserve_1]\n\t"
+        "push %[aMap]\n\t"
+        "call *%[fn]"
+        : "=g" (output)
+        : [fn] "g" (NativeGetResourcePath)
+        , [aMap] "g" (redirect_map)
+        , [aReserve_1] "g" (reserve_1)
+        , "c" (reserve_0)
+        , "d" (path)
+        : "cc", "memory"
+    );
+
+    std::cout << "[DEBUG] Output: " << (output ? output : "") << std::endl;
+
+    // forward original function output
+    return output;
+}
+
+inline void InstallResourceLookupHook() {
+    constexpr intptr_t fnCallAddr = 0x1139B6;
+    void* injectAddress = getBaseAddress() + fnCallAddr + 1;
+    void* hookAddress = reinterpret_cast<void*>(ResourceLookUpWrapper);
+
+    Patch_RelativeJump(
+        injectAddress,
+        hookAddress,
+        nullptr
+    );
+}
+
 void InstallHooks() {
     InstallPeekMessageHook();
     InstallGameUpdateHook();
     InstallEndSceneHook();
     InstallPresentHook();
     InstallSaveGameHook();
+    InstallResourceLookupHook();
 }
 
 static const BaseMod_HookApi _hookApi = {

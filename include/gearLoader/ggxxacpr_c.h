@@ -1095,7 +1095,7 @@ static_assert(sizeof(GGXXACPR_PlayerData) == 0x148);
 *   Essentially anything that is represented by a sprite.
 */
 typedef struct GGXXACPR_Entity GGXXACPR_Entity;
-typedef struct GGXXACPR_Entity {
+struct GGXXACPR_Entity {
     uint16_t id; /* enum ENTITY_ID*/
     uint8_t bIsFacingRight;
     uint8_t bIsLeftSide;
@@ -1218,21 +1218,27 @@ typedef struct GGXXACPR_Entity {
 
 	uint8_t actHitCount;
 	uint8_t maxHitCount;
-    uint8_t trans;
-    uint8_t trans2;
-    uint16_t dashFlags;
-    uint16_t airDashFlags;
-    uint16_t airDashFlags2;
-    PAD(24, 0x108);
-    uint32_t throwFlags; /* bitfield */
-    PAD(10, 0x124);
-} GGXXACPR_Entity;
+    uint8_t transparency;
+    uint8_t transparency2;
+    uint16_t LandBreakActId;
+    uint16_t LandBreakActFlags;
+    uint32_t _ActWork;
+    uint8_t BounceFlags;
+    PAD(3, 0x10D);
+    int32_t TransparencyDelta;
+    int32_t AngleDelta;
+    int32_t ScaleDelta;
+    int32_t ScaleYDelta;
+    uint32_t BoostArtsFlags; // BoostArts is internal name for Force Breaks
+    uint16_t BoostArtsInheritActNo; // BoostArts is internal name for Force Breaks
+    PAD(8, 0x128);
+};
 
 /* Struct layout sanity checks */
 static_assert(offsetof(GGXXACPR_Entity, cellNo) == 0x40);
 static_assert(offsetof(GGXXACPR_Entity, displayVar1) == 0x80);
 static_assert(offsetof(GGXXACPR_Entity, speedsvX) == 0xC0);
-static_assert(offsetof(GGXXACPR_Entity, trans) == 0x100);
+static_assert(offsetof(GGXXACPR_Entity, actHitCount) == 0x100);
 static_assert(sizeof(GGXXACPR_Entity) == 0x130);
 
 enum GGXXACPR_TrainingState {
