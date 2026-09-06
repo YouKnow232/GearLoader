@@ -112,9 +112,11 @@ if (NOT GEARLOADER_INCLUDE_ONLY)
     # Unit testing exe
     add_executable(Tests
         test/test.cpp
+        source/baseMod/resourceRedirector/resourceRedirector.cpp
     )
     target_include_directories(Tests PRIVATE
         include
+        source/baseMod
         source/modLoader
     )
     target_link_libraries(Tests PRIVATE core)

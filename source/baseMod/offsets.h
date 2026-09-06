@@ -27,6 +27,11 @@ constexpr intptr_t PUSH_HLOP_FN_INSTRUCTION = 0x356ADF;
 constexpr intptr_t SAVE_GAME_DATA_FN = 0x3662B0;
 constexpr intptr_t SAVE_GAME_DATA_FN_CALL = 0x2C3BF7;
 
+constexpr intptr_t RESOURCE_LOOKUP_FN_CALL_1 = 0x1139B6;
+constexpr intptr_t RESOURCE_LOOKUP_FN_CALL_2 = 0x22309E;
+constexpr intptr_t RESOURCE_LOOKUP_FN_CALL_3 = 0x36F5F4;
+constexpr intptr_t RESOURCE_LOOKUP_FN = 0x365440;
+
 constexpr intptr_t INIT_THREAD_AND_DEVICES_FUNC = 0x221720;
 constexpr intptr_t INIT_THREAD_AND_DEVICES_CALL = 0x2223A3;
 
