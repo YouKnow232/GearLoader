@@ -6,6 +6,7 @@
 #include "managedHook.h"
 #include "patch.h"
 #include "offsets.h"
+#include "resourceRedirector/resourceRedirector.h"
 
 
 static ManagedHookCallbacks<void, const BaseMod_HookContext*, const BaseMod_PeekMessageInfo*> _afterPeekMessageCallbacks;
@@ -211,11 +212,11 @@ inline void InstallSaveGameHook() {
 // TEMP
 #include <iostream>
 
-static const void* NativeGetResourcePath = getBaseAddress() + 0x365440;
-char* __stdcall ResourceLookUpWrapper(void* redirect_map, void* reserve_1) {
+static const void* NativeGetResourcePath = getBaseAddress() + offsets::RESOURCE_LOOKUP_FN;
+const char* __stdcall ResourceLookUpWrapper(void* redirect_map, void* reserve_1) {
     // Save register params
     void* reserve_0;
-    char* path;
+    const char* path;
     asm(
         "" // no asm
         : "=c" (reserve_0)
@@ -225,7 +226,7 @@ char* __stdcall ResourceLookUpWrapper(void* redirect_map, void* reserve_1) {
     std::cout << "[DEBUG] Resource Lookup: " << path << std::endl;
 
     // Invoke original function
-    char* output;
+    const char* output;
     asm(
         "push %[aReserve_1]\n\t"
         "push %[aMap]\n\t"
@@ -240,21 +241,29 @@ char* __stdcall ResourceLookUpWrapper(void* redirect_map, void* reserve_1) {
     );
 
     std::cout << "[DEBUG] Output: " << (output ? output : "") << std::endl;
+    // Redirect output to mod resource
+    const char* redirect = GetResourceOverride(path);
+    if (*redirect != 0) {
+        std::cout << "[DEBUG] Redirected to: " << redirect << std::endl;
+        return redirect;
+    }
 
     // forward original function output
     return output;
 }
 
+/**
+ * The hooked function is only called in three differnet places,
+ * so I just replaced those function calls to call `ResourceLookUpWrapper` instead.
+ * 
+ * It may be worth it to hook the function itself instead sometime down the line.
+ */
 inline void InstallResourceLookupHook() {
-    constexpr intptr_t fnCallAddr = 0x1139B6;
-    void* injectAddress = getBaseAddress() + fnCallAddr + 1;
     void* hookAddress = reinterpret_cast<void*>(ResourceLookUpWrapper);
 
-    Patch_RelativeJump(
-        injectAddress,
-        hookAddress,
-        nullptr
-    );
+    Patch_RelativeJump(getBaseAddress() + offsets::RESOURCE_LOOKUP_FN_CALL_1 + 1, hookAddress, nullptr);
+    Patch_RelativeJump(getBaseAddress() + offsets::RESOURCE_LOOKUP_FN_CALL_2 + 1, hookAddress, nullptr);
+    Patch_RelativeJump(getBaseAddress() + offsets::RESOURCE_LOOKUP_FN_CALL_3 + 1, hookAddress, nullptr);
 }
 
 void InstallHooks() {

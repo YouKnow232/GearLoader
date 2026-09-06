@@ -8,6 +8,7 @@ add_library(baseMod SHARED
     hookManager/hookManager.cpp
     modMenu/modMenu.cpp
     nativeFunctions/nativeFunctions.cpp
+    resourceRedirector/resourceRedirector.cpp
 )
 target_include_directories(baseMod PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}

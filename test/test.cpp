@@ -5,7 +5,9 @@
 #include "gearLoaderApi/gearLoader_p.h"
 #include "logger/logger.h"
 #include "modFolderWalker/modFolderWalker.h"
+#include "resourceRedirector/resourceRedirector.h"
 #include <exception>
+#include <filesystem>
 #include <string>
 #include <windows.h>
 
@@ -22,6 +24,13 @@ static Logger _testLogger = initTestLogger();
 
 inline void namedAssert(bool val, std::string errorMessage = "Unnamed assertion failed") {
     if (!val) throw std::runtime_error(errorMessage);
+}
+
+inline bool compareAsPath(std::string a, std::string b) {
+    // std::filesystem::path pA(a);
+    // std::filesystem::path pB(b);
+
+    return std::filesystem::equivalent(a, b);
 }
 
 void testLogger() {
@@ -476,6 +485,41 @@ void testModFolderWalker() {
         _testLogger);
 }
 
+void testResourceRedirector() {
+    RegisterModResources("./test/modFolderTest");
+
+    const char* test1 = "test1.bin";
+    const char* test2 = "test2.bin";
+    const char* test3 = "testDir/subDirTest.bin";
+    const char* test4 = "foo.bar";
+
+    const char* result1 = GetResourceOverride(test1);
+    const char* result2 = GetResourceOverride(test2);
+    const char* result3 = GetResourceOverride(test3);
+    const char* result4 = GetResourceOverride(test4);
+    
+    const char* expected1 = "./test/modFolderTest/modA/Resource/test1.bin";
+    const char* expected2 = "./test/modFolderTest/modB/Resource/test2.bin";
+    const char* expected3 = "./test/modFolderTest/modA/Resource/testDir/subDirTest.bin";
+    const char* expected4 = "";
+
+    std::ostringstream ss1;
+    ss1 << "basic redirect: " << result1 << " == " << expected1;
+    namedAssert(compareAsPath(result1, expected1), ss1.str());
+
+    std::ostringstream ss2;
+    ss2 << "two redirect: " << result2 << " == " << expected2;
+    namedAssert(compareAsPath(result2, expected2), ss2.str());
+    
+    std::ostringstream ss3;
+    ss3 << "sub directory redirect: " << result3 << " == " << expected3;
+    namedAssert(compareAsPath(result3, expected3), ss3.str());
+    
+    std::ostringstream ss4;
+    ss4 << "no redirect: result was not the empty string";
+    namedAssert(*result4 == 0, ss4.str());
+}
+
 inline bool test(std::string testName, TestFunc testFunc) {
     std::cout << testName;
 
@@ -508,6 +552,7 @@ int main() {
         {" - Circular Dep test       ", testDependencyManagerCycles},
         {" - Required Ver test       ", testDependencyManagerIndependentModErrors},
         {"Mod Folder Walker test     ", testModFolderWalker},
+        {"Test Resource Redirector   ", testResourceRedirector},
     };
 
     int total = tests.size();
