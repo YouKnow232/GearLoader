@@ -4,10 +4,10 @@
 #include <cstddef>
 #include "gearLoader/gearLoader_c.h"
 #include "gearLoader/ggxxacpr_c.h"
-
 #include "nativeFunctions/nativeFunctions.h"
 #include "gameData/gameData.h"
 #include "hookManager/hookManager.h"
+#include "gearLoaderLogger.h"
 #include "modMenu/modMenu.h"
 
 
@@ -36,7 +36,8 @@ static const BaseMod_Api _api = {
 };
 
 GEARLOADER_EXPORT void GEARLOADER_CALL Init(GearLoaderContext* ctx, GearLoaderApi* modLoaderApi) {
-    InstallHooks();
+    GLLogger* logger = new GLLogger(ctx, modLoaderApi);
+    InstallHooks(logger);
     InstallModMenu();
     modLoaderApi->RegisterApi(ctx, &_api, BASEMOD_NAME, getSemVer());
     std::cout << "[baseMod] Initialized" << std::endl;

@@ -8,6 +8,7 @@
 #include "offsets.h"
 #include "resourceRedirector/resourceRedirector.h"
 
+static GLLogger* _logger;
 
 static ManagedHookCallbacks<void, const BaseMod_HookContext*, const BaseMod_PeekMessageInfo*> _afterPeekMessageCallbacks;
 static ManagedHookCallbacks<void, const BaseMod_HookContext*, const BaseMod_GameUpdateInfo*> _beforeGameUpdateCallbacks;
@@ -242,7 +243,7 @@ const char* __stdcall ResourceLookUpWrapper(void* redirect_map, void* reserve_1)
 
     std::cout << "[DEBUG] Output: " << (output ? output : "") << std::endl;
     // Redirect output to mod resource
-    const char* redirect = GetResourceOverride(path);
+    const char* redirect = GetResourceOverride(path, _logger);
     if (*redirect != 0) {
         std::cout << "[DEBUG] Redirected to: " << redirect << std::endl;
         return redirect;
@@ -266,7 +267,8 @@ inline void InstallResourceLookupHook() {
     Patch_RelativeJump(getBaseAddress() + offsets::RESOURCE_LOOKUP_FN_CALL_3 + 1, hookAddress, nullptr);
 }
 
-void InstallHooks() {
+void InstallHooks(GLLogger* log) {
+    _logger = log;
     InstallPeekMessageHook();
     InstallGameUpdateHook();
     InstallEndSceneHook();

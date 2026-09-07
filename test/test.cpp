@@ -486,17 +486,18 @@ void testModFolderWalker() {
 }
 
 void testResourceRedirector() {
-    RegisterModResources("./test/modFolderTest");
+    GLLogger* noLogger = nullptr;
+    RegisterModResources("./test/modFolderTest", noLogger);
 
     const char* test1 = "test1.bin";
     const char* test2 = "test2.bin";
     const char* test3 = "testDir/subDirTest.bin";
     const char* test4 = "foo.bar";
 
-    const char* result1 = GetResourceOverride(test1);
-    const char* result2 = GetResourceOverride(test2);
-    const char* result3 = GetResourceOverride(test3);
-    const char* result4 = GetResourceOverride(test4);
+    const char* result1 = GetResourceOverride(test1, noLogger);
+    const char* result2 = GetResourceOverride(test2, noLogger);
+    const char* result3 = GetResourceOverride(test3, noLogger);
+    const char* result4 = GetResourceOverride(test4, noLogger);
     
     const char* expected1 = "./test/modFolderTest/modA/Resource/test1.bin";
     const char* expected2 = "./test/modFolderTest/modB/Resource/test2.bin";

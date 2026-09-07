@@ -1,4 +1,5 @@
 #include "resourceRedirector.h"
+#include "gearLoaderLogger.h"
 #include <filesystem>
 #include <unordered_map>
 #include <string>
@@ -13,10 +14,9 @@ static bool initialized = false;
 static std::unordered_map<fs::path, std::string> redirectMap;
 
 
-void RegisterFolderContents(const fs::path& path) {
+void RegisterFolderContents(const fs::path& path, GLLogger* log) {
     if (!fs::is_directory(path)) return;
 
-    // DEBUG
     int count = 0;
 
     for (const auto& entry : fs::recursive_directory_iterator(path)) {
@@ -24,32 +24,34 @@ void RegisterFolderContents(const fs::path& path) {
             fs::path key = fs::relative(entry.path(), path);
             fs::path value = path / key;
             redirectMap[key] = value.string();
-            std::cout << "[BaseMod][ResourceRedirector][DEBUG] Registered: " << key.string() <<
-                " --> " << value.string() << std::endl;
+            std::ostringstream ss1;
+            ss1 << "Modded Resource Registered: " << key.string() << " --> " << value.string();
+            if (log) log->Verbose(ss1.str());
             count++;
         }
     }
 
-    std::cout << "[BaseMod][ResourceRedirector][DEBUG] " << count <<
-        " modded resources found in " << path.string() << std::endl;
+    std::ostringstream ss2;
+    ss2 << count << " modded resources found in " << path.string();
+    if (log) log->Info(ss2.str());
 }
 
-void RegisterModResources(fs::path modDir) {
+void RegisterModResources(fs::path modDir, GLLogger* log) {
     try {
         if (std::filesystem::exists(modDir) && std::filesystem::is_directory(modDir)) {
             for (const auto& entry : std::filesystem::directory_iterator(modDir)) {
-                RegisterFolderContents(entry / subFolder);
+                RegisterFolderContents(entry / subFolder, log);
             }
         }
     } catch (std::exception e) {
-        std::cout << "[BaseMod][ResourceRedirector] Error occured while registering modded resources" << std:: endl;
+        if (log) log->Error("[BaseMod][ResourceRedirector] Error occured while registering modded resources");
     }
 
     initialized = true;
 }
 
-const char* GetResourceOverride(const char* path) {
-    if (!initialized) RegisterModResources(defaultModDir);
+const char* GetResourceOverride(const char* path, GLLogger* log) {
+    if (!initialized) RegisterModResources(defaultModDir, log);
 
     return redirectMap.contains(path) ? redirectMap[path].c_str() : "";
 }
