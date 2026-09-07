@@ -224,8 +224,6 @@ const char* __stdcall ResourceLookUpWrapper(void* redirect_map, void* reserve_1)
         , "=d" (path)
     );
 
-    std::cout << "[DEBUG] Resource Lookup: " << path << std::endl;
-
     // Invoke original function
     const char* output;
     asm(
@@ -241,11 +239,9 @@ const char* __stdcall ResourceLookUpWrapper(void* redirect_map, void* reserve_1)
         : "cc", "memory"
     );
 
-    std::cout << "[DEBUG] Output: " << (output ? output : "") << std::endl;
     // Redirect output to mod resource
     const char* redirect = GetResourceOverride(path, _logger);
     if (*redirect != 0) {
-        std::cout << "[DEBUG] Redirected to: " << redirect << std::endl;
         return redirect;
     }
 
