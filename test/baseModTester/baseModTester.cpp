@@ -58,70 +58,53 @@ void __stdcall testBeforeGameUpdateHook(
         tested = true;
     }
 }
-void __stdcall testAfterGameUpdateHook(
-    TestContext* uCtx,
-    const BaseMod_HookContext* hCtx,
-    const BaseMod_GameUpdateInfo* info
-) {
-    static bool tested = false;
-
-    if (!tested) {
-        uCtx->glApi->Log(GearLoader::LogLevel::DEBUG, "AfterGameUpdate hook called");
-        tested = true;
-    }
-
-    if (uCtx->bmApi->GameData.IsInGame() &&
-        uCtx->bmApi->GameData.GetJobMode() == ggxxacpr::JobMode::BATTLE &&
-        displayData > 0
-    ) {
+void displayApiTest1(BaseMod::Api& api) {
         constexpr int xPosLeftCol = 10;
         constexpr int xPosRightCol = 340;
-        auto& api = uCtx->bmApi->NativeFunctions;
-        auto& data = uCtx->bmApi->GameData;
-        auto p1 = uCtx->bmApi->GameData.GetPlayer(0);
-        auto p2 = uCtx->bmApi->GameData.GetPlayer(1);
-        auto cam = uCtx->bmApi->GameData.GetCamera();
+        auto& fn = api.NativeFunctions;
+        auto& data = api.GameData;
+        auto p1 = api.GameData.GetPlayer(0);
+        auto p2 = api.GameData.GetPlayer(1);
+        auto cam = api.GameData.GetCamera();
         float zPos = static_cast<float>(textZPos);
 
-        api.RenderCockpitFontText("ACT ID: " + std::to_string(p1.actId()), xPosLeftCol, 10, zPos, 0xFF, 1.0f);
-        api.RenderCockpitFontText("ACT TIMER: " + std::to_string(p1.actTimer()), xPosLeftCol, 30, zPos, 0xFF, 1.0f);
-        api.RenderCockpitFontText("POS: (" + std::to_string(p1.position().x) + "," + std::to_string(p1.position().y) + ")", 10, 50, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("ACT ID: " + std::to_string(p1.actId()), xPosLeftCol, 10, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("ACT TIMER: " + std::to_string(p1.actTimer()), xPosLeftCol, 30, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("POS: (" + std::to_string(p1.position().x) + "," + std::to_string(p1.position().y) + ")", 10, 50, zPos, 0xFF, 1.0f);
 
-        api.RenderCockpitFontText("ACT ID: " + std::to_string(p2.actId()), xPosRightCol, 10, zPos, 0xFF, 1.0f);
-        api.RenderCockpitFontText("ACT TIMER: " + std::to_string(p2.actTimer()), xPosRightCol, 30, zPos, 0xFF, 1.0f);
-        api.RenderCockpitFontText("POS: (" + std::to_string(p2.position().x) + "," + std::to_string(p1.position().y) + ")", xPosRightCol, 50, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("ACT ID: " + std::to_string(p2.actId()), xPosRightCol, 10, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("ACT TIMER: " + std::to_string(p2.actTimer()), xPosRightCol, 30, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("POS: (" + std::to_string(p2.position().x) + "," + std::to_string(p1.position().y) + ")", xPosRightCol, 50, zPos, 0xFF, 1.0f);
 
-        api.RenderCockpitFontText("HEALTH: " + std::to_string(p1.health()), xPosLeftCol, 70, zPos, 0xFF, 1.0f);
-        api.RenderCockpitFontText("TENSION: " + std::to_string(p1.tension()), xPosLeftCol, 90, zPos, 0xFF, 1.0f);
-        api.RenderCockpitFontText("BURST: " + std::to_string(p1.burstMeter()), xPosLeftCol, 110, zPos, 0xFF, 1.0f);
-        api.RenderCockpitFontText("ACT STATE: 0z" + ToHexString(static_cast<int>(p1.actionState())), xPosLeftCol, 130, zPos, 0xFF, 1.0f);
-        api.RenderCockpitFontText("GRD STATE: 0z" + ToHexString(static_cast<int>(p1.guardState())), xPosLeftCol, 150, zPos, 0xFF, 1.0f);
-        api.RenderCockpitFontText("ATK STATE: 0z" + ToHexString(static_cast<int>(p1.attackState())), xPosLeftCol, 170, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("HEALTH: " + std::to_string(p1.health()), xPosLeftCol, 70, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("TENSION: " + std::to_string(p1.tension()), xPosLeftCol, 90, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("BURST: " + std::to_string(p1.burstMeter()), xPosLeftCol, 110, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("ACT STATE: 0z" + ToHexString(static_cast<int>(p1.actionState())), xPosLeftCol, 130, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("GRD STATE: 0z" + ToHexString(static_cast<int>(p1.guardState())), xPosLeftCol, 150, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("ATK STATE: 0z" + ToHexString(static_cast<int>(p1.attackState())), xPosLeftCol, 170, zPos, 0xFF, 1.0f);
 
-        auto p1Input = uCtx->bmApi->GameData.GetPlayerInputStructArr()[0].InputRaw1;
-        api.RenderCockpitFontText("INPUT: 0z" + ToHexString(static_cast<int>(p1Input)), xPosLeftCol, 190, zPos, 0xFF, 1.0f);
+        auto p1Input = data.GetPlayerInputStructArr()[0].InputRaw;
+        fn.RenderCockpitFontText("INPUT: 0z" + ToHexString(static_cast<int>(p1Input)), xPosLeftCol, 190, zPos, 0xFF, 1.0f);
 
-        api.RenderCockpitFontText("CAM POS: (" + std::to_string(cam.position().x) + "," + std::to_string(cam.position().y) + ")", xPosLeftCol, 220, zPos, 0xFF, 1.0f);
-        api.RenderCockpitFontText("CAM ZOOM: " + std::to_string(cam.zoom()), xPosLeftCol, 240, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("CAM POS: (" + std::to_string(cam.position().x) + "," + std::to_string(cam.position().y) + ")", xPosLeftCol, 220, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("CAM ZOOM: " + std::to_string(cam.zoom()), xPosLeftCol, 240, zPos, 0xFF, 1.0f);
 
-        auto featureFlags = uCtx->bmApi->GameData.GetGameModeFeatureFlags();
-        api.RenderCockpitFontText("MODE FLAGS: 0z" + ToHexString(static_cast<int>(featureFlags)), xPosLeftCol, 260, zPos, 0xFF, 1.0f);
-        auto devicePointer = uCtx->bmApi->GameData.GetD3D9Device();
-        api.RenderCockpitFontText("D3D DEVICE: 0z" + ToHexString(reinterpret_cast<int>(devicePointer)), xPosLeftCol, 280, zPos, 0xFF, 1.0f);
+        auto featureFlags = data.GetGameModeFeatureFlags();
+        fn.RenderCockpitFontText("MODE FLAGS: 0z" + ToHexString(static_cast<int>(featureFlags)), xPosLeftCol, 260, zPos, 0xFF, 1.0f);
+        auto devicePointer = data.GetD3D9Device();
+        fn.RenderCockpitFontText("D3D DEVICE: 0z" + ToHexString(reinterpret_cast<int>(devicePointer)), xPosLeftCol, 280, zPos, 0xFF, 1.0f);
 
-        auto playerInputArr = bmApi->GameData.GetPlayerInputStructArr();
+        auto playerInputArr = data.GetPlayerInputStructArr();
         
-        api.RenderCockpitFontText("INPUT RAW2: 0z" + ToHexString(static_cast<int>(playerInputArr[0].InputRaw2)), xPosRightCol, 100, zPos, 0xFF, 1.0f);
-        api.RenderCockpitFontText("INPUT RAW1: 0z" + ToHexString(static_cast<int>(playerInputArr[0].InputRaw1)), xPosRightCol, 120, zPos, 0xFF, 1.0f);
-        api.RenderCockpitFontText("INPUT RELEASE: 0z" + ToHexString(static_cast<int>(playerInputArr[0].InputRelease)), xPosRightCol, 140, zPos, 0xFF, 1.0f);
-        api.RenderCockpitFontText("INPUT PRESS1: 0z" + ToHexString(static_cast<int>(playerInputArr[0].InputPress1)), xPosRightCol, 160, zPos, 0xFF, 1.0f);
-        api.RenderCockpitFontText("INPUT PRESS2: 0z" + ToHexString(static_cast<int>(playerInputArr[0].InputPress2)), xPosRightCol, 180, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("INPUT RAW1: 0z" + ToHexString(static_cast<int>(playerInputArr[0].InputRaw)), xPosRightCol, 100, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("INPUT RELEASE: 0z" + ToHexString(static_cast<int>(playerInputArr[0].InputRelease)), xPosRightCol, 120, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("INPUT PRESS2: 0z" + ToHexString(static_cast<int>(playerInputArr[0].InputPress)), xPosRightCol, 140, zPos, 0xFF, 1.0f);
 
-        api.RenderMenuText("Menu Text test", xPosRightCol, 200, zPos, 1.0f, nullptr, 0, true, 0xFFFFFF);
-        api.RenderMenuText("Colorful text", xPosRightCol, 220, zPos, 1.0f, nullptr, 0, false, 0xFF8080);
-        api.RenderMenuTextCenterAligned("Centered\nText Test!", xPosRightCol + 60, 240, zPos, 1.0f, 0xFFFFFF, true);
+        fn.RenderMenuText("Menu Text test", xPosRightCol, 200, zPos, 1.0f, nullptr, 0, true, 0xFFFFFF);
+        fn.RenderMenuText("Colorful text", xPosRightCol, 220, zPos, 1.0f, nullptr, 0, false, 0xFF8080);
+        fn.RenderMenuTextCenterAligned("Centered\nText Test!", xPosRightCol + 60, 240, zPos, 1.0f, 0xFFFFFF, true);
 
-        uCtx->bmApi->NativeFunctions.DrawQuad(610, 10, 630, 30, 1, 0x80FF0000);
+        fn.DrawQuad(610, 10, 630, 30, 1, 0x80FF0000);
 
         static ggxxacpr::ColorVertex testVerts[4] = {
             {{60.0f, 10.0f, 4.0f}, 0x8FFF0000},
@@ -129,10 +112,94 @@ void __stdcall testAfterGameUpdateHook(
             {{60.0f, 20.0f, 4.0f}, 0x8F0000FF},
             {{50.0f, 20.0f, 4.0f}, 0x8FFF8080},
         };
-        uCtx->bmApi->NativeFunctions.DrawTriStrip(testVerts, 4);
+        fn.DrawTriStrip(testVerts, 4);
+}
+void displayKeyboardInputTest(BaseMod::Api& api) {
+    constexpr int x = 200;
+    constexpr int y = 225;
+    constexpr int xStep = 12;
+    constexpr int yStep = 16;
+
+    using Key = ggxxacpr::KeyboardInput;
+    struct KeyInfo {
+        Key id;
+        char label;
+    };
+    static KeyInfo labels[] {
+        {Key::Q, 'Q'},
+        {Key::W, 'W'},
+        {Key::E, 'E'},
+        {Key::R, 'R'},
+        {Key::T, 'T'},
+        {Key::Y, 'Y'},
+        {Key::U, 'U'},
+        {Key::I, 'I'},
+        {Key::O, 'O'},
+        {Key::P, 'P'},
+
+        {Key::A, 'A'},
+        {Key::S, 'S'},
+        {Key::D, 'D'},
+        {Key::F, 'F'},
+        {Key::G, 'G'},
+        {Key::H, 'H'},
+        {Key::J, 'J'},
+        {Key::K, 'K'},
+        {Key::L, 'L'},
+        {Key::SEMI_COLON, ':'},
+
+        {Key::Z, 'Z'},
+        {Key::X, 'X'},
+        {Key::C, 'C'},
+        {Key::V, 'V'},
+        {Key::B, 'B'},
+        {Key::N, 'N'},
+        {Key::M, 'M'},
+        {Key::COMMA, ','},
+        {Key::PERIOD, '.'},
+        {Key::FORWARD_SLASH, '/'},
+    };
+
+    for (int i = 0; i < sizeof(labels) / sizeof(KeyInfo); i++) {
+        api.NativeFunctions.RenderCockpitFontText(
+            &labels[i].label,
+            x + (i % 10) * xStep,
+            y + (i / 10) * yStep,
+            static_cast<float>(textZPos),
+            api.GameData.GetKeyboardInput(labels[i].id) ? 0xFF : 0x60,
+            1.0f
+        );
+    }
+}
+
+void __stdcall testAfterGameUpdateHook(
+    TestContext* uCtx,
+    const BaseMod_HookContext* hCtx,
+    const BaseMod_GameUpdateInfo* info
+) {
+    static bool tested = false;
+
+    BaseMod::Api& api = *uCtx->bmApi;
+
+    if (!tested) {
+        uCtx->glApi->Log(GearLoader::LogLevel::DEBUG, "AfterGameUpdate hook called");
+        tested = true;
+    }
+
+    if (api.GameData.IsInGame() &&
+        api.GameData.GetJobMode() == ggxxacpr::JobMode::BATTLE
+    ) {
+        switch(displayData) {
+            case 1:
+                displayApiTest1(api);
+                break;
+            case 2:
+                displayKeyboardInputTest(api);
+                break;
+        }
     }
     if (enableZTest) {
-        uCtx->bmApi->NativeFunctions.DrawQuad(
+        api.NativeFunctions.DrawQuad(
             0, 0, 640, 480,
             zTestPos,
             enableZTest == 1 ? 0xFF000000 : 0xFF800080
@@ -252,11 +319,12 @@ void RegisterModMenu(BaseMod::ModMenuApi& api) {
         {"Scroll Test 6", nullptr, 0, 0, nullptr, TestCommand},
     };
 
-    static const char* boolLabels[2] = {"OFF", "ON"};
-    static const char* zTestLabels[3] = {"OFF", "BLACK", "PURPLE"};
-    static BaseMod::ModMenuEntry testerEntries[7] {
+    static const char* boolLabels[] = {"OFF", "ON"};
+    static const char* dataLabels[] = {"NONE", "GAME DATA", "KEYBOARD TEST"};
+    static const char* zTestLabels[] = {"OFF", "BLACK", "PURPLE"};
+    static BaseMod::ModMenuEntry testerEntries[] {
         {"Print frame times", &logFrameTime, 0, 1, boolLabels, nullptr},
-        {"Display Data / Tests", &displayData, 0, 1, boolLabels, nullptr},
+        {"Display Data / Tests", &displayData, 0, 2, dataLabels, nullptr},
         {"Data Text Z Pos", &textZPos, 0, 255, nullptr, nullptr},
         {"Trigger Pop-up", nullptr, 0,0, nullptr, TriggerPopUp},
         {"SFX Test", &sfxIndex, 0, 104, nullptr, PlaySFX},

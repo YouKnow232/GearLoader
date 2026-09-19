@@ -378,6 +378,13 @@ struct BaseMod_GameDataApi {
      *  \brief Gets a pointer to survival mode's boss check table for the golden bosses.
      */
     GGXXACPR_SurvivalBossEntry* BASEMOD_CALL (*GetGoldenBossCheck)();
+    /**
+     *  \brief Gets the state of a keyboard input.
+     * 
+     *  \param keyId enum `GGXXACPR_KeyboardInput`
+     *  \return A positive value if the key is pressed
+     */
+    uint8_t BASEMOD_CALL (*GetKeyboardInput)(int32_t keyId);
 };
 
 typedef uint32_t BaseMod_HookId;

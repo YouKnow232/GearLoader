@@ -6,9 +6,12 @@
 
 namespace offsets {
 
+// System
+constexpr intptr_t KEYBOARD_INPUT = 0x68EF58;
+
+// High Level Flags
 constexpr intptr_t IN_GAME_FLAG = 0x7101F4;
 constexpr intptr_t GAME_VER_FLAG = 0x6D0538;    // 0=AC, 1=+R
-constexpr intptr_t MAIN_MENU_SELECTION = 0x70FFB4;
 constexpr intptr_t GAME_MODE_FEATURE_FLAGS = 0x6D64CC;
 
 // Injection Addresses
@@ -62,6 +65,8 @@ constexpr intptr_t ENTITY_LIST_PTR = 0x6D137C;
 
 // Player Data
 constexpr intptr_t PLAYER_INPUT = 0x6D0E80;
+constexpr intptr_t PLAYER_INPUT_ARR = 0x6D9A18;
+constexpr intptr_t PLAYER_INPUT_ARR_P2 = 0x6D9AB0;
 
 // Camera
 constexpr intptr_t CAMERA = 0x6D5CD0;
@@ -97,10 +102,11 @@ constexpr intptr_t COMMAND_GRAB_RANGE_LOOKUP_TABLE = 0x572110;
 // one byte [P1Throwable, P2Throwable, P1ThrowActive P2ThrowActive]
 constexpr intptr_t GLOBAL_THROW_FLAGS = 0x6D5D7C;
 
-// Pause Menus
+// Menus
 // 0 = not paused, 1 or 2 = paused (not sure the difference between 1 and 2)
 constexpr intptr_t PAUSE_STATE = 0x7109E4;
 constexpr intptr_t PAUSE_DISPLAY_STATE = 0x6CBD20;
+constexpr intptr_t MAIN_MENU_SELECTION = 0x70FFB4;
 
 // Replay
 // 1 = normal, 0 = do not simulate, -1 = rewinding (stays at 0 for frame stepping)
@@ -129,7 +135,6 @@ constexpr intptr_t SURVIVAL_INFO = 0x6A6F60;
 constexpr intptr_t PAUSE_MENU_SELECTION = 0x875F68;
 constexpr intptr_t SUB_MENU_IS_OPEN = 0x6D0C2C;
 constexpr intptr_t INPUT_STRUCT_2 = 0x6D95B8;
-constexpr intptr_t PLAYER_INPUT_ARR = 0x6D9A18;
 constexpr intptr_t MENU_INPUT_HOLD_TIMER = 0x6D0C20;
 constexpr intptr_t BUTTON_MAPPINGS_1 = 0x69ED40;
 constexpr intptr_t BUTTON_MAPPINGS_2 = 0x6CE030;
