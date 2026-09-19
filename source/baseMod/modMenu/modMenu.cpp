@@ -146,25 +146,25 @@ enum CommonSoundEffectIds {
 //////////////////////
 
 inline bool NeitherInputting(Input input) {
-    return !(PlayerInputArr()[0].InputRaw1 & static_cast<uint32_t>(input)) &&
-        !(PlayerInputArr()[1].InputRaw1 & static_cast<uint32_t>(input));
+    return !(PlayerInputArr()[0].InputRaw & static_cast<uint32_t>(input)) &&
+        !(PlayerInputArr()[1].InputRaw & static_cast<uint32_t>(input));
 }
 inline bool EitherInputting(Input input) {
     return !NeitherInputting(input);
 }
 inline bool NeitherPressed(Input input) {
-    return !(PlayerInputArr()[0].InputPress2 & static_cast<uint32_t>(input)) &&
-        !(PlayerInputArr()[1].InputPress2 & static_cast<uint32_t>(input));
+    return !(PlayerInputArr()[0].PrevInputPress & static_cast<uint32_t>(input)) &&
+        !(PlayerInputArr()[1].PrevInputPress & static_cast<uint32_t>(input));
 }
 inline bool EitherPressed(Input input) {
     return !NeitherPressed(input);
 }
 
 inline int WhichPlayerIsInputting(Input input) {
-    if (PlayerInputArr()[0].InputRaw1 & static_cast<uint32_t>(input)) {
+    if (PlayerInputArr()[0].InputRaw & static_cast<uint32_t>(input)) {
         return 1;
     }
-    if (PlayerInputArr()[1].InputRaw1 & static_cast<uint32_t>(input)) {
+    if (PlayerInputArr()[1].InputRaw & static_cast<uint32_t>(input)) {
         return 2;
     }
     return 0;
@@ -176,8 +176,8 @@ int32_t BASEMOD_CALL HandleMenuSelection(int32_t selection, uint32_t totalEntrie
     constexpr uint32_t up = static_cast<uint32_t>(Input::UP);
     constexpr uint32_t down = static_cast<uint32_t>(Input::DOWN);
 
-    auto p1Input = PlayerInputArr()[0].InputRaw1;
-    auto p2Input = PlayerInputArr()[1].InputRaw1;
+    auto p1Input = PlayerInputArr()[0].InputRaw;
+    auto p2Input = PlayerInputArr()[1].InputRaw;
 
     if (NeitherInputting(Input::UP)) {
         if (NeitherInputting(Input::DOWN)) {
@@ -225,8 +225,8 @@ int32_t BASEMOD_CALL HandleMenuSelection(int32_t selection, uint32_t totalEntrie
 int32_t BASEMOD_CALL HoldDirectionInputHandler(uint32_t input) {
     constexpr uint32_t directionInputMask = 0xF0;
 
-    uint32_t p1Input = PlayerInputArr()[0].InputRaw1;
-    uint32_t p2Input = PlayerInputArr()[1].InputRaw1;
+    uint32_t p1Input = PlayerInputArr()[0].InputRaw;
+    uint32_t p2Input = PlayerInputArr()[1].InputRaw;
 
     if ((p1Input & input) || (p2Input & input)) {
         int pIndex = ((p1Input & input) != 0) ? 0 : 1;
@@ -604,8 +604,8 @@ int update_generic_pause_menu_substitute() {
     static int strIds[itemsLength] = {0x332, 0x333, 0x9fb, 0x334, 0x32d, 0, 0x337};
 
     int selection = *pause_menu_selection;
-    auto p1Input = PlayerInputArr()[0].InputRaw1;
-    auto p2Input = PlayerInputArr()[1].InputRaw1;
+    auto p1Input = PlayerInputArr()[0].InputRaw;
+    auto p2Input = PlayerInputArr()[1].InputRaw;
 
     if (does_fiber_exist("HLOP") || *sub_menu_is_open) {
         return selection;
@@ -621,7 +621,7 @@ int update_generic_pause_menu_substitute() {
         buttonMapping = button_mappings_2;
     }
 
-    if (!(static_cast<int>(input->InputPress2) & buttonMapping->PauseKey) || (*is_past_menu != 1)) {
+    if (!(static_cast<int>(input->PrevInputPress) & buttonMapping->PauseKey) || (*is_past_menu != 1)) {
         input = input_struct_2;
         buttonMapping = button_mappings_1;
         if (freePlayFlag == ModeFlag::NONE) {
@@ -629,7 +629,7 @@ int update_generic_pause_menu_substitute() {
             buttonMapping = button_mappings_2;
         }
         ButtonMapping* puVar2 = buttonMapping + 1;
-        if (!(static_cast<int32_t>(input[1].InputPress2) & puVar2->PauseKey) ||
+        if (!(static_cast<int32_t>(input[1].PrevInputPress) & puVar2->PauseKey) ||
             *unknown_struct_field != 1 && NeitherPressed(Input::RIGHT_FACE)) {
             if (EitherPressed(Input::BOTTOM_FACE)) {
                 Native()->PlayCommonSoundEffect(SE_ACCEPT);

@@ -471,6 +471,132 @@ enum GGXXACPR_RawControllerInput {
     INPUT_LEFT_FACE = 0x8000,
 };
 
+// RE NOTE: Info taken from function at offset 0x351970 and data region at offset 0x68ef58
+enum GGXXACPR_KeyboardInput {
+    KB_INPUT_ESC = 1,
+    KB_INPUT_1,
+    KB_INPUT_2,
+    KB_INPUT_3,
+    KB_INPUT_4,
+    KB_INPUT_5,
+    KB_INPUT_6,
+    KB_INPUT_7,
+    KB_INPUT_8,
+    KB_INPUT_9,
+    KB_INPUT_0,
+    KB_INPUT_MINUS,
+    KB_INPUT_EQUALS,
+    KB_INPUT_BACKSPACE,
+    KB_INPUT_TAB,
+    KB_INPUT_Q,
+    KB_INPUT_W,
+    KB_INPUT_E,
+    KB_INPUT_R,
+    KB_INPUT_T,
+    KB_INPUT_Y,
+    KB_INPUT_U,
+    KB_INPUT_I,
+    KB_INPUT_O,
+    KB_INPUT_P,
+    KB_INPUT_SQUARE_BRACKET_OPEN,
+    KB_INPUT_SQUARE_BRACKET_CLOSE,
+    KB_INPUT_ENTER,
+    KB_INPUT_LEFT_CTRL,
+    KB_INPUT_A,
+    KB_INPUT_S,
+    KB_INPUT_D,
+    KB_INPUT_F,
+    KB_INPUT_G,
+    KB_INPUT_H,
+    KB_INPUT_J,
+    KB_INPUT_K,
+    KB_INPUT_L,
+    KB_INPUT_SEMI_COLON,
+    KB_INPUT_APOSTROPHE,
+    KB_INPUT_GRAVE,
+    KB_INPUT_LEFT_SHIFT,
+    KB_INPUT_BACKSLASH,
+    KB_INPUT_Z,
+    KB_INPUT_X,
+    KB_INPUT_C,
+    KB_INPUT_V,
+    KB_INPUT_B,
+    KB_INPUT_N,
+    KB_INPUT_M,
+    KB_INPUT_COMMA,
+    KB_INPUT_PERIOD,
+    KB_INPUT_FORWARD_SLASH,
+    KB_INPUT_RIGHT_SHIFT,
+    KB_INPUT_NUM_ASTERISK,
+    KB_INPUT_LEFT_ALT,
+    KB_INPUT_SPACE,
+    KB_INPUT_CAPS_LOCK,
+    KB_INPUT_F1,
+    KB_INPUT_F2,
+    KB_INPUT_F3,
+    KB_INPUT_F4,
+    KB_INPUT_F5,
+    KB_INPUT_F6,
+    KB_INPUT_F7,
+    KB_INPUT_F8,
+    KB_INPUT_F9,
+    KB_INPUT_F10,
+    KB_INPUT_NUM_LOCK,
+    KB_INPUT_SCROLL_LOCK,
+    KB_INPUT_NUM_7,
+    KB_INPUT_NUM_8,
+    KB_INPUT_NUM_9,
+    KB_INPUT_NUM_MINUS,
+    KB_INPUT_NUM_4,
+    KB_INPUT_NUM_5,
+    KB_INPUT_NUM_6,
+    KB_INPUT_NUM_PLUS,
+    KB_INPUT_NUM_1,
+    KB_INPUT_NUM_2,
+    KB_INPUT_NUM_3,
+    KB_INPUT_NUM_0,
+    KB_INPUT_NUM_PERIOD,
+    KB_INPUT_PRINT_SCREEN,
+
+    KB_INPUT_F11 = 0x57,
+    KB_INPUT_F12,
+
+    KB_INPUT_NUM_EQUALS = 0x8D,
+
+    KB_INPUT_CARROT = 0x90,
+    KB_INPUT_AT_SIGN,
+    KB_INPUT_COLON,
+
+    KB_INPUT_NUM_ENTER = 0x9C,
+    KB_INPUT_RIGHT_CTRL,
+
+    KB_INPUT_NUM_COMMA = 0xB3,
+
+    KB_INPUT_NUM_FORWARD_SLASH = 0xB5,
+
+    KB_INPUT_RIGHT_ALT = 0xB8,
+
+    KB_INPUT_PAUSE_BREAK = 0xC5,
+
+    KB_INPUT_HOME = 0xC7,
+    KB_INPUT_UP,
+    KB_INPUT_PAGE_UP,
+
+    KB_INPUT_LEFT = 0xCB,
+
+    KB_INPUT_RIGHT = 0xCD,
+
+    KB_INPUT_END = 0xCF,
+    KB_INPUT_DOWN,
+    KB_INPUT_PAGE_DOWN,
+    KB_INPUT_INSERT,
+    KB_INPUT_DELETE,
+
+    KB_INPUT_LEFT_START = 0xDB, // Windows Key / Command Key
+    KB_INPUT_RIGHT_START,   // Windows Key / Command Key
+    KB_INPUT_MENU   // Menu / Application Key
+};
+
 enum GGXXACPR_Language {
     ACPR_LANG_JPN,
     ACPR_LANG_ENG,
@@ -540,10 +666,10 @@ typedef struct GGXXACPR_FiberData {
 static_assert(sizeof(GGXXACPR_FiberData) == 0x54);
 
 typedef struct GGXXACPR_PlayerInput {
-    uint32_t InputRaw1;     // enum `GGXXACPR_RawControllerInput`
-    uint32_t InputRaw2;     // enum `GGXXACPR_RawControllerInput`
-    uint32_t InputPress1;   // enum `GGXXACPR_RawControllerInput`
-    uint32_t InputPress2;   // enum `GGXXACPR_RawControllerInput`
+    uint32_t InputRaw;      // enum `GGXXACPR_RawControllerInput`
+    uint32_t PrevInputRaw;  // enum `GGXXACPR_RawControllerInput`
+    uint32_t PrevInputPress;// enum `GGXXACPR_RawControllerInput`
+    uint32_t InputPress;    // enum `GGXXACPR_RawControllerInput`
     uint32_t InputRelease;  // enum `GGXXACPR_RawControllerInput`
     int32_t SelectCharge;
     int32_t L3Charge;
@@ -1372,7 +1498,7 @@ typedef struct GGXXACPR_SurvivalInfo {
     int16_t Hitpoints;
     int8_t  time_cnt;
     int8_t  hoimi;
-    int16_t EnemyTable[26]; //see enum GGXXACPR_EntityId
+    int16_t EnemyTable[26]; //see `enum GGXXACPR_EntityId`
     int32_t EnemyTableIndex;
     int32_t oldhp;
     GGXXACPR_SurvivalExtra SurvivalExtra;
@@ -1384,7 +1510,7 @@ static_assert(sizeof(GGXXACPR_SurvivalInfo) == 0xA8);
     Survival Mode entries for bosses in the boss table
 */
 typedef struct GGXXACPR_SurvivalBossEntry {
-    int32_t CharId; //see enum GGXXACPR_EntityId
+    int32_t CharId; //see enum `GGXXACPR_EntityId`
     int32_t LevelReq;
     int32_t CPULevel;
     int32_t isEx;

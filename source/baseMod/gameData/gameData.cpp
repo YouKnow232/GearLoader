@@ -74,6 +74,10 @@ GGXXACPR_SurvivalBossEntry* BASEMOD_CALL GetShadowBossCheck() {
 GGXXACPR_SurvivalBossEntry* BASEMOD_CALL GetGoldenBossCheck() {
     return reinterpret_cast<GGXXACPR_SurvivalBossEntry*>(getBaseAddress() + offsets::SURVIVAL_GOLDEN_BOSS_CHECK);
 }
+uint8_t BASEMOD_CALL GetKeyboardInput(int32_t keyId) {
+    if (keyId < 0 || 256 <= keyId) return 0;
+    return reinterpret_cast<uint8_t*>(getBaseAddress() + offsets::KEYBOARD_INPUT)[keyId];
+}
 
 const BaseMod_GameDataApi* GetGameDataApi() {
     static const BaseMod_GameDataApi _gameDataApi = {
@@ -101,6 +105,7 @@ const BaseMod_GameDataApi* GetGameDataApi() {
         GetSurvivalInfo: GetSurvivalInfo,
         GetShadowBossCheck: GetShadowBossCheck,
         GetGoldenBossCheck: GetGoldenBossCheck,
+        GetKeyboardInput: GetKeyboardInput,
     };
 
     return &_gameDataApi;

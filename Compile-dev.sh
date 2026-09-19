@@ -41,4 +41,5 @@ if [[ -d "./bin/GearLoader" && ! -z "$GGXXACPR_DIR" ]]; then
     echo # line break
     echo "Copying files:"
     cp -ru --verbose "./bin/GearLoader/mods" "./bin/GearLoader/DBGHELP.dll" "$GGXXACPR_DIR"
+    cp -ru --verbose "./bin/baseModTester" "$GGXXACPR_DIR/mods"
 fi

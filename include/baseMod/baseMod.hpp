@@ -405,6 +405,13 @@ public:
      *  \brief Gets a pointer to the game's locale state. see `GGXXACPR_LocaleState`.
      */
     ggxxacpr::LocaleState* GetLocaleState() { return _ref->GetLocaleState(); }
+    /**
+     *  \brief Gets the state of a keyboard input.
+     * 
+     *  \param keyId The key to check
+     *  \return A positive value if the key is pressed
+     */
+    uint8_t GetKeyboardInput(ggxxacpr::KeyboardInput keyId) { return _ref->GetKeyboardInput(static_cast<int32_t>(keyId)); }
 };
 
 template<typename T>
