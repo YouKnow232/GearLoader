@@ -69,7 +69,7 @@ typedef struct GearLoaderApi {
      *      information of the received version.
      *  \return An error code if an error occurred, otherwise `0`.
      */
-    int32_t __stdcall (*RetrieveModApi)(
+    int32_t (__stdcall *RetrieveModApi)(
         GearLoaderContext* ctx,
         const char* name,
         const char* versionConstraint,
@@ -93,7 +93,7 @@ typedef struct GearLoaderApi {
      *  \param version The version of the registered API. Used when resolving the version constraint passed to `RetrieveModApi`.
      *  \return An error code if an error occurred, otherwise `0`.
      */
-    int32_t __stdcall (*RegisterApi)(
+    int32_t (__stdcall *RegisterApi)(
         GearLoaderContext* ctx,
         const void* api,
         const char* name,
@@ -112,7 +112,7 @@ typedef struct GearLoaderApi {
      *  \param str The string to be logged.
      *  \return An error code if an error occurred, otherwise `0`.
      */
-    uint32_t __stdcall (*Log)(
+    uint32_t (__stdcall *Log)(
         GearLoaderContext* ctx,
         uint32_t logLevel,
         const char* str);

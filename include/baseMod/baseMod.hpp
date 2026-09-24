@@ -57,7 +57,7 @@ public:
     ApiWrapper(const T* ref) : _ref(ref) {}
     bool VersionError() {
         return (BASEMOD_API_VERSION_NUM & 0xFF0000) !=
-            (reinterpret_cast<CApiBase*>(_ref)->version & 0xFF0000);
+            (reinterpret_cast<const CApiBase*>(_ref)->version & 0xFF0000);
     }
     bool IsValid() { return _ref != nullptr; }
     const T* GetCApi() { return _ref; }
