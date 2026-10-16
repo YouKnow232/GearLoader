@@ -204,6 +204,32 @@ struct BaseMod_NativeFunctionsApi {
     uint32_t (BASEMOD_CALL *GetActiveCommandGrabId)(GGXXACPR_Entity* player);
 };
 
+// Used with `BaseMod_GameDataApi::GetValue` and `BaseMod_GameDataApi::SetValue`
+typedef enum BM_GameVariable {
+    BM_VAR_PLAYER_1,                // Type: `GGXXACPR_Entity*`
+    BM_VAR_PLAYER_2,                // Type: `GGXXACPR_Entity*`
+    BM_VAR_PLAYER_1_INPUT,          // Type: `GGXXACPR_PlayerInput*`
+    BM_VAR_PLAYER_2_INPUT,          // Type: `GGXXACPR_PlayerInput*`
+    BM_VAR_ROOT_ENTITY,             // Type: `GGXXACPR_Entity*`
+    BM_VAR_CAMERA,                  // Type: `GGXXACPR_Camera*`
+    BM_VAR_GAME_VER,                // Type: `int32_t`, Enum: `GGXXACPR_GameVersion`
+    BM_VAR_JOB_MODE,                // Type: `int32_t`, Enum: `GGXXACPR_JobMode`
+    BM_VAR_BATTLE_FLAG,             // Type: `int8_t`, zero when not in battle, else one
+    BM_VAR_GAME_MODE_FEATURE_FLAGS, // Type: `uint32_t` Enum: `GGXXACPR_GameModeFeatureFlags`
+    BM_VAR_MAIN_MENU_SELECTION,     // Type: `int16_t`, Enum: `GGXXACPR_MainMenuItem`
+    BM_VAR_D3D9_DEVICE,             // Type: `IDirect3DDevice9*` from d3d9.h
+    BM_VAR_VIEW_WIDTH,              // Type: `int32_t`
+    BM_VAR_VIEW_HEIGHT,             // Type: `int32_t`
+    BM_VAR_GLOBAL_THROW_FLAGS,      // Type: `uint32_t`
+    BM_VAR_PAUSE_STATE,             // Type: `int32_t`
+    BM_VAR_PAUSE_DISPLAY_STATE,     // Type: `int32_t`
+    BM_VAR_LOCALE_STATE,            // Type: `GGXXACPR_LocaleState*`
+    BM_VAR_SURVIVAL_INFO,           // Type: `GGXXACPR_SurvivalInfo*`
+    BM_VAR_SHADOW_BOSS_CHECK,       // Type: `GGXXACPR_SurvivalBossEntry*`
+    BM_VAR_GOLDEN_BOSS_CHECK,       // Type: `GGXXACPR_SurvivalBossEntry*`
+    BM_VAR_BACKGROUND_STATE,        // Type: `uint16_t`, Enum: `GGXXACPR_BackgroundState`
+    BM_VAR_KEYBOARD_INPUT,          // Type: `uint8_t*`, 256 element array index with enum `GGXXACPR_KeyboardInput`
+} BM_GameVariable;
 
 typedef enum BM_PushboxDimensionArrayType {
     BM_PD_STANDING_WIDTH,
@@ -385,6 +411,27 @@ struct BaseMod_GameDataApi {
      *  \return A positive value if the key is pressed
      */
     uint8_t (BASEMOD_CALL *GetKeyboardInput)(int32_t keyId);
+    /**
+     *  \brief Gets the address of the specified game Variable.
+     *  
+     *  You must cast the pointer yourself. Check the comments on the `BM_GameVariable` for type hints.
+     *  
+     *  usage example:
+     *  ```C
+     *  int32_t err;
+     *  int8_t* battleFlag = (int8_t*)data.GetVarAddress(BM_VAR_BATTLE_FLAG, &err);
+     *  if (err || !battleFlag) {
+     *      // error handling
+     *  }
+     *  ```
+     *  
+     *  \param varId The variable to retrieve. see enum `BM_GameVariable`.
+     *  \param errOut Pointer to an int32_t variable to hold the error code.
+     *      you can pass a null pointer for this parameter to ignore the error code.
+     *      0 = No error, 1 = Invalid varId, 2 = Null pointer error
+     *  \return A generic pointer to the specified variable.
+     */
+    void* (BASEMOD_CALL *GetVarAddress)(int32_t varId, int32_t* errOut);
 };
 
 typedef uint32_t BaseMod_HookId;
