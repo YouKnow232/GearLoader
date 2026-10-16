@@ -4,6 +4,61 @@
 #include "charData/charData.h"
 
 
+// Info about a game variable
+struct AddressInfo {
+    intptr_t offset;        // from base address
+    unsigned short size;    // In bytes
+    unsigned short deref;   // How many times should the address be dereferenced
+};
+static AddressInfo gameVarInfo[] = {
+    [BM_VAR_PLAYER_1]                   = {offsets::PLAYER_1_PTR, sizeof(GGXXACPR_Entity), 1},
+    [BM_VAR_PLAYER_2]                   = {offsets::PLAYER_2_PTR, sizeof(GGXXACPR_Entity), 1},
+    [BM_VAR_PLAYER_1_INPUT]             = {offsets::PLAYER_INPUT_ARR, sizeof(GGXXACPR_PlayerInput), 0},
+    [BM_VAR_PLAYER_2_INPUT]             = {offsets::PLAYER_INPUT_ARR_P2, sizeof(GGXXACPR_PlayerInput), 0},
+    [BM_VAR_ROOT_ENTITY]                = {offsets::ROOT_ENTITY, sizeof(GGXXACPR_Entity), 0},
+    [BM_VAR_CAMERA]                     = {offsets::CAMERA, sizeof(GGXXACPR_Camera), 0},
+    [BM_VAR_GAME_VER]                   = {offsets::GAME_VER_FLAG, 4, 0},
+    [BM_VAR_JOB_MODE]                   = {offsets::JOB_MODE, 4, 0},
+    [BM_VAR_BATTLE_FLAG]                = {offsets::IN_GAME_FLAG, 1, 0},
+    [BM_VAR_GAME_MODE_FEATURE_FLAGS]    = {offsets::GAME_MODE_FEATURE_FLAGS, 4, 0},
+    [BM_VAR_MAIN_MENU_SELECTION]        = {offsets::MAIN_MENU_SELECTION, 2, 0},
+    [BM_VAR_D3D9_DEVICE]                = {offsets::DIRECT3D9_DEVICE, 4, 0},
+    [BM_VAR_VIEW_WIDTH]                 = {offsets::VIEW_WIDTH, 4, 0},
+    [BM_VAR_VIEW_HEIGHT]                = {offsets::VIEW_HEIGHT, 4, 0},
+    [BM_VAR_GLOBAL_THROW_FLAGS]         = {offsets::GLOBAL_THROW_FLAGS, 4, 0},
+    [BM_VAR_PAUSE_STATE]                = {offsets::PAUSE_STATE, 4, 0},
+    [BM_VAR_PAUSE_DISPLAY_STATE]        = {offsets::PAUSE_DISPLAY_STATE, 4, 0},
+    [BM_VAR_LOCALE_STATE]               = {offsets::CURRENT_LOCALE_MODE, sizeof(GGXXACPR_LocaleState), 0},
+    [BM_VAR_SURVIVAL_INFO]              = {offsets::SURVIVAL_INFO, sizeof(GGXXACPR_SurvivalInfo), 0},
+    [BM_VAR_SHADOW_BOSS_CHECK]          = {offsets::SURVIVAL_SHADOW_BOSS_CHECK, sizeof(GGXXACPR_SurvivalBossEntry), 0},
+    [BM_VAR_GOLDEN_BOSS_CHECK]          = {offsets::SURVIVAL_GOLDEN_BOSS_CHECK, sizeof(GGXXACPR_SurvivalBossEntry), 0},
+    [BM_VAR_BACKGROUND_STATE]           = {offsets::BACKGROUND_STATE, 2, 0},
+    [BM_VAR_KEYBOARD_INPUT]             = {offsets::KEYBOARD_INPUT, 256, 0},
+};
+constexpr int NUM_VARS = sizeof(gameVarInfo) / sizeof(AddressInfo);
+
+void* BASEMOD_CALL GetVarAddress(int32_t varId, int32_t* errOut) {
+    if (varId < 0 || NUM_VARS <= varId) {
+        if (errOut) *errOut = 1;
+        return 0;
+    }
+
+    AddressInfo& varInfo = gameVarInfo[varId];
+    std::byte* addr = getBaseAddress() + varInfo.offset;
+
+    for (int i = 0; i < varInfo.deref; i++) {
+        if (!addr) {    // Basic null pointer check
+            if (errOut) *errOut = 2;
+            return 0;
+        }
+        // Dangerous pointer deref, varInfo better be correct!
+        addr = *reinterpret_cast<std::byte**>(addr);
+    }
+
+    return addr;
+}
+
+
 GGXXACPR_Entity* BASEMOD_CALL GetPlayer(int playerIndex) {
     std::byte *address = getBaseAddress() + (playerIndex == 0 ?
         offsets::PLAYER_1_PTR :
@@ -106,6 +161,7 @@ const BaseMod_GameDataApi* GetGameDataApi() {
         GetShadowBossCheck: GetShadowBossCheck,
         GetGoldenBossCheck: GetGoldenBossCheck,
         GetKeyboardInput: GetKeyboardInput,
+        GetVarAddress: GetVarAddress,
     };
 
     return &_gameDataApi;

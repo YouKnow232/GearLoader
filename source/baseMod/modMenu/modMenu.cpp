@@ -153,8 +153,8 @@ inline bool EitherInputting(Input input) {
     return !NeitherInputting(input);
 }
 inline bool NeitherPressed(Input input) {
-    return !(PlayerInputArr()[0].PrevInputPress & static_cast<uint32_t>(input)) &&
-        !(PlayerInputArr()[1].PrevInputPress & static_cast<uint32_t>(input));
+    return !(PlayerInputArr()[0].InputPress & static_cast<uint32_t>(input)) &&
+        !(PlayerInputArr()[1].InputPress & static_cast<uint32_t>(input));
 }
 inline bool EitherPressed(Input input) {
     return !NeitherPressed(input);

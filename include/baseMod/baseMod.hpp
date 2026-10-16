@@ -48,6 +48,31 @@ enum class DrawScrollArrowFlags : int32_t {
     DOWN = BM_DSAF_DOWN,
     BOTH = BM_DSAF_BOTH,
 };
+enum class GameVariable : int32_t {
+    PLAYER_1 = BM_VAR_PLAYER_1,                                 // Type: `GGXXACPR_Entity*`
+    PLAYER_2 = BM_VAR_PLAYER_2,                                 // Type: `GGXXACPR_Entity*`
+    PLAYER_1_INPUT = BM_VAR_PLAYER_1_INPUT,                     // Type: `GGXXACPR_PlayerInput*`
+    PLAYER_2_INPUT = BM_VAR_PLAYER_2_INPUT,                     // Type: `GGXXACPR_PlayerInput*`
+    ROOT_ENTITY = BM_VAR_ROOT_ENTITY,                           // Type: `GGXXACPR_Entity*`
+    CAMERA = BM_VAR_CAMERA,                                     // Type: `GGXXACPR_Camera*`
+    GAME_VER = BM_VAR_GAME_VER,                                 // Type: `int32_t`, Enum: `GGXXACPR_GameVersion`
+    JOB_MODE = BM_VAR_JOB_MODE,                                 // Type: `int32_t`, Enum: `GGXXACPR_JobMode`
+    BATTLE_FLAG = BM_VAR_BATTLE_FLAG,                           // Type: `int8_t`, zero when not in battle, else one
+    GAME_MODE_FEATURE_FLAGS = BM_VAR_GAME_MODE_FEATURE_FLAGS,   // Type: `uint32_t` Enum: `GGXXACPR_GameModeFeatureFlags`
+    MAIN_MENU_SELECTION = BM_VAR_MAIN_MENU_SELECTION,           // Type: `int16_t`, Enum: `GGXXACPR_MainMenuItem`
+    D3D9_DEVICE = BM_VAR_D3D9_DEVICE,                           // Type: `IDirect3DDevice9*` from d3d9.h
+    VIEW_WIDTH = BM_VAR_VIEW_WIDTH,                             // Type: `int32_t`
+    VIEW_HEIGHT = BM_VAR_VIEW_HEIGHT,                           // Type: `int32_t`
+    GLOBAL_THROW_FLAGS = BM_VAR_GLOBAL_THROW_FLAGS,             // Type: `uint32_t`
+    PAUSE_STATE = BM_VAR_PAUSE_STATE,                           // Type: `int32_t`
+    PAUSE_DISPLAY_STATE = BM_VAR_PAUSE_DISPLAY_STATE,           // Type: `int32_t`
+    LOCALE_STATE = BM_VAR_LOCALE_STATE,                         // Type: `GGXXACPR_LocaleState*`
+    SURVIVAL_INFO = BM_VAR_SURVIVAL_INFO,                       // Type: `GGXXACPR_SurvivalInfo*`
+    SHADOW_BOSS_CHECK = BM_VAR_SHADOW_BOSS_CHECK,               // Type: `GGXXACPR_SurvivalBossEntry*`
+    GOLDEN_BOSS_CHECK = BM_VAR_GOLDEN_BOSS_CHECK,               // Type: `GGXXACPR_SurvivalBossEntry*`
+    BACKGROUND_STATE = BM_VAR_BACKGROUND_STATE,                 // Type: `uint16_t`, Enum: `GGXXACPR_BackgroundState`
+    KEYBOARD_INPUT = BM_VAR_KEYBOARD_INPUT,                     // Type: `uint8_t*`, 256 element array index with enum `GGXXACPR_KeyboardInput`
+};
 
 // Generic functionality for wrapper classes
 template<typename T>
@@ -412,6 +437,57 @@ public:
      *  \return A positive value if the key is pressed
      */
     uint8_t GetKeyboardInput(ggxxacpr::KeyboardInput keyId) { return _ref->GetKeyboardInput(static_cast<int32_t>(keyId)); }
+    /**
+     *  \brief Gets the address of the specified game Variable.
+     *  
+     *  You can either cast the void pointer yourself or specify the data
+     *  type returned using an explicit template specialization.
+     *  Check the comments on the `BM_GameVariable` for type hints.
+     *  
+     *  usage example:
+     *  ```C++
+     *  int32_t err;
+     *  int8_t* battleFlag = data.GetVarAddress<int8_t>(BaseMod::GameVariable::BATTLE_FLAG, err);
+     *  if (err || !battleFlag) {
+     *      // error handling
+     *  }
+     *  ```
+     *  
+     *  \param varId The variable to retrieve. see enum `BM_GameVariable`.
+     *  \param errOut Pointer to an int32_t variable to hold the error code.
+     *      you can pass a null pointer for this parameter to ignore the error code.
+     *      0 = No error, 1 = Invalid varId, 2 = Null pointer error
+     *  \return A pointer to the specified variable.
+     */
+    template<typename T>
+    T* GetVarAddress(GameVariable varId, int32_t* errOut) {
+        return reinterpret_cast<T*>(_ref->GetVarAddress(static_cast<int32_t>(varId), errOut));
+    }    
+    /**
+     *  \brief Gets the address of the specified game Variable.
+     *  
+     *  You can either cast the void pointer yourself or specify the data
+     *  type returned using an explicit template specialization.
+     *  Check the comments on the `BM_GameVariable` for type hints.
+     *  
+     *  usage example:
+     *  ```C++
+     *  int32_t err;
+     *  int8_t* battleFlag = data.GetVarAddress<int8_t>(BaseMod::GameVariable::BATTLE_FLAG, err);
+     *  if (err || !battleFlag) {
+     *      // error handling
+     *  }
+     *  ```
+     *  
+     *  \param varId The variable to retrieve. see enum `BM_GameVariable`.
+     *  \param errOut Pointer to an int32_t variable to hold the error code.
+     *      you can pass a null pointer for this parameter to ignore the error code.
+     *      0 = No error, 1 = Invalid varId, 2 = Null pointer error
+     *  \return A void pointer to the specified variable.
+     */
+    void* GetVarAddress(GameVariable varId, int32_t* errOut) {
+        return _ref->GetVarAddress(static_cast<int32_t>(varId), errOut);
+    }
 };
 
 template<typename T>
