@@ -34,6 +34,16 @@ static AddressInfo gameVarInfo[] = {
     [BM_VAR_GOLDEN_BOSS_CHECK]          = {offsets::SURVIVAL_GOLDEN_BOSS_CHECK, sizeof(GGXXACPR_SurvivalBossEntry), 0},
     [BM_VAR_BACKGROUND_STATE]           = {offsets::BACKGROUND_STATE, 2, 0},
     [BM_VAR_KEYBOARD_INPUT]             = {offsets::KEYBOARD_INPUT, 256, 0},
+    [BM_VAR_TIME_LIMIT_SETTING]         = {offsets::TIME_LIMIT_SETTING, 4, 0},
+    [BM_VAR_DIFFICULTY]                 = {offsets::DIFFICULTY, 2, 0},
+    [BM_VAR_ROUNDS_WON]                 = {offsets::ROUNDS_WON, 2, 0},
+    [BM_VAR_ROUND_TIMER]                = {offsets::ROUND_TIMER, 4, 0},
+    [BM_VAR_ROUND_STATE]                = {offsets::ROUND_STATE, 4, 0},
+    [BM_VAR_ROUND_NUMBER]               = {offsets::ROUND_NUMBER, 2, 0},
+    [BM_VAR_CPU_CONTROLLED]             = {offsets::CPU_CONTROLLED_FLAGS, 4, 0},
+    [BM_VAR_IS_EX_CHARACTER]            = {offsets::IS_EX_CHARACTER_ARR, 8, 0},
+    [BM_VAR_PLAYER_CHARACTER_MODE]      = {offsets::PLAYER_GG_MODE_ARR, 8, 0}
+
 };
 constexpr int NUM_VARS = sizeof(gameVarInfo) / sizeof(AddressInfo);
 
