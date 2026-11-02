@@ -234,6 +234,18 @@ uint32_t BASEMOD_CALL GetActiveCommandGrabId(GGXXACPR_Entity* player) {
     return result;
 }
 
+int32_t BASEMOD_CALL DoesFiberExist(const char* name) {
+    int32_t output;
+    asm(
+        "call *%[fn]"
+        : "=a" (output)
+        : [fn] "r" (getBaseAddress() + offsets::DOES_FIBER_EXIST_FN),
+          "a" (name)
+        : "cc" // clobbered
+    );
+    return output;
+}
+
 
 const BaseMod_NativeFunctionsApi* GetNativeFunctionsApi() {
     static const BaseMod_NativeFunctionsApi _api = {
@@ -253,6 +265,8 @@ const BaseMod_NativeFunctionsApi* GetNativeFunctionsApi() {
         // v1.1.0
         RegisterSprites: RegisterSprites,
         GetActiveCommandGrabId: GetActiveCommandGrabId,
+        // v1.2.0
+        DoesFiberExist: DoesFiberExist,
     };
 
     return &_api;

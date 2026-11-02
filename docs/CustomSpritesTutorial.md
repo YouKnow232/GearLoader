@@ -14,7 +14,7 @@ But in a nutshell, this'll be the basic workflow:
     * Some resource files are in a format that GearStudio cannot open
 2. Remove / Replace existing sprites with the "Delete..." / "Import..." buttons respectively
     * resource .bin files can have multiple images
-    * You can make any pallette adjustments with the "Open palette editor"
+    * You can make any palette adjustments with the "Open palette editor"
     * Note that when using 4bpp sprites, they'll need to have an even numbered width in pixels (Weird +R limitation).
 3. "Save" when finished.
 

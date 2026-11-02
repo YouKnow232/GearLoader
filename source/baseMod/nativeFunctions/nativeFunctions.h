@@ -8,7 +8,7 @@
 const BaseMod_NativeFunctionsApi* GetNativeFunctionsApi();
 
 // Internal only:
-
+// TODO refactor to use public api version
 inline bool does_fiber_exist(const char* name) {
     uint32_t output;
     asm(

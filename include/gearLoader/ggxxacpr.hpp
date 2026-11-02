@@ -59,6 +59,28 @@ namespace ggxxacpr {
         SOUND_TEST = MAIN_MENU_ITEM_SOUND_TEST,
     };
 
+    enum class DifficultySetting : uint16_t {
+        BEGINNER = ACPR_DIFFICULTY_BEGINNER,
+        EASY = ACPR_DIFFICULTY_EASY,
+        NORMAL = ACPR_DIFFICULTY_NORMAL,
+        HARD = ACPR_DIFFICULTY_HARD,
+        VERY_HARD = ACPR_DIFFICULTY_VERY_HARD,
+        MANIAC = ACPR_DIFFICULTY_MANIAC,
+    };
+
+    enum class TimeLimitSetting : uint32_t {
+        T_60 = ACPR_TIME_LIMIT_60,
+        T_30 = ACPR_TIME_LIMIT_30,
+        T_99 = ACPR_TIME_LIMIT_99,
+        T_INFINITY = ACPR_TIME_LIMIT_INFINITY,
+    };
+
+    enum class CharacterModes : uint32_t {
+        AC = ACPR_MODE_AC,
+        GG = ACPR_MODE_GG,
+        GGX = ACPR_MODE_GGX,
+    };
+
     // Dictates high-level program flow
     enum class JobMode : uint32_t {
         AUTO_LOAD = JOB_MODE_AUTO_LOAD,
@@ -415,6 +437,14 @@ namespace ggxxacpr {
         UNKNOWN_BIT_13 = BACKGROUND_STATE_UNKNOWN_BIT_13,
         FORCE_BREAK_SUPER_FLASH = BACKGROUND_STATE_FORCE_BREAK_SUPER_FLASH,
         LIGHTNING = BACKGROUND_STATE_LIGHTNING,
+    };
+    
+    enum class RoundState {
+        NONE = ACPR_ROUND_STATE_NONE,
+        START = ACPR_ROUND_STATE_START,
+        MID = ACPR_ROUND_STATE_MID,
+        PRE_END = ACPR_ROUND_STATE_PRE_END,
+        END = ACPR_ROUND_STATE_END,
     };
 
     enum class SpriteRenderState : uint32_t {

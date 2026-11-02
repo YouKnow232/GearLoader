@@ -67,6 +67,15 @@ constexpr intptr_t ENTITY_LIST_PTR = 0x6D137C;
 constexpr intptr_t PLAYER_INPUT = 0x6D0E80;
 constexpr intptr_t PLAYER_INPUT_ARR = 0x6D9A18;
 constexpr intptr_t PLAYER_INPUT_ARR_P2 = 0x6D9AB0;
+constexpr intptr_t CPU_CONTROLLED_FLAGS = 0x6D641C;
+constexpr intptr_t IS_EX_CHARACTER_ARR = 0x6D64F8;
+constexpr intptr_t PLAYER_GG_MODE_ARR = 0x6D6500;
+
+// Battle State
+constexpr intptr_t ROUNDS_WON   = 0x6CA138;
+constexpr intptr_t ROUND_TIMER  = 0x6CA150;
+constexpr intptr_t ROUND_STATE  = 0x6CBD1C;
+constexpr intptr_t ROUND_NUMBER = 0x6D641A;
 
 // Camera
 constexpr intptr_t CAMERA = 0x6D5CD0;
@@ -108,9 +117,14 @@ constexpr intptr_t PAUSE_STATE = 0x7109E4;
 constexpr intptr_t PAUSE_DISPLAY_STATE = 0x6CBD20;
 constexpr intptr_t MAIN_MENU_SELECTION = 0x70FFB4;
 
+// Settings
+constexpr intptr_t DIFFICULTY = 0x6D63A6;
+constexpr intptr_t TIME_LIMIT_SETTING = 0x6CE220;
+
 // Replay
 // 1 = normal, 0 = do not simulate, -1 = rewinding (stays at 0 for frame stepping)
 constexpr intptr_t GLOBAL_REPLAY_SIMULATE = 0x7D5788;
+// 0 = 60, 1 = 30, 2 = 99
 constexpr intptr_t REPLAY_FRAME_COUNT = 0x7D57D8;
 
 // Program flow

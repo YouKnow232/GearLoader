@@ -181,9 +181,9 @@ void displayApiTest2(BaseMod::Api& api) {
         //auto devicePointer = data.GetD3D9Device();
         fn.RenderCockpitFontText("D3D DEVICE: 0z" + ToHexString(reinterpret_cast<int>(devicePointer)), xPosLeftCol, 280, zPos, 0xFF, 1.0f);
         
-        fn.RenderCockpitFontText("INPUT RAW1: 0z" + ToHexString(static_cast<int>(playerInputArr[0].InputRaw)), xPosRightCol, 100, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("INPUT RAW: 0z" + ToHexString(static_cast<int>(playerInputArr[0].InputRaw)), xPosRightCol, 100, zPos, 0xFF, 1.0f);
         fn.RenderCockpitFontText("INPUT RELEASE: 0z" + ToHexString(static_cast<int>(playerInputArr[0].InputRelease)), xPosRightCol, 120, zPos, 0xFF, 1.0f);
-        fn.RenderCockpitFontText("INPUT PRESS2: 0z" + ToHexString(static_cast<int>(playerInputArr[0].InputPress)), xPosRightCol, 140, zPos, 0xFF, 1.0f);
+        fn.RenderCockpitFontText("INPUT PRESS: 0z" + ToHexString(static_cast<int>(playerInputArr[0].InputPress)), xPosRightCol, 140, zPos, 0xFF, 1.0f);
         
         uint16_t bgState;
         uint16_t* addr16 = data.GetVarAddress<uint16_t>(BaseMod::GameVariable::BACKGROUND_STATE, &err);
@@ -198,6 +198,13 @@ void displayApiTest2(BaseMod::Api& api) {
         fn.RenderMenuText("Menu Text test", xPosRightCol, 200, zPos, 1.0f, nullptr, 0, true, 0xFFFFFF);
         fn.RenderMenuText("Colorful text", xPosRightCol, 220, zPos, 1.0f, nullptr, 0, false, 0xFF8080);
         fn.RenderMenuTextCenterAligned("Centered\nText Test!", xPosRightCol + 60, 240, zPos, 1.0f, 0xFFFFFF, true);
+
+        static uint32_t* roundState = data.GetVarAddress<uint32_t>(BaseMod::GameVariable::ROUND_STATE, &err);
+        fn.RenderCockpitFontText("ROUND STATE: " + std::to_string(*roundState), xPosRightCol, 280, zPos, 0xFF, 1.0f);
+        static int16_t* roundNumber = data.GetVarAddress<int16_t>(BaseMod::GameVariable::ROUND_NUMBER, &err);
+        fn.RenderCockpitFontText("ROUND NUMBER: " + std::to_string(*roundNumber), xPosRightCol, 300, zPos, 0xFF, 1.0f);
+        static int32_t* exChar = data.GetVarAddress<int32_t>(BaseMod::GameVariable::IS_EX_CHARACTER, &err);
+        fn.RenderCockpitFontText("EX CHAR: " + std::to_string(exChar[0]) + "-" + std::to_string(exChar[1]), xPosRightCol, 320, zPos, 0xFF, 1.0f);
 
         fn.DrawQuad(610, 10, 630, 30, 1, 0x80FF0000);
 

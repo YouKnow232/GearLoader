@@ -72,6 +72,15 @@ enum class GameVariable : int32_t {
     GOLDEN_BOSS_CHECK = BM_VAR_GOLDEN_BOSS_CHECK,               // Type: `GGXXACPR_SurvivalBossEntry*`
     BACKGROUND_STATE = BM_VAR_BACKGROUND_STATE,                 // Type: `uint16_t`, Enum: `GGXXACPR_BackgroundState`
     KEYBOARD_INPUT = BM_VAR_KEYBOARD_INPUT,                     // Type: `uint8_t*`, 256 element array index with enum `GGXXACPR_KeyboardInput`
+    TIME_LIMIT_SETTING = BM_VAR_TIME_LIMIT_SETTING,             // Type: `uint32_t`, Enum: `GGXXACPR_TimeLimitSetting`
+    DIFFICULTY = BM_VAR_DIFFICULTY,                             // Type: `uint16_t`, Enum: `GGXXACPR_DifficultySetting`
+    ROUNDS_WON = BM_VAR_ROUNDS_WON,                             // Type: `uint8_t[2]`
+    ROUND_TIMER = BM_VAR_ROUND_TIMER,                           // Type: `int32_t`
+    ROUND_STATE = BM_VAR_ROUND_STATE,                           // Type: `uint32_t`, Enum: `GGXXACPR_RoundState`
+    ROUND_NUMBER = BM_VAR_ROUND_NUMBER,                         // Type: `int16_t`
+    CPU_CONTROLLED = BM_VAR_CPU_CONTROLLED,                     // Type: `int16_t[2]`, boolean
+    IS_EX_CHARACTER = BM_VAR_IS_EX_CHARACTER,                   // Type: `int32_t[2]`, boolean
+    PLAYER_CHARACTER_MODE = BM_VAR_PLAYER_CHARACTER_MODE,       // Type: `uint32_t[2]`, Enum: `GGXXACPR_CharacterModes`
 };
 
 // Generic functionality for wrapper classes
@@ -274,6 +283,17 @@ public:
      */
     uint32_t GetActiveCommandGrabId(ggxxacpr::Player player) {
         return _ref->GetActiveCommandGrabId(player.getRaw());
+    }
+    
+    /**
+     *  \brief Checks if a fiber exists with the given name. See doc on [Plus R's Fibers](https://YouKnow232.github.io/GearLoader/doxygen/md_docs_2_game_architecture).
+     * 
+     *  Ex: You can check to see if the game is running netplay by checking the "NTWRK" fiber.
+     * 
+     *  \param name the fiber name to lookup.
+     */
+    bool DoesFiberExist(std::string name) {
+        return _ref->DoesFiberExist(name.c_str());
     }
 };
 
