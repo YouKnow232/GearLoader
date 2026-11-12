@@ -138,7 +138,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  608</span>            : raw(ref) {};</div>
+<div class="fragment"><div class="line"><span class="lineno">  805</span>            : raw(ref) {};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -167,7 +167,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Y-coordinate of the bottom edge of the screen. </p>
-<div class="fragment"><div class="line"><span class="lineno">  631</span>{ <span class="keywordflow">return</span> raw-&gt;cameraYPos_actual + (raw-&gt;cameraHeight / 12); }</div>
+<div class="fragment"><div class="line"><span class="lineno">  828</span>{ <span class="keywordflow">return</span> raw-&gt;cameraYPos_actual + (raw-&gt;cameraHeight / 12); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -193,7 +193,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  609</span>{ <span class="keywordflow">return</span> raw; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  806</span>{ <span class="keywordflow">return</span> raw; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -221,7 +221,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>X-coordinate of the left edge of the screen. </p>
-<div class="fragment"><div class="line"><span class="lineno">  625</span>{ <span class="keywordflow">return</span> raw-&gt;leftEdgePos; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  822</span>{ <span class="keywordflow">return</span> raw-&gt;leftEdgePos; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -250,12 +250,12 @@ Public Member Functions</h2></td></tr>
 
 <p>the camera position in world coordinates. </p>
 <p>This position is the center point of the visible screen for the X-axis and about 1/6th from the bottom edge for the Y-axis such that it aligns with the ground. </p>
-<div class="fragment"><div class="line"><span class="lineno">  618</span>                                   {</div>
-<div class="line"><span class="lineno">  619</span>            <span class="keywordflow">return</span> {</div>
-<div class="line"><span class="lineno">  620</span>                raw-&gt;cameraXPos_actual,</div>
-<div class="line"><span class="lineno">  621</span>                raw-&gt;cameraYPos_actual</div>
-<div class="line"><span class="lineno">  622</span>            };</div>
-<div class="line"><span class="lineno">  623</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  815</span>                                   {</div>
+<div class="line"><span class="lineno">  816</span>            <span class="keywordflow">return</span> {</div>
+<div class="line"><span class="lineno">  817</span>                raw-&gt;cameraXPos_actual,</div>
+<div class="line"><span class="lineno">  818</span>                raw-&gt;cameraYPos_actual</div>
+<div class="line"><span class="lineno">  819</span>            };</div>
+<div class="line"><span class="lineno">  820</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -283,8 +283,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>X-coordinate of the right edge of the screen. </p>
-<div class="fragment"><div class="line"><span class="lineno">  627</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="#a93966dad886a595b144dace33ad93624">left</a>() + raw-&gt;cameraWidth_actual; }</div>
-<div class="ttc" id="aclassggxxacpr_1_1_camera_html_a93966dad886a595b144dace33ad93624"><div class="ttname"><a href="#a93966dad886a595b144dace33ad93624">ggxxacpr::Camera::left</a></div><div class="ttdeci">int left()</div><div class="ttdoc">X-coordinate of the left edge of the screen.</div><div class="ttdef"><b>Definition</b> ggxxacpr.hpp:625</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  824</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="#a93966dad886a595b144dace33ad93624">left</a>() + raw-&gt;cameraWidth_actual; }</div>
+<div class="ttc" id="aclassggxxacpr_1_1_camera_html_a93966dad886a595b144dace33ad93624"><div class="ttname"><a href="#a93966dad886a595b144dace33ad93624">ggxxacpr::Camera::left</a></div><div class="ttdeci">int left()</div><div class="ttdoc">X-coordinate of the left edge of the screen.</div><div class="ttdef"><b>Definition</b> ggxxacpr.hpp:822</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -312,12 +312,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="classggxxacpr_1_1_camera.html">Camera</a> size dimensions in world coordinates. </p>
-<div class="fragment"><div class="line"><span class="lineno">  635</span>                               {</div>
-<div class="line"><span class="lineno">  636</span>            <span class="keywordflow">return</span> {</div>
-<div class="line"><span class="lineno">  637</span>                <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(raw-&gt;cameraWidth_actual),</div>
-<div class="line"><span class="lineno">  638</span>                <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(raw-&gt;cameraHeight)</div>
-<div class="line"><span class="lineno">  639</span>            };</div>
-<div class="line"><span class="lineno">  640</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  832</span>                               {</div>
+<div class="line"><span class="lineno">  833</span>            <span class="keywordflow">return</span> {</div>
+<div class="line"><span class="lineno">  834</span>                <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(raw-&gt;cameraWidth_actual),</div>
+<div class="line"><span class="lineno">  835</span>                <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(raw-&gt;cameraHeight)</div>
+<div class="line"><span class="lineno">  836</span>            };</div>
+<div class="line"><span class="lineno">  837</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -345,8 +345,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Y-coordinate of the top edge of the screen. </p>
-<div class="fragment"><div class="line"><span class="lineno">  629</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="#a7ba6d5c698df0dd65a564a674c276be6">bottom</a>() - raw-&gt;cameraHeight; }</div>
-<div class="ttc" id="aclassggxxacpr_1_1_camera_html_a7ba6d5c698df0dd65a564a674c276be6"><div class="ttname"><a href="#a7ba6d5c698df0dd65a564a674c276be6">ggxxacpr::Camera::bottom</a></div><div class="ttdeci">int bottom()</div><div class="ttdoc">Y-coordinate of the bottom edge of the screen.</div><div class="ttdef"><b>Definition</b> ggxxacpr.hpp:631</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  826</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="#a7ba6d5c698df0dd65a564a674c276be6">bottom</a>() - raw-&gt;cameraHeight; }</div>
+<div class="ttc" id="aclassggxxacpr_1_1_camera_html_a7ba6d5c698df0dd65a564a674c276be6"><div class="ttname"><a href="#a7ba6d5c698df0dd65a564a674c276be6">ggxxacpr::Camera::bottom</a></div><div class="ttdeci">int bottom()</div><div class="ttdoc">Y-coordinate of the bottom edge of the screen.</div><div class="ttdef"><b>Definition</b> ggxxacpr.hpp:828</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -375,9 +375,9 @@ Public Member Functions</h2></td></tr>
 
 <p>The zoom factor of the camera. </p>
 <p>camera size = base size / zoom </p>
-<div class="fragment"><div class="line"><span class="lineno">  646</span>                     {</div>
-<div class="line"><span class="lineno">  647</span>            <span class="keywordflow">return</span> raw-&gt;zoom;</div>
-<div class="line"><span class="lineno">  648</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  843</span>                     {</div>
+<div class="line"><span class="lineno">  844</span>            <span class="keywordflow">return</span> raw-&gt;zoom;</div>
+<div class="line"><span class="lineno">  845</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -405,9 +405,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The delay timer before the camera begins to zoom in. </p>
-<div class="fragment"><div class="line"><span class="lineno">  650</span>                          {</div>
-<div class="line"><span class="lineno">  651</span>            <span class="keywordflow">return</span> raw-&gt;zoomTimer;</div>
-<div class="line"><span class="lineno">  652</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  847</span>                          {</div>
+<div class="line"><span class="lineno">  848</span>            <span class="keywordflow">return</span> raw-&gt;zoomTimer;</div>
+<div class="line"><span class="lineno">  849</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>

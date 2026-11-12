@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['characterdata_0',['CharacterData',['../class_base_mod_1_1_game_data_api.html#ac4005b1fb23d89bfe6a9613ec188d25c',1,'BaseMod::GameDataApi::CharacterData'],['../struct_base_mod___game_data_api.html#a2922b97e3d529887f7d69ae043138301',1,'BaseMod_GameDataApi::CharacterData']]],
-  ['command_1',['Command',['../struct_base_mod___mod_menu_entry.html#ab0e117ad08a52a7ed94fb02597dba21d',1,'BaseMod_ModMenuEntry']]]
+  ['gamedata_0',['GameData',['../class_base_mod_1_1_api.html#ad61adf6f956097df397efa4a500ae534',1,'BaseMod::Api::GameData'],['../struct_base_mod___api.html#a44637962a290547c3f1f9e82cfc9f73c',1,'BaseMod_Api::GameData']]]
 ];

@@ -94,6 +94,21 @@ $(function(){initNavTree('struct_base_mod___mod_menu___helper_functions_api.html
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a49227d56e22390c6f327dd355e5cb4f1" id="r_a49227d56e22390c6f327dd355e5cb4f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49227d56e22390c6f327dd355e5cb4f1">int32_t</a> (BASEMOD_CALL *SelectionHandler)(int32_t currentSelection</td></tr>
+<tr class="memdesc:a49227d56e22390c6f327dd355e5cb4f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles updating the current menu selection.  <br /></td></tr>
+<tr class="memitem:a3140d9afb1904ed6f3bec3616e2e87fd" id="r_a3140d9afb1904ed6f3bec3616e2e87fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3140d9afb1904ed6f3bec3616e2e87fd">int32_t</a> (BASEMOD_CALL *HoldDirectionInputHandler)(uint32_t input)</td></tr>
+<tr class="memdesc:a3140d9afb1904ed6f3bec3616e2e87fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles input repeating for held direction inputs.  <br /></td></tr>
+<tr class="memitem:aec52ec015ab0f2d615d2a1188f9b0462" id="r_aec52ec015ab0f2d615d2a1188f9b0462"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec52ec015ab0f2d615d2a1188f9b0462">void</a> (BASEMOD_CALL *DrawEnumSettingUI)(const char *label</td></tr>
+<tr class="memdesc:aec52ec015ab0f2d615d2a1188f9b0462"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the enum setting UI.  <br /></td></tr>
+<tr class="memitem:aa3006453a1a1ccca73ef0068acef5893" id="r_aa3006453a1a1ccca73ef0068acef5893"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3006453a1a1ccca73ef0068acef5893">void</a> (BASEMOD_CALL *DrawGaugeSettingUI)(<a class="el" href="#a49227d56e22390c6f327dd355e5cb4f1">int32_t</a> currentValue</td></tr>
+<tr class="memdesc:aa3006453a1a1ccca73ef0068acef5893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the gauge setting UI.  <br /></td></tr>
+<tr class="memitem:a1d53b3493a4ee5ed862b2a0f4cc30908" id="r_a1d53b3493a4ee5ed862b2a0f4cc30908"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d53b3493a4ee5ed862b2a0f4cc30908">void</a> (BASEMOD_CALL *DrawScrollArrow)(<a class="el" href="#a49227d56e22390c6f327dd355e5cb4f1">int32_t</a> flags)</td></tr>
+<tr class="memdesc:a1d53b3493a4ee5ed862b2a0f4cc30908"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws one or both of the menu scroll arrows.  <br /></td></tr>
+<tr class="memitem:af7c3412ef00ce4f212e86d2734e010df" id="r_af7c3412ef00ce4f212e86d2734e010df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7c3412ef00ce4f212e86d2734e010df">void</a> (BASEMOD_CALL *SwitchToMainFiber)()</td></tr>
+<tr class="memdesc:af7c3412ef00ce4f212e86d2734e010df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yields control back to the main fiber. Use this to pause <span class="tt">BM_CustomMenuHandler</span> execution until the next frame. Useful for sub-menus.  <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:ae3a317840ab23f41c458cf132cf6e9cb" id="r_ae3a317840ab23f41c458cf132cf6e9cb"><td class="memItemLeft" align="right" valign="top"><a id="ae3a317840ab23f41c458cf132cf6e9cb" name="ae3a317840ab23f41c458cf132cf6e9cb"></a>
@@ -101,28 +116,86 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr
 <tr class="memdesc:ae3a317840ab23f41c458cf132cf6e9cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the struct in bytes. <br /></td></tr>
 <tr class="memitem:a88774bf7c4238c4bd56272fffc5d8c8e" id="r_a88774bf7c4238c4bd56272fffc5d8c8e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88774bf7c4238c4bd56272fffc5d8c8e">version</a></td></tr>
 <tr class="memdesc:a88774bf7c4238c4bd56272fffc5d8c8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">the API version.  <br /></td></tr>
-<tr class="memitem:ae138e8a15ac6a7abeac7d8112b56a748" id="r_ae138e8a15ac6a7abeac7d8112b56a748"><td class="memItemLeft" align="right" valign="top">int32_t BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae138e8a15ac6a7abeac7d8112b56a748">SelectionHandler</a> )(int32_t currentSelection, uint32_t totalEntries)</td></tr>
-<tr class="memdesc:ae138e8a15ac6a7abeac7d8112b56a748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles updating the current menu selection.  <br /></td></tr>
-<tr class="memitem:af2ed34a1e7b6507b7a4c308d76a9c544" id="r_af2ed34a1e7b6507b7a4c308d76a9c544"><td class="memItemLeft" align="right" valign="top">int32_t BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2ed34a1e7b6507b7a4c308d76a9c544">HoldDirectionInputHandler</a> )(uint32_t input)</td></tr>
-<tr class="memdesc:af2ed34a1e7b6507b7a4c308d76a9c544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles input repeating for held direction inputs.  <br /></td></tr>
-<tr class="memitem:a8ded57665c204763d4f0970211f4ccb9" id="r_a8ded57665c204763d4f0970211f4ccb9"><td class="memItemLeft" align="right" valign="top">void BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ded57665c204763d4f0970211f4ccb9">DrawEnumSettingUI</a> )(const char *label, int32_t xOffset, int32_t y, int32_t isSelected)</td></tr>
-<tr class="memdesc:a8ded57665c204763d4f0970211f4ccb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the enum setting UI.  <br /></td></tr>
-<tr class="memitem:a60e6c4a14ae7550f430e0a4389cc2f24" id="r_a60e6c4a14ae7550f430e0a4389cc2f24"><td class="memItemLeft" align="right" valign="top">void BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60e6c4a14ae7550f430e0a4389cc2f24">DrawGaugeSettingUI</a> )(int32_t currentValue, int32_t y, int32_t isSelected, int32_t maxValue)</td></tr>
-<tr class="memdesc:a60e6c4a14ae7550f430e0a4389cc2f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the gauge setting UI.  <br /></td></tr>
-<tr class="memitem:a5b43fd81ae710dd78dccb103f5abd554" id="r_a5b43fd81ae710dd78dccb103f5abd554"><td class="memItemLeft" align="right" valign="top">void BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b43fd81ae710dd78dccb103f5abd554">DrawScrollArrow</a> )(int32_t flags)</td></tr>
-<tr class="memdesc:a5b43fd81ae710dd78dccb103f5abd554"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws one or both of the menu scroll arrows.  <br /></td></tr>
-<tr class="memitem:aecaa0ed8ded4db8a1e0a4fd99868d0c7" id="r_aecaa0ed8ded4db8a1e0a4fd99868d0c7"><td class="memItemLeft" align="right" valign="top">void BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecaa0ed8ded4db8a1e0a4fd99868d0c7">SwitchToMainFiber</a> )()</td></tr>
-<tr class="memdesc:aecaa0ed8ded4db8a1e0a4fd99868d0c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yields control back to the main fiber. Use this to pause <span class="tt">BM_CustomMenuHandler</span> execution until the next frame. Useful for sub-menus.  <br /></td></tr>
+<tr class="memitem:a8cc40eba28c4019c535809437046fd63" id="r_a8cc40eba28c4019c535809437046fd63"><td class="memItemLeft" align="right" valign="top"><a id="a8cc40eba28c4019c535809437046fd63" name="a8cc40eba28c4019c535809437046fd63"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>totalEntries</b></td></tr>
+<tr class="memitem:ad609123fb03f743de64b44c516304b41" id="r_ad609123fb03f743de64b44c516304b41"><td class="memItemLeft" align="right" valign="top"><a id="ad609123fb03f743de64b44c516304b41" name="ad609123fb03f743de64b44c516304b41"></a>
+<a class="el" href="#a49227d56e22390c6f327dd355e5cb4f1">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>xOffset</b></td></tr>
+<tr class="memitem:a28deeff2ecdef5a814cb8c83f756e8f7" id="r_a28deeff2ecdef5a814cb8c83f756e8f7"><td class="memItemLeft" align="right" valign="top"><a id="a28deeff2ecdef5a814cb8c83f756e8f7" name="a28deeff2ecdef5a814cb8c83f756e8f7"></a>
+<a class="el" href="#a49227d56e22390c6f327dd355e5cb4f1">int32_t</a> <a class="el" href="#a49227d56e22390c6f327dd355e5cb4f1">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
+<tr class="memitem:acd3d2b75fe99735a53999ce269a75b42" id="r_acd3d2b75fe99735a53999ce269a75b42"><td class="memItemLeft" align="right" valign="top"><a id="acd3d2b75fe99735a53999ce269a75b42" name="acd3d2b75fe99735a53999ce269a75b42"></a>
+<a class="el" href="#a49227d56e22390c6f327dd355e5cb4f1">int32_t</a> <a class="el" href="#a49227d56e22390c6f327dd355e5cb4f1">int32_t</a> <a class="el" href="#a49227d56e22390c6f327dd355e5cb4f1">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSelected</b></td></tr>
+<tr class="memitem:aea3959a9957eee8c0fa9d2664e9b9f64" id="r_aea3959a9957eee8c0fa9d2664e9b9f64"><td class="memItemLeft" align="right" valign="top"><a id="aea3959a9957eee8c0fa9d2664e9b9f64" name="aea3959a9957eee8c0fa9d2664e9b9f64"></a>
+<a class="el" href="#a49227d56e22390c6f327dd355e5cb4f1">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
+<tr class="memitem:a1ae65cf256b6b787216a29db88c89166" id="r_a1ae65cf256b6b787216a29db88c89166"><td class="memItemLeft" align="right" valign="top"><a id="a1ae65cf256b6b787216a29db88c89166" name="a1ae65cf256b6b787216a29db88c89166"></a>
+<a class="el" href="#a49227d56e22390c6f327dd355e5cb4f1">int32_t</a> <a class="el" href="#a49227d56e22390c6f327dd355e5cb4f1">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isSelected</b></td></tr>
+<tr class="memitem:a6d1a1847e5ec392ca722a23d764bc564" id="r_a6d1a1847e5ec392ca722a23d764bc564"><td class="memItemLeft" align="right" valign="top"><a id="a6d1a1847e5ec392ca722a23d764bc564" name="a6d1a1847e5ec392ca722a23d764bc564"></a>
+<a class="el" href="#a49227d56e22390c6f327dd355e5cb4f1">int32_t</a> <a class="el" href="#a49227d56e22390c6f327dd355e5cb4f1">int32_t</a> <a class="el" href="#a49227d56e22390c6f327dd355e5cb4f1">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>maxValue</b></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
-<a id="a8ded57665c204763d4f0970211f4ccb9" name="a8ded57665c204763d4f0970211f4ccb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ded57665c204763d4f0970211f4ccb9">&#9670;&#160;</a></span>DrawEnumSettingUI</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a3140d9afb1904ed6f3bec3616e2e87fd" name="a3140d9afb1904ed6f3bec3616e2e87fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3140d9afb1904ed6f3bec3616e2e87fd">&#9670;&#160;</a></span>int32_t() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void BASEMOD_CALL(* BaseMod_ModMenu_HelperFunctionsApi::DrawEnumSettingUI) (const char *label, int32_t xOffset, int32_t y, int32_t isSelected)</td>
+          <td class="memname">BaseMod_ModMenu_HelperFunctionsApi::int32_t </td>
+          <td>(</td>
+          <td class="paramtype">BASEMOD_CALL *</td>          <td class="paramname"><span class="paramname"><em>HoldDirectionInputHandler</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handles input repeating for held direction inputs. </p>
+<p>Uses this for left/right inputs in the menu or custom selection handling.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>see enum <span class="tt">GGXXACPR_RawControllerInput</span> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a49227d56e22390c6f327dd355e5cb4f1" name="a49227d56e22390c6f327dd355e5cb4f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49227d56e22390c6f327dd355e5cb4f1">&#9670;&#160;</a></span>int32_t() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BaseMod_ModMenu_HelperFunctionsApi::int32_t </td>
+          <td>(</td>
+          <td class="paramtype">BASEMOD_CALL *</td>          <td class="paramname"><span class="paramname"><em>SelectionHandler</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handles updating the current menu selection. </p>
+<p>Updates selection based on player input and implements hold-repeat functionality identically to native menus.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentSelection</td><td>The selection value. 0 is the top menu item. </td></tr>
+    <tr><td class="paramname">totalEntries</td><td>Number of entries in the current menu (i.e. maximum value + 1). Needed for selection wrapping. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aec52ec015ab0f2d615d2a1188f9b0462" name="aec52ec015ab0f2d615d2a1188f9b0462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec52ec015ab0f2d615d2a1188f9b0462">&#9670;&#160;</a></span>void() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BaseMod_ModMenu_HelperFunctionsApi::void </td>
+          <td>(</td>
+          <td class="paramtype">BASEMOD_CALL *</td>          <td class="paramname"><span class="paramname"><em>DrawEnumSettingUI</em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -130,7 +203,7 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr
 <p>Draws the enum setting UI. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>Label of the current value. This label is drawn via the <span class="tt">RenderCockpitFontText</span> internal function. String format and character restrictions apply. see <span class="tt"><a class="el" href="struct_base_mod___native_functions_api.html#acbf1405a3df732bd08a800cc493e3dce" title="Draws cockpit font text to the screen.">BaseMod_NativeFunctionsApi::RenderCockpitFontText</a></span> for details. </td></tr>
+    <tr><td class="paramname">label</td><td>Label of the current value. This label is drawn via the <span class="tt">RenderCockpitFontText</span> internal function. String format and character restrictions apply. see <span class="tt">BaseMod_NativeFunctionsApi::RenderCockpitFontText</span> for details. </td></tr>
     <tr><td class="paramname">xOffset</td><td>Offset from the default x position. Internal resolution screen-space coordinates. </td></tr>
     <tr><td class="paramname">y</td><td>Internal resolution screen-space coordinate (640x480). Top edge is 0, bottom is 480. </td></tr>
     <tr><td class="paramname">isSelected</td><td>A 4-byte boolean that determines transparency. Opaque if param is non-zero, semi-transparent if zero. </td></tr>
@@ -140,14 +213,17 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr
 
 </div>
 </div>
-<a id="a60e6c4a14ae7550f430e0a4389cc2f24" name="a60e6c4a14ae7550f430e0a4389cc2f24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60e6c4a14ae7550f430e0a4389cc2f24">&#9670;&#160;</a></span>DrawGaugeSettingUI</h2>
+<a id="aa3006453a1a1ccca73ef0068acef5893" name="aa3006453a1a1ccca73ef0068acef5893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3006453a1a1ccca73ef0068acef5893">&#9670;&#160;</a></span>void() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void BASEMOD_CALL(* BaseMod_ModMenu_HelperFunctionsApi::DrawGaugeSettingUI) (int32_t currentValue, int32_t y, int32_t isSelected, int32_t maxValue)</td>
+          <td class="memname">BaseMod_ModMenu_HelperFunctionsApi::void </td>
+          <td>(</td>
+          <td class="paramtype">BASEMOD_CALL *</td>          <td class="paramname"><span class="paramname"><em>DrawGaugeSettingUI</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -166,14 +242,17 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr
 
 </div>
 </div>
-<a id="a5b43fd81ae710dd78dccb103f5abd554" name="a5b43fd81ae710dd78dccb103f5abd554"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b43fd81ae710dd78dccb103f5abd554">&#9670;&#160;</a></span>DrawScrollArrow</h2>
+<a id="a1d53b3493a4ee5ed862b2a0f4cc30908" name="a1d53b3493a4ee5ed862b2a0f4cc30908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d53b3493a4ee5ed862b2a0f4cc30908">&#9670;&#160;</a></span>void() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void BASEMOD_CALL(* BaseMod_ModMenu_HelperFunctionsApi::DrawScrollArrow) (int32_t flags)</td>
+          <td class="memname">BaseMod_ModMenu_HelperFunctionsApi::void </td>
+          <td>(</td>
+          <td class="paramtype">BASEMOD_CALL *</td>          <td class="paramname"><span class="paramname"><em>DrawScrollArrow</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -189,61 +268,17 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr
 
 </div>
 </div>
-<a id="af2ed34a1e7b6507b7a4c308d76a9c544" name="af2ed34a1e7b6507b7a4c308d76a9c544"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2ed34a1e7b6507b7a4c308d76a9c544">&#9670;&#160;</a></span>HoldDirectionInputHandler</h2>
+<a id="af7c3412ef00ce4f212e86d2734e010df" name="af7c3412ef00ce4f212e86d2734e010df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7c3412ef00ce4f212e86d2734e010df">&#9670;&#160;</a></span>void() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int32_t BASEMOD_CALL(* BaseMod_ModMenu_HelperFunctionsApi::HoldDirectionInputHandler) (uint32_t input)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Handles input repeating for held direction inputs. </p>
-<p>Uses this for left/right inputs in the menu or custom selection handling.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">input</td><td>see enum <span class="tt">GGXXACPR_RawControllerInput</span> </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ae138e8a15ac6a7abeac7d8112b56a748" name="ae138e8a15ac6a7abeac7d8112b56a748"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae138e8a15ac6a7abeac7d8112b56a748">&#9670;&#160;</a></span>SelectionHandler</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int32_t BASEMOD_CALL(* BaseMod_ModMenu_HelperFunctionsApi::SelectionHandler) (int32_t currentSelection, uint32_t totalEntries)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Handles updating the current menu selection. </p>
-<p>Updates selection based on player input and implements hold-repeat functionality identically to native menus.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">currentSelection</td><td>The selection value. 0 is the top menu item. </td></tr>
-    <tr><td class="paramname">totalEntries</td><td>Number of entries in the current menu (i.e. maximum value + 1). Needed for selection wrapping. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aecaa0ed8ded4db8a1e0a4fd99868d0c7" name="aecaa0ed8ded4db8a1e0a4fd99868d0c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecaa0ed8ded4db8a1e0a4fd99868d0c7">&#9670;&#160;</a></span>SwitchToMainFiber</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void BASEMOD_CALL(* BaseMod_ModMenu_HelperFunctionsApi::SwitchToMainFiber) ()</td>
+          <td class="memname">BaseMod_ModMenu_HelperFunctionsApi::void </td>
+          <td>(</td>
+          <td class="paramtype">BASEMOD_CALL *</td>          <td class="paramname"><span class="paramname"><em>SwitchToMainFiber</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -253,6 +288,7 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr
 
 </div>
 </div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="a88774bf7c4238c4bd56272fffc5d8c8e" name="a88774bf7c4238c4bd56272fffc5d8c8e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a88774bf7c4238c4bd56272fffc5d8c8e">&#9670;&#160;</a></span>version</h2>
 

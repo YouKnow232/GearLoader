@@ -4,13 +4,14 @@ var searchData=
   ['degrees_1',['degrees',['../structggxxacpr_1_1_angle.html#a2f58ddc153604223568e6d5977024b78',1,'ggxxacpr::Angle']]],
   ['dependency_20mods_2',['Obtaining APIs of dependency mods',['../md_docs_2_modding_instructions.html#autotoc_md6',1,'']]],
   ['device_3',['device',['../struct_base_mod___draw_info.html#a589331a747be0fa20a8da1bdf87742fa',1,'BaseMod_DrawInfo']]],
-  ['drawarrowsprite_4',['DrawArrowSprite',['../struct_base_mod___native_functions_api.html#a71802dac90a5efae3d2be493f4d484c0',1,'BaseMod_NativeFunctionsApi::DrawArrowSprite'],['../class_base_mod_1_1_native_functions_api.html#a61eba6fa2fc3e8ebd22616d0a647bc15',1,'BaseMod::NativeFunctionsApi::DrawArrowSprite()']]],
-  ['drawenumsettingui_5',['DrawEnumSettingUI',['../struct_base_mod___mod_menu___helper_functions_api.html#a8ded57665c204763d4f0970211f4ccb9',1,'BaseMod_ModMenu_HelperFunctionsApi::DrawEnumSettingUI'],['../class_base_mod_1_1_mod_menu_helper_functions_api.html#a56f84c1ba1484cf4e7dc10b7e6faed5c',1,'BaseMod::ModMenuHelperFunctionsApi::DrawEnumSettingUI()']]],
-  ['drawgaugesettingui_6',['DrawGaugeSettingUI',['../struct_base_mod___mod_menu___helper_functions_api.html#a60e6c4a14ae7550f430e0a4389cc2f24',1,'BaseMod_ModMenu_HelperFunctionsApi::DrawGaugeSettingUI'],['../class_base_mod_1_1_mod_menu_helper_functions_api.html#a378767340dae8f689c83e90949702427',1,'BaseMod::ModMenuHelperFunctionsApi::DrawGaugeSettingUI()']]],
-  ['drawing_20sprites_7',['Drawing Sprites',['../md_docs_2_custom_sprites_tutorial.html#autotoc_md13',1,'']]],
-  ['drawpriority_8',['drawPriority',['../classggxxacpr_1_1_player.html#af84d7f757231b1e3c3020e4403d7579f',1,'ggxxacpr::Player::drawPriority()'],['../classggxxacpr_1_1_entity.html#aafce9c312ed691fabceb8147c4e16b78',1,'ggxxacpr::Entity::drawPriority()']]],
-  ['drawquad_9',['DrawQuad',['../struct_base_mod___native_functions_api.html#a9686caa670ddeb8dddb8eaf54d9c68c8',1,'BaseMod_NativeFunctionsApi::DrawQuad'],['../class_base_mod_1_1_native_functions_api.html#ab3846a9c6490a4f64023abc44486c0dd',1,'BaseMod::NativeFunctionsApi::DrawQuad()']]],
-  ['drawscrollarrow_10',['DrawScrollArrow',['../struct_base_mod___mod_menu___helper_functions_api.html#a5b43fd81ae710dd78dccb103f5abd554',1,'BaseMod_ModMenu_HelperFunctionsApi::DrawScrollArrow'],['../class_base_mod_1_1_mod_menu_helper_functions_api.html#ac6a434991ee5cad14cd3cdb653631890',1,'BaseMod::ModMenuHelperFunctionsApi::DrawScrollArrow()']]],
-  ['drawsprite_11',['DrawSprite',['../struct_base_mod___native_functions_api.html#ab092b057ca2792c4560ef340fd51bb4e',1,'BaseMod_NativeFunctionsApi::DrawSprite'],['../class_base_mod_1_1_native_functions_api.html#a2d828a89aae34450c60f4796dcc67573',1,'BaseMod::NativeFunctionsApi::DrawSprite()']]],
-  ['drawtristrip_12',['DrawTriStrip',['../struct_base_mod___native_functions_api.html#ad7d53828b0ea3b6c89c0d902c3245570',1,'BaseMod_NativeFunctionsApi::DrawTriStrip'],['../class_base_mod_1_1_native_functions_api.html#a2e6de0e6a5e264519b321809cc0da7b7',1,'BaseMod::NativeFunctionsApi::DrawTriStrip()']]]
+  ['doesfiberexist_4',['DoesFiberExist',['../class_base_mod_1_1_native_functions_api.html#a3857d60528100aa79031af8bb90111e5',1,'BaseMod::NativeFunctionsApi']]],
+  ['drawarrowsprite_5',['DrawArrowSprite',['../class_base_mod_1_1_native_functions_api.html#a61eba6fa2fc3e8ebd22616d0a647bc15',1,'BaseMod::NativeFunctionsApi']]],
+  ['drawenumsettingui_6',['DrawEnumSettingUI',['../class_base_mod_1_1_mod_menu_helper_functions_api.html#a56f84c1ba1484cf4e7dc10b7e6faed5c',1,'BaseMod::ModMenuHelperFunctionsApi']]],
+  ['drawgaugesettingui_7',['DrawGaugeSettingUI',['../class_base_mod_1_1_mod_menu_helper_functions_api.html#a378767340dae8f689c83e90949702427',1,'BaseMod::ModMenuHelperFunctionsApi']]],
+  ['drawing_20sprites_8',['Drawing Sprites',['../md_docs_2_custom_sprites_tutorial.html#autotoc_md13',1,'']]],
+  ['drawpriority_9',['drawPriority',['../classggxxacpr_1_1_player.html#af84d7f757231b1e3c3020e4403d7579f',1,'ggxxacpr::Player::drawPriority()'],['../classggxxacpr_1_1_entity.html#aafce9c312ed691fabceb8147c4e16b78',1,'ggxxacpr::Entity::drawPriority()']]],
+  ['drawquad_10',['DrawQuad',['../class_base_mod_1_1_native_functions_api.html#ab3846a9c6490a4f64023abc44486c0dd',1,'BaseMod::NativeFunctionsApi']]],
+  ['drawscrollarrow_11',['DrawScrollArrow',['../class_base_mod_1_1_mod_menu_helper_functions_api.html#ac6a434991ee5cad14cd3cdb653631890',1,'BaseMod::ModMenuHelperFunctionsApi']]],
+  ['drawsprite_12',['DrawSprite',['../class_base_mod_1_1_native_functions_api.html#a2d828a89aae34450c60f4796dcc67573',1,'BaseMod::NativeFunctionsApi']]],
+  ['drawtristrip_13',['DrawTriStrip',['../class_base_mod_1_1_native_functions_api.html#a2e6de0e6a5e264519b321809cc0da7b7',1,'BaseMod::NativeFunctionsApi']]]
 ];

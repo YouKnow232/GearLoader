@@ -7,9 +7,9 @@
 #define GEARLOADER_H
 
 
-#define GEARLOADER_VERSION "0.1.0"
-#define GEARLOADER_VERSION_NUM 0x000100
-#define GEARLOADER_VERSION_SEM_VER {0,1,0}
+#define GEARLOADER_VERSION "0.1.1"
+#define GEARLOADER_VERSION_NUM 0x000101
+#define GEARLOADER_VERSION_SEM_VER {0,1,1}
 
 #if __cplusplus
     #include <cstdint>

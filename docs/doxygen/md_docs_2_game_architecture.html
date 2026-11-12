@@ -100,7 +100,20 @@ Inspecting Game Code with Ghidra</h1>
 <p>In Ghidra, some labels of note include <span class="tt">main</span>, <span class="tt">main_game_loop</span>, and <span class="tt">update_players</span>.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
 Fibers</h1>
-<p>GGXXACPR uses <a href="https://learn.microsoft.com/en-us/windows/win32/procthread/fibers">Fibers</a> to handle asynchronous code. When the game boots it converts it's main thread into a fiber with <span class="tt">ConvertThreadToFiber</span> (+0x10a046). New fibers are created through the <span class="tt">create_fiber</span> function. Fibers and their state data are managed in the <span class="tt">named_fiber_array</span>. From within a fiber, calling the <span class="tt">winnt.h</span> macro <span class="tt">GetFiberData</span> will return a pointer to the current fiber's entry in the <span class="tt">named_fiber_array</span>. </p>
+<p>GGXXACPR uses <a href="https://learn.microsoft.com/en-us/windows/win32/procthread/fibers">Fibers</a> to handle asynchronous code. When the game boots it converts it's main thread into a fiber with <span class="tt">ConvertThreadToFiber</span> (+0x10a046). New fibers are created through the <span class="tt">create_fiber</span> function. Fibers and their state data are managed in the <span class="tt">named_fiber_array</span>. From within a fiber, calling the <span class="tt">winnt.h</span> macro <span class="tt">GetFiberData</span> will return a pointer to the current fiber's entry in the <span class="tt">named_fiber_array</span>.</p>
+<p>Some example fibers:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Name  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">OPTION  </td><td class="markdownTableBodyNone">Main menu fiber  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">MMV2  </td><td class="markdownTableBodyNone">Handles netplay matchmaking. You can generally check for this to detect netplay  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">HLOP  </td><td class="markdownTableBodyNone">Help and Options menu fiber. (gets modified by BaseMod to include "Mod Settings" option)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">MOD_MENU  </td><td class="markdownTableBodyNone">Custom fiber created by BaseMod  </td></tr>
+</table>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

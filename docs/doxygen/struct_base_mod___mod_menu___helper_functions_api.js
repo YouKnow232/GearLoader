@@ -1,11 +1,11 @@
 var struct_base_mod___mod_menu___helper_functions_api =
 [
-    [ "DrawEnumSettingUI", "struct_base_mod___mod_menu___helper_functions_api.html#a8ded57665c204763d4f0970211f4ccb9", null ],
-    [ "DrawGaugeSettingUI", "struct_base_mod___mod_menu___helper_functions_api.html#a60e6c4a14ae7550f430e0a4389cc2f24", null ],
-    [ "DrawScrollArrow", "struct_base_mod___mod_menu___helper_functions_api.html#a5b43fd81ae710dd78dccb103f5abd554", null ],
-    [ "HoldDirectionInputHandler", "struct_base_mod___mod_menu___helper_functions_api.html#af2ed34a1e7b6507b7a4c308d76a9c544", null ],
-    [ "SelectionHandler", "struct_base_mod___mod_menu___helper_functions_api.html#ae138e8a15ac6a7abeac7d8112b56a748", null ],
+    [ "int32_t", "struct_base_mod___mod_menu___helper_functions_api.html#a3140d9afb1904ed6f3bec3616e2e87fd", null ],
+    [ "int32_t", "struct_base_mod___mod_menu___helper_functions_api.html#a49227d56e22390c6f327dd355e5cb4f1", null ],
+    [ "void", "struct_base_mod___mod_menu___helper_functions_api.html#aec52ec015ab0f2d615d2a1188f9b0462", null ],
+    [ "void", "struct_base_mod___mod_menu___helper_functions_api.html#aa3006453a1a1ccca73ef0068acef5893", null ],
+    [ "void", "struct_base_mod___mod_menu___helper_functions_api.html#a1d53b3493a4ee5ed862b2a0f4cc30908", null ],
+    [ "void", "struct_base_mod___mod_menu___helper_functions_api.html#af7c3412ef00ce4f212e86d2734e010df", null ],
     [ "size", "struct_base_mod___mod_menu___helper_functions_api.html#ae3a317840ab23f41c458cf132cf6e9cb", null ],
-    [ "SwitchToMainFiber", "struct_base_mod___mod_menu___helper_functions_api.html#aecaa0ed8ded4db8a1e0a4fd99868d0c7", null ],
     [ "version", "struct_base_mod___mod_menu___helper_functions_api.html#a88774bf7c4238c4bd56272fffc5d8c8e", null ]
 ];

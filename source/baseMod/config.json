@@ -1,5 +1,5 @@
 {
     "$schema": "https://raw.githubusercontent.com/YouKnow232/GearLoader/refs/heads/main/schema/0.1.0/config.schema.json",
     "name": "baseMod",
-    "version": "1.1.1"
+    "version": "1.2.0"
 }

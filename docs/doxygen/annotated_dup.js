@@ -82,6 +82,9 @@ var annotated_dup =
     [ "GGXXACPR_PlayerInput", "struct_g_g_x_x_a_c_p_r___player_input.html", null ],
     [ "GGXXACPR_ReversalRecordingState", "struct_g_g_x_x_a_c_p_r___reversal_recording_state.html", null ],
     [ "GGXXACPR_Screenshake", "struct_g_g_x_x_a_c_p_r___screenshake.html", null ],
+    [ "GGXXACPR_SurvivalBossEntry", "struct_g_g_x_x_a_c_p_r___survival_boss_entry.html", null ],
+    [ "GGXXACPR_SurvivalExtra", "struct_g_g_x_x_a_c_p_r___survival_extra.html", null ],
+    [ "GGXXACPR_SurvivalInfo", "struct_g_g_x_x_a_c_p_r___survival_info.html", null ],
     [ "GGXXACPR_Vector", "struct_g_g_x_x_a_c_p_r___vector.html", null ],
     [ "SemanticVersion", "struct_semantic_version.html", null ]
 ];

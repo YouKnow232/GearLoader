@@ -124,9 +124,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab3846a9c6490a4f64023abc44486c0dd" id="r_ab3846a9c6490a4f64023abc44486c0dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3846a9c6490a4f64023abc44486c0dd">DrawQuad</a> (int32_t left, int32_t top, int32_t right, int32_t bottom, int32_t z, uint32_t color)</td></tr>
 <tr class="memdesc:ab3846a9c6490a4f64023abc44486c0dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a quad to the screen.  <br /></td></tr>
 <tr class="memitem:a086f769aa766e817a20b1b3920b2142d" id="r_a086f769aa766e817a20b1b3920b2142d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a086f769aa766e817a20b1b3920b2142d">RegisterSprites</a> (uint32_t spriteId, void *textureDataArray, uint32_t count)</td></tr>
-<tr class="memdesc:a086f769aa766e817a20b1b3920b2142d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers sprite data to a spriteId to later be rendered with <span class="tt"><a class="el" href="struct_base_mod___native_functions_api.html#ab092b057ca2792c4560ef340fd51bb4e" title="Draws a sprite to the screen.">BaseMod_NativeFunctionsApi::DrawSprite</a></span>.  <br /></td></tr>
+<tr class="memdesc:a086f769aa766e817a20b1b3920b2142d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers sprite data to a spriteId to later be rendered with <span class="tt">BaseMod_NativeFunctionsApi::DrawSprite</span>.  <br /></td></tr>
 <tr class="memitem:aba465f1ff6a552196c9ffd4b0aa9dea6" id="r_aba465f1ff6a552196c9ffd4b0aa9dea6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba465f1ff6a552196c9ffd4b0aa9dea6">GetActiveCommandGrabId</a> (<a class="el" href="classggxxacpr_1_1_player.html">ggxxacpr::Player</a> player)</td></tr>
 <tr class="memdesc:aba465f1ff6a552196c9ffd4b0aa9dea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the given player currently has an active command grab, returns its command grab id, else return 0.  <br /></td></tr>
+<tr class="memitem:a3857d60528100aa79031af8bb90111e5" id="r_a3857d60528100aa79031af8bb90111e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3857d60528100aa79031af8bb90111e5">DoesFiberExist</a> (std::string name)</td></tr>
+<tr class="memdesc:a3857d60528100aa79031af8bb90111e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a fiber exists with the given name. See doc on <a href="https://YouKnow232.github.io/GearLoader/doxygen/md_docs_2_game_architecture">Plus R's Fibers</a>.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_base_mod_1_1_api_wrapper"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_base_mod_1_1_api_wrapper')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_base_mod_1_1_api_wrapper.html">BaseMod::ApiWrapper&lt; BaseMod_NativeFunctionsApi &gt;</a></td></tr>
 <tr class="memitem:a480ee48040c91cb052823321e25a6673 inherit pub_methods_class_base_mod_1_1_api_wrapper" id="r_a480ee48040c91cb052823321e25a6673"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_mod_1_1_api_wrapper.html#a480ee48040c91cb052823321e25a6673">VersionError</a> ()</td></tr>
 <tr class="memitem:ad5f6ad8a0f29fc260cfc9b3960fd884e inherit pub_methods_class_base_mod_1_1_api_wrapper" id="r_ad5f6ad8a0f29fc260cfc9b3960fd884e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_mod_1_1_api_wrapper.html#ad5f6ad8a0f29fc260cfc9b3960fd884e">IsValid</a> ()</td></tr>
@@ -139,6 +141,43 @@ Additional Inherited Members</h2></td></tr>
 const <a class="el" href="struct_base_mod___native_functions_api.html">BaseMod_NativeFunctionsApi</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_ref</b></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a3857d60528100aa79031af8bb90111e5" name="a3857d60528100aa79031af8bb90111e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3857d60528100aa79031af8bb90111e5">&#9670;&#160;</a></span>DoesFiberExist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BaseMod::NativeFunctionsApi::DoesFiberExist </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if a fiber exists with the given name. See doc on <a href="https://YouKnow232.github.io/GearLoader/doxygen/md_docs_2_game_architecture">Plus R's Fibers</a>. </p>
+<p>Ex: You can check to see if the game is running netplay by checking the "NTWRK" fiber.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the fiber name to lookup. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  295</span>                                        {</div>
+<div class="line"><span class="lineno">  296</span>        <span class="keywordflow">return</span> _ref-&gt;DoesFiberExist(name.c_str());</div>
+<div class="line"><span class="lineno">  297</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a61eba6fa2fc3e8ebd22616d0a647bc15" name="a61eba6fa2fc3e8ebd22616d0a647bc15"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a61eba6fa2fc3e8ebd22616d0a647bc15">&#9670;&#160;</a></span>DrawArrowSprite()</h2>
 
@@ -192,9 +231,9 @@ const <a class="el" href="struct_base_mod___native_functions_api.html">BaseMod_N
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">  190</span>                                                                                                              {</div>
-<div class="line"><span class="lineno">  191</span>        _ref-&gt;DrawArrowSprite(<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(direction), x, y, z, alpha);</div>
-<div class="line"><span class="lineno">  192</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  224</span>                                                                                                              {</div>
+<div class="line"><span class="lineno">  225</span>        _ref-&gt;DrawArrowSprite(<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(direction), x, y, z, alpha);</div>
+<div class="line"><span class="lineno">  226</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -258,9 +297,9 @@ const <a class="el" href="struct_base_mod___native_functions_api.html">BaseMod_N
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">  222</span>                                                                                                       {</div>
-<div class="line"><span class="lineno">  223</span>        _ref-&gt;DrawQuad(left, top, right, bottom, z, color);</div>
-<div class="line"><span class="lineno">  224</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  256</span>                                                                                                       {</div>
+<div class="line"><span class="lineno">  257</span>        _ref-&gt;DrawQuad(left, top, right, bottom, z, color);</div>
+<div class="line"><span class="lineno">  258</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -300,9 +339,9 @@ const <a class="el" href="struct_base_mod___native_functions_api.html">BaseMod_N
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">  177</span>                                                                              {</div>
-<div class="line"><span class="lineno">  178</span>        _ref-&gt;DrawSprite(params, ignoreSpriteMask ? 1 : 0);</div>
-<div class="line"><span class="lineno">  179</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  211</span>                                                                              {</div>
+<div class="line"><span class="lineno">  212</span>        _ref-&gt;DrawSprite(params, ignoreSpriteMask ? 1 : 0);</div>
+<div class="line"><span class="lineno">  213</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -342,9 +381,9 @@ const <a class="el" href="struct_base_mod___native_functions_api.html">BaseMod_N
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">  203</span>                                                                           {</div>
-<div class="line"><span class="lineno">  204</span>        _ref-&gt;DrawTriStrip(vertices, numVertices);</div>
-<div class="line"><span class="lineno">  205</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  237</span>                                                                           {</div>
+<div class="line"><span class="lineno">  238</span>        _ref-&gt;DrawTriStrip(vertices, numVertices);</div>
+<div class="line"><span class="lineno">  239</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -372,10 +411,10 @@ const <a class="el" href="struct_base_mod___native_functions_api.html">BaseMod_N
 </div><div class="memdoc">
 
 <p>If the given player currently has an active command grab, returns its command grab id, else return 0. </p>
-<div class="fragment"><div class="line"><span class="lineno">  250</span>                                                           {</div>
-<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">return</span> _ref-&gt;GetActiveCommandGrabId(player.<a class="code hl_function" href="classggxxacpr_1_1_player.html#a5e8d017e845b61990e6cb1ab36435dda">getRaw</a>());</div>
-<div class="line"><span class="lineno">  252</span>    }</div>
-<div class="ttc" id="aclassggxxacpr_1_1_player_html_a5e8d017e845b61990e6cb1ab36435dda"><div class="ttname"><a href="classggxxacpr_1_1_player.html#a5e8d017e845b61990e6cb1ab36435dda">ggxxacpr::Player::getRaw</a></div><div class="ttdeci">GGXXACPR_Entity * getRaw()</div><div class="ttdoc">Returns the underlying GGXXACPR_Entity struct pointer.</div><div class="ttdef"><b>Definition</b> ggxxacpr.hpp:681</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  284</span>                                                           {</div>
+<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">return</span> _ref-&gt;GetActiveCommandGrabId(player.<a class="code hl_function" href="classggxxacpr_1_1_player.html#a5e8d017e845b61990e6cb1ab36435dda">getRaw</a>());</div>
+<div class="line"><span class="lineno">  286</span>    }</div>
+<div class="ttc" id="aclassggxxacpr_1_1_player_html_a5e8d017e845b61990e6cb1ab36435dda"><div class="ttname"><a href="classggxxacpr_1_1_player.html#a5e8d017e845b61990e6cb1ab36435dda">ggxxacpr::Player::getRaw</a></div><div class="ttdeci">GGXXACPR_Entity * getRaw()</div><div class="ttdoc">Returns the underlying GGXXACPR_Entity struct pointer.</div><div class="ttdef"><b>Definition</b> ggxxacpr.hpp:878</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -411,9 +450,9 @@ const <a class="el" href="struct_base_mod___native_functions_api.html">BaseMod_N
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if <span class="tt">id</span> param is zero </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  164</span>                                            {</div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">return</span> _ref-&gt;PlayCommonSoundEffect(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  198</span>                                            {</div>
+<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">return</span> _ref-&gt;PlayCommonSoundEffect(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  200</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -449,7 +488,7 @@ const <a class="el" href="struct_base_mod___native_functions_api.html">BaseMod_N
 </table>
 </div><div class="memdoc">
 
-<p>Registers sprite data to a spriteId to later be rendered with <span class="tt"><a class="el" href="struct_base_mod___native_functions_api.html#ab092b057ca2792c4560ef340fd51bb4e" title="Draws a sprite to the screen.">BaseMod_NativeFunctionsApi::DrawSprite</a></span>. </p>
+<p>Registers sprite data to a spriteId to later be rendered with <span class="tt">BaseMod_NativeFunctionsApi::DrawSprite</span>. </p>
 <p>When registering multiple sprites, each sprite will be sequentially registered with spriteIds starting with the given <span class="tt">spriteId</span> parameter. Example: Registering 4 sprites at spriteId 100 registers ids 100,101,102,103.</p>
 <p>See tutorial on registering and using <a href="https://YouKnow232.github.io/GearLoader/doxygen/md_docs_2_custom_sprites_tutorial">custom sprites</a> for more information.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -461,9 +500,9 @@ const <a class="el" href="struct_base_mod___native_functions_api.html">BaseMod_N
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of sprites registered </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  242</span>                                                                                    {</div>
-<div class="line"><span class="lineno">  243</span>        _ref-&gt;RegisterSprites(spriteId, textureDataArray, count);</div>
-<div class="line"><span class="lineno">  244</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  276</span>                                                                                    {</div>
+<div class="line"><span class="lineno">  277</span>        _ref-&gt;RegisterSprites(spriteId, textureDataArray, count);</div>
+<div class="line"><span class="lineno">  278</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -531,9 +570,9 @@ Example input/output. Font type depends on game setting.</div></div>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   96</span>                                                                                                         {</div>
-<div class="line"><span class="lineno">   97</span>        _ref-&gt;RenderCockpitFontText(text.c_str(), x, y, z, alpha, size);</div>
-<div class="line"><span class="lineno">   98</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  130</span>                                                                                                         {</div>
+<div class="line"><span class="lineno">  131</span>        _ref-&gt;RenderCockpitFontText(text.c_str(), x, y, z, alpha, size);</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -616,9 +655,9 @@ Example input/output. Font type depends on game setting.</div></div>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">  121</span>      {</div>
-<div class="line"><span class="lineno">  122</span>        _ref-&gt;RenderMenuText(text, x, y, z, alpha, animCounter, animSpeed, ignoreSpriteMask, color);</div>
-<div class="line"><span class="lineno">  123</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  155</span>      {</div>
+<div class="line"><span class="lineno">  156</span>        _ref-&gt;RenderMenuText(text, x, y, z, alpha, animCounter, animSpeed, ignoreSpriteMask, color);</div>
+<div class="line"><span class="lineno">  157</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -688,9 +727,9 @@ Example input/output. Font type depends on game setting.</div></div>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>      {</div>
-<div class="line"><span class="lineno">  142</span>        _ref-&gt;RenderMenuTextCenterAligned(text, x, y, z, alpha, color, ignoreSpriteMask);</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  175</span>      {</div>
+<div class="line"><span class="lineno">  176</span>        _ref-&gt;RenderMenuTextCenterAligned(text, x, y, z, alpha, color, ignoreSpriteMask);</div>
+<div class="line"><span class="lineno">  177</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -729,9 +768,9 @@ Example input/output. Font type depends on game setting.</div></div>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>                                                              {</div>
-<div class="line"><span class="lineno">  151</span>        _ref-&gt;RenderPopUpText(playerIndex, text.c_str());</div>
-<div class="line"><span class="lineno">  152</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  184</span>                                                              {</div>
+<div class="line"><span class="lineno">  185</span>        _ref-&gt;RenderPopUpText(playerIndex, text.c_str());</div>
+<div class="line"><span class="lineno">  186</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

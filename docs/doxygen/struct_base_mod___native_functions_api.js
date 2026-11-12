@@ -1,16 +1,17 @@
 var struct_base_mod___native_functions_api =
 [
-    [ "DrawArrowSprite", "struct_base_mod___native_functions_api.html#a71802dac90a5efae3d2be493f4d484c0", null ],
-    [ "DrawQuad", "struct_base_mod___native_functions_api.html#a9686caa670ddeb8dddb8eaf54d9c68c8", null ],
-    [ "DrawSprite", "struct_base_mod___native_functions_api.html#ab092b057ca2792c4560ef340fd51bb4e", null ],
-    [ "DrawTriStrip", "struct_base_mod___native_functions_api.html#ad7d53828b0ea3b6c89c0d902c3245570", null ],
-    [ "GetActiveCommandGrabId", "struct_base_mod___native_functions_api.html#ae3dbbdefcccb6b0ecae98dcaadeb8877", null ],
-    [ "PlayCommonSoundEffect", "struct_base_mod___native_functions_api.html#a1a0c31b1b33956d7869ae989ec55e31b", null ],
-    [ "RegisterSprites", "struct_base_mod___native_functions_api.html#a425a821052fabc113cf0e0d37eb749b0", null ],
-    [ "RenderCockpitFontText", "struct_base_mod___native_functions_api.html#acbf1405a3df732bd08a800cc493e3dce", null ],
-    [ "RenderMenuText", "struct_base_mod___native_functions_api.html#ac43fccfcad4c986d567f8c923b027797", null ],
-    [ "RenderMenuTextCenterAligned", "struct_base_mod___native_functions_api.html#a7b98ecd14f66b660e567ae93cb763c78", null ],
-    [ "RenderPopUpText", "struct_base_mod___native_functions_api.html#a4005a85c3f2220b852ac654323d02e40", null ],
+    [ "int32_t", "struct_base_mod___native_functions_api.html#a234d4bdf22b0a7be460257243feb67b2", null ],
+    [ "uint32_t", "struct_base_mod___native_functions_api.html#a117fb4cf6237d44ca1e2358bfa3b0105", null ],
+    [ "uint32_t", "struct_base_mod___native_functions_api.html#a53ed4ac3029b9a3aac52158f6077a65a", null ],
+    [ "uint32_t", "struct_base_mod___native_functions_api.html#a3bb80ae476b5d8e9ad330dda65f84bf6", null ],
+    [ "void", "struct_base_mod___native_functions_api.html#a6c7b19cec149251752eb0adeae9f2db9", null ],
+    [ "void", "struct_base_mod___native_functions_api.html#ad8e65dd5ba4e91e40e74347649673eda", null ],
+    [ "void", "struct_base_mod___native_functions_api.html#a67527d3b1fc4207f066988ba865195bd", null ],
+    [ "void", "struct_base_mod___native_functions_api.html#a51b06d280a244d532e4f5bdad938a25d", null ],
+    [ "void", "struct_base_mod___native_functions_api.html#a9785fb507543a1372af1482f4be0c7d8", null ],
+    [ "void", "struct_base_mod___native_functions_api.html#a095cd36f0a892dacba82e936ab73128c", null ],
+    [ "void", "struct_base_mod___native_functions_api.html#a04309dcf7005a44e88636773565ffed6", null ],
+    [ "void", "struct_base_mod___native_functions_api.html#aaca58b447b94ffb12c51c5f02195a9dc", null ],
     [ "size", "struct_base_mod___native_functions_api.html#a82e62f03c328f681058801d175809a98", null ],
     [ "version", "struct_base_mod___native_functions_api.html#a8c9ab6b7d7323e4e66512ab58c7e7f34", null ]
 ];
