@@ -135,6 +135,7 @@ WARN_LOGFILE           =
 INPUT                  = ./docs/ModdingInstructions.md \
                          ./docs/CustomSpritesTutorial.md \
                          ./docs/GameArchitecture.md \
+                         ./docs/BinFileMods.md \
                          ./include/
 INPUT_ENCODING         = UTF-8
 INPUT_FILE_ENCODING    =
