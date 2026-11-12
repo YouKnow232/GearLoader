@@ -63,7 +63,7 @@ void LoadAndInitMod(ModManifest& manifest) {
         _loadOrder,
         &_logger
     };
-    GearLoaderContext* currentContext = &_contextBuffer[_loadOrder];
+    GearLoaderContext* currentContext = &_contextBuffer[_loadOrder++];
 
     wstring libraryPath = manifest.path.wstring();
     HMODULE modHandle = LoadLibraryW(libraryPath.c_str());
