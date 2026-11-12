@@ -170,7 +170,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  670</span>            : raw(ref) {};</div>
+<div class="fragment"><div class="line"><span class="lineno">  867</span>            : raw(ref) {};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -197,7 +197,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  696</span>{ <span class="keywordflow">return</span> raw-&gt;actId; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  893</span>{ <span class="keywordflow">return</span> raw-&gt;actId; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -223,9 +223,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  693</span>                                  {</div>
-<div class="line"><span class="lineno">  694</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>ActionState<span class="keyword">&gt;</span>(raw-&gt;actionState);</div>
-<div class="line"><span class="lineno">  695</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  890</span>                                  {</div>
+<div class="line"><span class="lineno">  891</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>ActionState<span class="keyword">&gt;</span>(raw-&gt;actionState);</div>
+<div class="line"><span class="lineno">  892</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -251,7 +251,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  697</span>{ <span class="keywordflow">return</span> raw-&gt;actTimer; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  894</span>{ <span class="keywordflow">return</span> raw-&gt;actTimer; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -277,9 +277,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  703</span>                                  {</div>
-<div class="line"><span class="lineno">  704</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>AttackState<span class="keyword">&gt;</span>(raw-&gt;attackState);</div>
-<div class="line"><span class="lineno">  705</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  900</span>                                  {</div>
+<div class="line"><span class="lineno">  901</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>AttackState<span class="keyword">&gt;</span>(raw-&gt;attackState);</div>
+<div class="line"><span class="lineno">  902</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -308,7 +308,7 @@ Public Member Functions</h2></td></tr>
 
 <p>The position of the player's center point in model space. </p>
 <p>Combines <span class="tt">GGXXACPR_Entity::coreX</span> and <span class="tt">GGXXACPR_Entity::coreY</span>. </p>
-<div class="fragment"><div class="line"><span class="lineno">  711</span>{ <span class="keywordflow">return</span> {raw-&gt;coreX, raw-&gt;coreY}; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  908</span>{ <span class="keywordflow">return</span> {raw-&gt;coreX, raw-&gt;coreY}; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -336,7 +336,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The damage value of the current action. </p>
-<div class="fragment"><div class="line"><span class="lineno">  759</span>{ <span class="keywordflow">return</span> raw-&gt;actHeader.damage; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  956</span>{ <span class="keywordflow">return</span> raw-&gt;actHeader.damage; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -365,7 +365,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Determines which sprites draw in which order. </p>
 <p>Higher values draw first, lower values draw over higher values. Essentially a position on the z-axis / depth buffer. </p>
-<div class="fragment"><div class="line"><span class="lineno">  755</span>{ <span class="keywordflow">return</span> raw-&gt;drawPriority; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  952</span>{ <span class="keywordflow">return</span> raw-&gt;drawPriority; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -393,7 +393,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the underlying <span class="tt"><a class="el" href="struct_g_g_x_x_a_c_p_r___entity.html">GGXXACPR_Entity</a></span> struct pointer. </p>
-<div class="fragment"><div class="line"><span class="lineno">  681</span>{ <span class="keywordflow">return</span> raw; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  878</span>{ <span class="keywordflow">return</span> raw; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -419,9 +419,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  700</span>                                {</div>
-<div class="line"><span class="lineno">  701</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>GuardState<span class="keyword">&gt;</span>(raw-&gt;guardState);</div>
-<div class="line"><span class="lineno">  702</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  897</span>                                {</div>
+<div class="line"><span class="lineno">  898</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>GuardState<span class="keyword">&gt;</span>(raw-&gt;guardState);</div>
+<div class="line"><span class="lineno">  899</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -447,7 +447,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  698</span>{ <span class="keywordflow">return</span> raw-&gt;health; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  895</span>{ <span class="keywordflow">return</span> raw-&gt;health; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -475,7 +475,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A counter for hitstop. </p>
-<div class="fragment"><div class="line"><span class="lineno">  763</span>{ <span class="keywordflow">return</span> raw-&gt;hitstopTime; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  960</span>{ <span class="keywordflow">return</span> raw-&gt;hitstopTime; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -501,9 +501,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  684</span>                      {</div>
-<div class="line"><span class="lineno">  685</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>EntityId<span class="keyword">&gt;</span>(raw-&gt;id);</div>
-<div class="line"><span class="lineno">  686</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  881</span>                      {</div>
+<div class="line"><span class="lineno">  882</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>EntityId<span class="keyword">&gt;</span>(raw-&gt;id);</div>
+<div class="line"><span class="lineno">  883</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -529,9 +529,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  687</span>                             {</div>
-<div class="line"><span class="lineno">  688</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(raw-&gt;bIsFacingRight);</div>
-<div class="line"><span class="lineno">  689</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  884</span>                             {</div>
+<div class="line"><span class="lineno">  885</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(raw-&gt;bIsFacingRight);</div>
+<div class="line"><span class="lineno">  886</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -557,9 +557,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  690</span>                          {</div>
-<div class="line"><span class="lineno">  691</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(raw-&gt;bIsLeftSide);</div>
-<div class="line"><span class="lineno">  692</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  887</span>                          {</div>
+<div class="line"><span class="lineno">  888</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(raw-&gt;bIsLeftSide);</div>
+<div class="line"><span class="lineno">  889</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -588,7 +588,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Checks if the underlying reference is valid. </p>
 <p>+R's entity data structures are not initialized immediately, so this method should be used as a null check. </p>
-<div class="fragment"><div class="line"><span class="lineno">  677</span>{ <span class="keywordflow">return</span> raw != <span class="keyword">nullptr</span>; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  874</span>{ <span class="keywordflow">return</span> raw != <span class="keyword">nullptr</span>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -614,7 +614,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  699</span>{ <span class="keywordflow">return</span> raw-&gt;playerIndex; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  896</span>{ <span class="keywordflow">return</span> raw-&gt;playerIndex; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -643,7 +643,7 @@ Public Member Functions</h2></td></tr>
 
 <p>The position of the player. </p>
 <p>Sometimes called the "origin point" or "pivot". </p>
-<div class="fragment"><div class="line"><span class="lineno">  744</span>{ <span class="keywordflow">return</span> {raw-&gt;xPos, raw-&gt;yPos}; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  941</span>{ <span class="keywordflow">return</span> {raw-&gt;xPos, raw-&gt;yPos}; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -672,7 +672,7 @@ Public Member Functions</h2></td></tr>
 
 <p>The scaling factor that should be applied to this player's colliders. </p>
 <p>An interpretation of <span class="tt">GGXXACPR_Entity::scale</span> and <span class="tt">GGXXACPR_Entity::scaleY</span>. </p>
-<div class="fragment"><div class="line"><span class="lineno">  718</span>{ <span class="keywordflow">return</span> {raw-&gt;scale, raw-&gt;scaleY}; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  915</span>{ <span class="keywordflow">return</span> {raw-&gt;scale, raw-&gt;scaleY}; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -698,7 +698,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  806</span>{raw-&gt;actionState = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(state); };</div>
+<div class="fragment"><div class="line"><span class="lineno"> 1003</span>{raw-&gt;actionState = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(state); };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -724,7 +724,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  809</span>{raw-&gt;attackState = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(state); }</div>
+<div class="fragment"><div class="line"><span class="lineno"> 1006</span>{raw-&gt;attackState = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(state); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -750,7 +750,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  828</span>{ <span class="keywordflow">if</span> (raw-&gt;playerEntityDataPtr) raw-&gt;playerEntityDataPtr-&gt;burstMeter = value; }</div>
+<div class="fragment"><div class="line"><span class="lineno"> 1025</span>{ <span class="keywordflow">if</span> (raw-&gt;playerEntityDataPtr) raw-&gt;playerEntityDataPtr-&gt;burstMeter = value; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -776,7 +776,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  810</span>{raw-&gt;commandFlags = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(state); }</div>
+<div class="fragment"><div class="line"><span class="lineno"> 1007</span>{raw-&gt;commandFlags = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(state); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -802,7 +802,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  827</span>{ <span class="keywordflow">if</span> (raw-&gt;playerEntityDataPtr) raw-&gt;playerEntityDataPtr-&gt;dizzyBuildup = value; }</div>
+<div class="fragment"><div class="line"><span class="lineno"> 1024</span>{ <span class="keywordflow">if</span> (raw-&gt;playerEntityDataPtr) raw-&gt;playerEntityDataPtr-&gt;dizzyBuildup = value; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -828,7 +828,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  826</span>{ <span class="keywordflow">if</span> (raw-&gt;playerEntityDataPtr) raw-&gt;playerEntityDataPtr-&gt;frcTime = value; }</div>
+<div class="fragment"><div class="line"><span class="lineno"> 1023</span>{ <span class="keywordflow">if</span> (raw-&gt;playerEntityDataPtr) raw-&gt;playerEntityDataPtr-&gt;frcTime = value; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -854,7 +854,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  824</span>{ <span class="keywordflow">if</span> (raw-&gt;playerEntityDataPtr) raw-&gt;playerEntityDataPtr-&gt;guardBar = value; }</div>
+<div class="fragment"><div class="line"><span class="lineno"> 1021</span>{ <span class="keywordflow">if</span> (raw-&gt;playerEntityDataPtr) raw-&gt;playerEntityDataPtr-&gt;guardBar = value; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -880,7 +880,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  808</span>{raw-&gt;guardState = <span class="keyword">static_cast&lt;</span>uint16_t<span class="keyword">&gt;</span>(state); }</div>
+<div class="fragment"><div class="line"><span class="lineno"> 1005</span>{raw-&gt;guardState = <span class="keyword">static_cast&lt;</span>uint16_t<span class="keyword">&gt;</span>(state); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -906,7 +906,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  807</span>{ raw-&gt;health = value; }</div>
+<div class="fragment"><div class="line"><span class="lineno"> 1004</span>{ raw-&gt;health = value; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -932,7 +932,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  825</span>{ <span class="keywordflow">if</span> (raw-&gt;playerEntityDataPtr) raw-&gt;playerEntityDataPtr-&gt;invulnCounter = value; }</div>
+<div class="fragment"><div class="line"><span class="lineno"> 1022</span>{ <span class="keywordflow">if</span> (raw-&gt;playerEntityDataPtr) raw-&gt;playerEntityDataPtr-&gt;invulnCounter = value; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -958,10 +958,10 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  815</span>                                              {</div>
-<div class="line"><span class="lineno">  816</span>            raw-&gt;xPos = pos.x;</div>
-<div class="line"><span class="lineno">  817</span>            raw-&gt;yPos = pos.y;</div>
-<div class="line"><span class="lineno">  818</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno"> 1012</span>                                              {</div>
+<div class="line"><span class="lineno"> 1013</span>            raw-&gt;xPos = pos.x;</div>
+<div class="line"><span class="lineno"> 1014</span>            raw-&gt;yPos = pos.y;</div>
+<div class="line"><span class="lineno"> 1015</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -987,11 +987,11 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  811</span>                                   {</div>
-<div class="line"><span class="lineno">  812</span>            raw-&gt;scale = <a class="code hl_function" href="#a03d7e5fac2e0e4f89dec3cc29de9c63a">scale</a>._rawX;</div>
-<div class="line"><span class="lineno">  813</span>            raw-&gt;scaleY = <a class="code hl_function" href="#a03d7e5fac2e0e4f89dec3cc29de9c63a">scale</a>._rawY;</div>
-<div class="line"><span class="lineno">  814</span>        }</div>
-<div class="ttc" id="aclassggxxacpr_1_1_player_html_a03d7e5fac2e0e4f89dec3cc29de9c63a"><div class="ttname"><a href="#a03d7e5fac2e0e4f89dec3cc29de9c63a">ggxxacpr::Player::scale</a></div><div class="ttdeci">Scale scale()</div><div class="ttdoc">The scaling factor that should be applied to this player&#39;s colliders.</div><div class="ttdef"><b>Definition</b> ggxxacpr.hpp:718</div></div>
+<div class="fragment"><div class="line"><span class="lineno"> 1008</span>                                   {</div>
+<div class="line"><span class="lineno"> 1009</span>            raw-&gt;scale = <a class="code hl_function" href="#a03d7e5fac2e0e4f89dec3cc29de9c63a">scale</a>._rawX;</div>
+<div class="line"><span class="lineno"> 1010</span>            raw-&gt;scaleY = <a class="code hl_function" href="#a03d7e5fac2e0e4f89dec3cc29de9c63a">scale</a>._rawY;</div>
+<div class="line"><span class="lineno"> 1011</span>        }</div>
+<div class="ttc" id="aclassggxxacpr_1_1_player_html_a03d7e5fac2e0e4f89dec3cc29de9c63a"><div class="ttname"><a href="#a03d7e5fac2e0e4f89dec3cc29de9c63a">ggxxacpr::Player::scale</a></div><div class="ttdeci">Scale scale()</div><div class="ttdoc">The scaling factor that should be applied to this player&#39;s colliders.</div><div class="ttdef"><b>Definition</b> ggxxacpr.hpp:915</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1017,7 +1017,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  823</span>{ <span class="keywordflow">if</span> (raw-&gt;playerEntityDataPtr) raw-&gt;playerEntityDataPtr-&gt;tension = value; }</div>
+<div class="fragment"><div class="line"><span class="lineno"> 1020</span>{ <span class="keywordflow">if</span> (raw-&gt;playerEntityDataPtr) raw-&gt;playerEntityDataPtr-&gt;tension = value; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1045,7 +1045,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="classggxxacpr_1_1_player.html" title="Wraps a GGXXACPR_Entity struct pointer and provides conversions and interpretations of its data.">Player</a> velocity given in world coordinates per frame. </p>
-<div class="fragment"><div class="line"><span class="lineno">  748</span>{ <span class="keywordflow">return</span> {raw-&gt;xVelocity, raw-&gt;yVelocity}; }</div>
+<div class="fragment"><div class="line"><span class="lineno">  945</span>{ <span class="keywordflow">return</span> {raw-&gt;xVelocity, raw-&gt;yVelocity}; }</div>
 </div><!-- fragment -->
 </div>
 </div>

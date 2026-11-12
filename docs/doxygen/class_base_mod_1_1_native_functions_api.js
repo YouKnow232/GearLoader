@@ -1,5 +1,6 @@
 var class_base_mod_1_1_native_functions_api =
 [
+    [ "DoesFiberExist", "class_base_mod_1_1_native_functions_api.html#a3857d60528100aa79031af8bb90111e5", null ],
     [ "DrawArrowSprite", "class_base_mod_1_1_native_functions_api.html#a61eba6fa2fc3e8ebd22616d0a647bc15", null ],
     [ "DrawQuad", "class_base_mod_1_1_native_functions_api.html#ab3846a9c6490a4f64023abc44486c0dd", null ],
     [ "DrawSprite", "class_base_mod_1_1_native_functions_api.html#a2d828a89aae34450c60f4796dcc67573", null ],

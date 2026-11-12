@@ -94,67 +94,86 @@ $(function(){initNavTree('struct_base_mod___game_data_api.html','',''); });
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae29a1691dabd5372d4946b35230aa26b" id="r_ae29a1691dabd5372d4946b35230aa26b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_g_g_x_x_a_c_p_r___entity.html">GGXXACPR_Entity</a> *BASEMOD_CALL *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae29a1691dabd5372d4946b35230aa26b">GetPlayer</a> (int playerIndex)</td></tr>
+<tr class="memdesc:ae29a1691dabd5372d4946b35230aa26b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets player data.  <br /></td></tr>
+<tr class="memitem:a27da7e55b435bba159cf80116faf8ac7" id="r_a27da7e55b435bba159cf80116faf8ac7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_g_g_x_x_a_c_p_r___player_input.html">GGXXACPR_PlayerInput</a> *BASEMOD_CALL *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27da7e55b435bba159cf80116faf8ac7">GetPlayerInputStructArr</a> ()</td></tr>
+<tr class="memdesc:a27da7e55b435bba159cf80116faf8ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a pointer to the player input struct array. See <span class="tt"><a class="el" href="struct_g_g_x_x_a_c_p_r___player_input.html">GGXXACPR_PlayerInput</a></span>.  <br /></td></tr>
+<tr class="memitem:a193dcaca2c8217be8ab7bdbcf1f3867a" id="r_a193dcaca2c8217be8ab7bdbcf1f3867a"><td class="memItemLeft" align="right" valign="top"><a id="a193dcaca2c8217be8ab7bdbcf1f3867a" name="a193dcaca2c8217be8ab7bdbcf1f3867a"></a>
+<a class="el" href="struct_g_g_x_x_a_c_p_r___camera.html">GGXXACPR_Camera</a> *BASEMOD_CALL *&#160;</td><td class="memItemRight" valign="bottom"><b>GetCamera</b> ()</td></tr>
+<tr class="memdesc:a193dcaca2c8217be8ab7bdbcf1f3867a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets camera data. <br /></td></tr>
+<tr class="memitem:a8a93263211c006ac5a8c1f3c28ad7ecc" id="r_a8a93263211c006ac5a8c1f3c28ad7ecc"><td class="memItemLeft" align="right" valign="top"><a id="a8a93263211c006ac5a8c1f3c28ad7ecc" name="a8a93263211c006ac5a8c1f3c28ad7ecc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>int32_t</b> (BASEMOD_CALL *IsInGame)()</td></tr>
+<tr class="memdesc:a8a93263211c006ac5a8c1f3c28ad7ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a non-zero value if the game is on the battle screen. <br /></td></tr>
+<tr class="memitem:ab6745c886cb4017b4ec5894fa85b62ba" id="r_ab6745c886cb4017b4ec5894fa85b62ba"><td class="memItemLeft" align="right" valign="top"><a id="ab6745c886cb4017b4ec5894fa85b62ba" name="ab6745c886cb4017b4ec5894fa85b62ba"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>int32_t</b> (BASEMOD_CALL *GetJobMode)()</td></tr>
+<tr class="memdesc:ab6745c886cb4017b4ec5894fa85b62ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current job mode, see enum <span class="tt">GGXXACPR_JobMode</span>. This variable determines what scene the game is set to such as "TitleScreen", "Battle", "MissionMenu". <br /></td></tr>
+<tr class="memitem:a792c6dc84832986788538e6782d132ea" id="r_a792c6dc84832986788538e6782d132ea"><td class="memItemLeft" align="right" valign="top"><a id="a792c6dc84832986788538e6782d132ea" name="a792c6dc84832986788538e6782d132ea"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>uint32_t</b> (BASEMOD_CALL *GetGameModeFeatureFlags)()</td></tr>
+<tr class="memdesc:a792c6dc84832986788538e6782d132ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">See enum <span class="tt">GGXXACPR_GameModeFeatureFlags</span>. Returns the current game mode feature flags. <br /></td></tr>
+<tr class="memitem:a8080ed86a65aa271dc5e67ea0c7b949a" id="r_a8080ed86a65aa271dc5e67ea0c7b949a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8080ed86a65aa271dc5e67ea0c7b949a">uint32_t</a> (BASEMOD_CALL *GetMainMenuSelection)()</td></tr>
+<tr class="memdesc:a8080ed86a65aa271dc5e67ea0c7b949a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum <span class="tt">GGXXACPR_MainMenuItem</span>. Returns the game mode selected from the main menu.  <br /></td></tr>
+<tr class="memitem:a2b23dae8baf065d972121731323dd737" id="r_a2b23dae8baf065d972121731323dd737"><td class="memItemLeft" align="right" valign="top">void *BASEMOD_CALL *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b23dae8baf065d972121731323dd737">GetD3D9Device</a> ()</td></tr>
+<tr class="memdesc:a2b23dae8baf065d972121731323dd737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the D3D9 device pointer.  <br /></td></tr>
+<tr class="memitem:a095d1925f8d303ba3ea1fa6e820883ad" id="r_a095d1925f8d303ba3ea1fa6e820883ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a095d1925f8d303ba3ea1fa6e820883ad">uint32_t</a> (BASEMOD_CALL *GetGameVersion)()</td></tr>
+<tr class="memdesc:a095d1925f8d303ba3ea1fa6e820883ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current game version. See enum <span class="tt">GGXXACPR_GameVersion</span>.  <br /></td></tr>
+<tr class="memitem:a861c2505cc95c1f3fb4ca6010eb72391" id="r_a861c2505cc95c1f3fb4ca6010eb72391"><td class="memItemLeft" align="right" valign="top"><a id="a861c2505cc95c1f3fb4ca6010eb72391" name="a861c2505cc95c1f3fb4ca6010eb72391"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>uint32_t</b> (BASEMOD_CALL *GetViewWidth)()</td></tr>
+<tr class="memdesc:a861c2505cc95c1f3fb4ca6010eb72391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current view width. <br /></td></tr>
+<tr class="memitem:a5d11a7ce42d7bbfdb7c190e28ad33fa9" id="r_a5d11a7ce42d7bbfdb7c190e28ad33fa9"><td class="memItemLeft" align="right" valign="top"><a id="a5d11a7ce42d7bbfdb7c190e28ad33fa9" name="a5d11a7ce42d7bbfdb7c190e28ad33fa9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>uint32_t</b> (BASEMOD_CALL *GetViewHeight)()</td></tr>
+<tr class="memdesc:a5d11a7ce42d7bbfdb7c190e28ad33fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current view height. <br /></td></tr>
+<tr class="memitem:aabbda7c564d26f4457b628b22a38f659" id="r_aabbda7c564d26f4457b628b22a38f659"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_g_g_x_x_a_c_p_r___entity.html">GGXXACPR_Entity</a> *BASEMOD_CALL *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabbda7c564d26f4457b628b22a38f659">GetRootEntity</a> ()</td></tr>
+<tr class="memdesc:aabbda7c564d26f4457b628b22a38f659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the root entity.  <br /></td></tr>
+<tr class="memitem:abb9cb55e03cfc8e9ba10239bb5ad35e6" id="r_abb9cb55e03cfc8e9ba10239bb5ad35e6"><td class="memItemLeft" align="right" valign="top"><a id="abb9cb55e03cfc8e9ba10239bb5ad35e6" name="abb9cb55e03cfc8e9ba10239bb5ad35e6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>uint32_t</b> (BASEMOD_CALL *GetGlobalThrowFlags)()</td></tr>
+<tr class="memdesc:abb9cb55e03cfc8e9ba10239bb5ad35e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets raw throw detection info. <br /></td></tr>
+<tr class="memitem:a6dc7bdd9f3d1f3dd2cb0747694013f40" id="r_a6dc7bdd9f3d1f3dd2cb0747694013f40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a8a93263211c006ac5a8c1f3c28ad7ecc">int32_t</a> *BASEMOD_CALL *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dc7bdd9f3d1f3dd2cb0747694013f40">GetPauseState</a> ()</td></tr>
+<tr class="memdesc:a6dc7bdd9f3d1f3dd2cb0747694013f40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a pointer to the pause state global variable.  <br /></td></tr>
+<tr class="memitem:a403400a2a46e84df1c3922c6d8c0aa84" id="r_a403400a2a46e84df1c3922c6d8c0aa84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a8a93263211c006ac5a8c1f3c28ad7ecc">int32_t</a> *BASEMOD_CALL *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a403400a2a46e84df1c3922c6d8c0aa84">GetPauseDisplayState</a> ()</td></tr>
+<tr class="memdesc:a403400a2a46e84df1c3922c6d8c0aa84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a pointer to the pause display state global variable.  <br /></td></tr>
+<tr class="memitem:a50e51ad00621f19550e7323e31b46f06" id="r_a50e51ad00621f19550e7323e31b46f06"><td class="memItemLeft" align="right" valign="top"><a id="a50e51ad00621f19550e7323e31b46f06" name="a50e51ad00621f19550e7323e31b46f06"></a>
+<a class="el" href="struct_g_g_x_x_a_c_p_r___locale_state.html">GGXXACPR_LocaleState</a> *BASEMOD_CALL *&#160;</td><td class="memItemRight" valign="bottom"><b>GetLocaleState</b> ()</td></tr>
+<tr class="memdesc:a50e51ad00621f19550e7323e31b46f06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a pointer to the game's locale state. see <span class="tt"><a class="el" href="struct_g_g_x_x_a_c_p_r___locale_state.html">GGXXACPR_LocaleState</a></span>. <br /></td></tr>
+<tr class="memitem:a5404d7f1e4535d8530a02cc9a88cdea7" id="r_a5404d7f1e4535d8530a02cc9a88cdea7"><td class="memItemLeft" align="right" valign="top"><a id="a5404d7f1e4535d8530a02cc9a88cdea7" name="a5404d7f1e4535d8530a02cc9a88cdea7"></a>
+<a class="el" href="struct_g_g_x_x_a_c_p_r___survival_info.html">GGXXACPR_SurvivalInfo</a> *BASEMOD_CALL *&#160;</td><td class="memItemRight" valign="bottom"><b>GetSurvivalInfo</b> ()</td></tr>
+<tr class="memdesc:a5404d7f1e4535d8530a02cc9a88cdea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a pointer to the survival information struct. see <span class="tt"><a class="el" href="struct_g_g_x_x_a_c_p_r___survival_info.html">GGXXACPR_SurvivalInfo</a></span>. <br /></td></tr>
+<tr class="memitem:a998c4077348fbd3499a5a65ceb02bacf" id="r_a998c4077348fbd3499a5a65ceb02bacf"><td class="memItemLeft" align="right" valign="top"><a id="a998c4077348fbd3499a5a65ceb02bacf" name="a998c4077348fbd3499a5a65ceb02bacf"></a>
+<a class="el" href="struct_g_g_x_x_a_c_p_r___survival_boss_entry.html">GGXXACPR_SurvivalBossEntry</a> *BASEMOD_CALL *&#160;</td><td class="memItemRight" valign="bottom"><b>GetShadowBossCheck</b> ()</td></tr>
+<tr class="memdesc:a998c4077348fbd3499a5a65ceb02bacf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a pointer to survival mode's boss check table for the shadow bosses. <br /></td></tr>
+<tr class="memitem:a9fa4bd48bdb81d21ac53bbb2ed9a28aa" id="r_a9fa4bd48bdb81d21ac53bbb2ed9a28aa"><td class="memItemLeft" align="right" valign="top"><a id="a9fa4bd48bdb81d21ac53bbb2ed9a28aa" name="a9fa4bd48bdb81d21ac53bbb2ed9a28aa"></a>
+<a class="el" href="struct_g_g_x_x_a_c_p_r___survival_boss_entry.html">GGXXACPR_SurvivalBossEntry</a> *BASEMOD_CALL *&#160;</td><td class="memItemRight" valign="bottom"><b>GetGoldenBossCheck</b> ()</td></tr>
+<tr class="memdesc:a9fa4bd48bdb81d21ac53bbb2ed9a28aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a pointer to survival mode's boss check table for the golden bosses. <br /></td></tr>
+<tr class="memitem:a59a13645e4e1e4a1d35c024f5c3b2909" id="r_a59a13645e4e1e4a1d35c024f5c3b2909"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59a13645e4e1e4a1d35c024f5c3b2909">uint8_t</a> (BASEMOD_CALL *GetKeyboardInput)(<a class="el" href="#a8a93263211c006ac5a8c1f3c28ad7ecc">int32_t</a> keyId)</td></tr>
+<tr class="memdesc:a59a13645e4e1e4a1d35c024f5c3b2909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the state of a keyboard input.  <br /></td></tr>
+<tr class="memitem:a1610dd6fc8cccab2842b87d701d90db0" id="r_a1610dd6fc8cccab2842b87d701d90db0"><td class="memItemLeft" align="right" valign="top">void *BASEMOD_CALL *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1610dd6fc8cccab2842b87d701d90db0">GetVarAddress</a> (<a class="el" href="#a8a93263211c006ac5a8c1f3c28ad7ecc">int32_t</a> varId, <a class="el" href="#a8a93263211c006ac5a8c1f3c28ad7ecc">int32_t</a> *errOut)</td></tr>
+<tr class="memdesc:a1610dd6fc8cccab2842b87d701d90db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the address of the specified game Variable.  <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a14e669d97fbb91e87bdc4322bd60c94e" id="r_a14e669d97fbb91e87bdc4322bd60c94e"><td class="memItemLeft" align="right" valign="top"><a id="a14e669d97fbb91e87bdc4322bd60c94e" name="a14e669d97fbb91e87bdc4322bd60c94e"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
+<a class="el" href="#a792c6dc84832986788538e6782d132ea">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
 <tr class="memdesc:a14e669d97fbb91e87bdc4322bd60c94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the struct in bytes. <br /></td></tr>
 <tr class="memitem:a93210a864f1e7ece1515536dad18a9ae" id="r_a93210a864f1e7ece1515536dad18a9ae"><td class="memItemLeft" align="right" valign="top"><a id="a93210a864f1e7ece1515536dad18a9ae" name="a93210a864f1e7ece1515536dad18a9ae"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>version</b></td></tr>
+<a class="el" href="#a792c6dc84832986788538e6782d132ea">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>version</b></td></tr>
 <tr class="memdesc:a93210a864f1e7ece1515536dad18a9ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">The API version. <br /></td></tr>
 <tr class="memitem:a2922b97e3d529887f7d69ae043138301" id="r_a2922b97e3d529887f7d69ae043138301"><td class="memItemLeft" align="right" valign="top"><a id="a2922b97e3d529887f7d69ae043138301" name="a2922b97e3d529887f7d69ae043138301"></a>
 const struct <a class="el" href="struct_base_mod___char_data_api.html">BaseMod_CharDataApi</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>CharacterData</b></td></tr>
 <tr class="memdesc:a2922b97e3d529887f7d69ae043138301"><td class="mdescLeft">&#160;</td><td class="mdescRight">API for accessing static character data. <br /></td></tr>
-<tr class="memitem:ab1be68d4a30c208fbe1f82d68a5945ae" id="r_ab1be68d4a30c208fbe1f82d68a5945ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_g_g_x_x_a_c_p_r___entity.html">GGXXACPR_Entity</a> *BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1be68d4a30c208fbe1f82d68a5945ae">GetPlayer</a> )(int playerIndex)</td></tr>
-<tr class="memdesc:ab1be68d4a30c208fbe1f82d68a5945ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets player data.  <br /></td></tr>
-<tr class="memitem:ad4064601a68eb52ce3879eb90a1e80e3" id="r_ad4064601a68eb52ce3879eb90a1e80e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_g_g_x_x_a_c_p_r___player_input.html">GGXXACPR_PlayerInput</a> *BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4064601a68eb52ce3879eb90a1e80e3">GetPlayerInputStructArr</a> )()</td></tr>
-<tr class="memdesc:ad4064601a68eb52ce3879eb90a1e80e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a pointer to the player input struct array. See <span class="tt"><a class="el" href="struct_g_g_x_x_a_c_p_r___player_input.html">GGXXACPR_PlayerInput</a></span>.  <br /></td></tr>
-<tr class="memitem:ad5686fa3a3635eb41adc07a1644e1558" id="r_ad5686fa3a3635eb41adc07a1644e1558"><td class="memItemLeft" align="right" valign="top"><a id="ad5686fa3a3635eb41adc07a1644e1558" name="ad5686fa3a3635eb41adc07a1644e1558"></a>
-<a class="el" href="struct_g_g_x_x_a_c_p_r___camera.html">GGXXACPR_Camera</a> *BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><b>GetCamera</b> )()</td></tr>
-<tr class="memdesc:ad5686fa3a3635eb41adc07a1644e1558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets camera data. <br /></td></tr>
-<tr class="memitem:a778ea0664bb1e014f51603bc014a2aca" id="r_a778ea0664bb1e014f51603bc014a2aca"><td class="memItemLeft" align="right" valign="top"><a id="a778ea0664bb1e014f51603bc014a2aca" name="a778ea0664bb1e014f51603bc014a2aca"></a>
-int32_t BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><b>IsInGame</b> )()</td></tr>
-<tr class="memdesc:a778ea0664bb1e014f51603bc014a2aca"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a non-zero value if the game is on the battle screen. <br /></td></tr>
-<tr class="memitem:a39ea24271f5a644236866f65a631925a" id="r_a39ea24271f5a644236866f65a631925a"><td class="memItemLeft" align="right" valign="top"><a id="a39ea24271f5a644236866f65a631925a" name="a39ea24271f5a644236866f65a631925a"></a>
-int32_t BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><b>GetJobMode</b> )()</td></tr>
-<tr class="memdesc:a39ea24271f5a644236866f65a631925a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current job mode, see enum <span class="tt">GGXXACPR_JobMode</span>. This variable determines what scene the game is set to such as "TitleScreen", "Battle", "MissionMenu". <br /></td></tr>
-<tr class="memitem:a9356c465dd5b711beadc7c7a4f78cfc0" id="r_a9356c465dd5b711beadc7c7a4f78cfc0"><td class="memItemLeft" align="right" valign="top"><a id="a9356c465dd5b711beadc7c7a4f78cfc0" name="a9356c465dd5b711beadc7c7a4f78cfc0"></a>
-uint32_t BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><b>GetGameModeFeatureFlags</b> )()</td></tr>
-<tr class="memdesc:a9356c465dd5b711beadc7c7a4f78cfc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">See enum <span class="tt">GGXXACPR_GameModeFeatureFlags</span>. Returns the current game mode feature flags. <br /></td></tr>
-<tr class="memitem:a5bd2efb2ee0b285b09cde74b519c8106" id="r_a5bd2efb2ee0b285b09cde74b519c8106"><td class="memItemLeft" align="right" valign="top">uint32_t BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bd2efb2ee0b285b09cde74b519c8106">GetMainMenuSelection</a> )()</td></tr>
-<tr class="memdesc:a5bd2efb2ee0b285b09cde74b519c8106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum <span class="tt">GGXXACPR_MainMenuItem</span>. Returns the game mode selected from the main menu.  <br /></td></tr>
-<tr class="memitem:a1336d859a3c504a9a3c7fa7571c7fd4b" id="r_a1336d859a3c504a9a3c7fa7571c7fd4b"><td class="memItemLeft" align="right" valign="top">void *BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1336d859a3c504a9a3c7fa7571c7fd4b">GetD3D9Device</a> )()</td></tr>
-<tr class="memdesc:a1336d859a3c504a9a3c7fa7571c7fd4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the D3D9 device pointer.  <br /></td></tr>
-<tr class="memitem:af01bccab210a5050a0645e7cb9802518" id="r_af01bccab210a5050a0645e7cb9802518"><td class="memItemLeft" align="right" valign="top">uint32_t BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af01bccab210a5050a0645e7cb9802518">GetGameVersion</a> )()</td></tr>
-<tr class="memdesc:af01bccab210a5050a0645e7cb9802518"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current game version. See enum <span class="tt">GGXXACPR_GameVersion</span>.  <br /></td></tr>
-<tr class="memitem:a644cd0b423f71ed6837dbdba7f7c6e39" id="r_a644cd0b423f71ed6837dbdba7f7c6e39"><td class="memItemLeft" align="right" valign="top"><a id="a644cd0b423f71ed6837dbdba7f7c6e39" name="a644cd0b423f71ed6837dbdba7f7c6e39"></a>
-uint32_t BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><b>GetViewWidth</b> )()</td></tr>
-<tr class="memdesc:a644cd0b423f71ed6837dbdba7f7c6e39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current view width. <br /></td></tr>
-<tr class="memitem:ace17eda09da2594eeb1b9cbb155273e3" id="r_ace17eda09da2594eeb1b9cbb155273e3"><td class="memItemLeft" align="right" valign="top"><a id="ace17eda09da2594eeb1b9cbb155273e3" name="ace17eda09da2594eeb1b9cbb155273e3"></a>
-uint32_t BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><b>GetViewHeight</b> )()</td></tr>
-<tr class="memdesc:ace17eda09da2594eeb1b9cbb155273e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current view height. <br /></td></tr>
-<tr class="memitem:afdfe4e2de2510ae86d087b2597c70551" id="r_afdfe4e2de2510ae86d087b2597c70551"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_g_g_x_x_a_c_p_r___entity.html">GGXXACPR_Entity</a> *BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdfe4e2de2510ae86d087b2597c70551">GetRootEntity</a> )()</td></tr>
-<tr class="memdesc:afdfe4e2de2510ae86d087b2597c70551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the root entity.  <br /></td></tr>
-<tr class="memitem:a2f26116a7a56e1c48509fe9450b920e6" id="r_a2f26116a7a56e1c48509fe9450b920e6"><td class="memItemLeft" align="right" valign="top"><a id="a2f26116a7a56e1c48509fe9450b920e6" name="a2f26116a7a56e1c48509fe9450b920e6"></a>
-uint32_t BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalThrowFlags</b> )()</td></tr>
-<tr class="memdesc:a2f26116a7a56e1c48509fe9450b920e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets raw throw detection info. <br /></td></tr>
-<tr class="memitem:ae8ee7178330cc5148e4527136259b0db" id="r_ae8ee7178330cc5148e4527136259b0db"><td class="memItemLeft" align="right" valign="top">int32_t *BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8ee7178330cc5148e4527136259b0db">GetPauseState</a> )()</td></tr>
-<tr class="memdesc:ae8ee7178330cc5148e4527136259b0db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a pointer to the pause state global variable.  <br /></td></tr>
-<tr class="memitem:abfe830a87fabac1bc835e99f3c863c0d" id="r_abfe830a87fabac1bc835e99f3c863c0d"><td class="memItemLeft" align="right" valign="top">int32_t *BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfe830a87fabac1bc835e99f3c863c0d">GetPauseDisplayState</a> )()</td></tr>
-<tr class="memdesc:abfe830a87fabac1bc835e99f3c863c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a pointer to the pause display state global variable.  <br /></td></tr>
-<tr class="memitem:a9c4adba8e9ba97eadf61f01df381e262" id="r_a9c4adba8e9ba97eadf61f01df381e262"><td class="memItemLeft" align="right" valign="top"><a id="a9c4adba8e9ba97eadf61f01df381e262" name="a9c4adba8e9ba97eadf61f01df381e262"></a>
-<a class="el" href="struct_g_g_x_x_a_c_p_r___locale_state.html">GGXXACPR_LocaleState</a> *BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><b>GetLocaleState</b> )()</td></tr>
-<tr class="memdesc:a9c4adba8e9ba97eadf61f01df381e262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a pointer to the game's locale state. see <span class="tt"><a class="el" href="struct_g_g_x_x_a_c_p_r___locale_state.html">GGXXACPR_LocaleState</a></span>. <br /></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
-<a id="a1336d859a3c504a9a3c7fa7571c7fd4b" name="a1336d859a3c504a9a3c7fa7571c7fd4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1336d859a3c504a9a3c7fa7571c7fd4b">&#9670;&#160;</a></span>GetD3D9Device</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a2b23dae8baf065d972121731323dd737" name="a2b23dae8baf065d972121731323dd737"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b23dae8baf065d972121731323dd737">&#9670;&#160;</a></span>GetD3D9Device()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void *BASEMOD_CALL(* BaseMod_GameDataApi::GetD3D9Device) ()</td>
+          <td class="memname">void *BASEMOD_CALL * BaseMod_GameDataApi::GetD3D9Device </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -164,48 +183,17 @@ uint32_t BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><b>Ge
 
 </div>
 </div>
-<a id="af01bccab210a5050a0645e7cb9802518" name="af01bccab210a5050a0645e7cb9802518"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af01bccab210a5050a0645e7cb9802518">&#9670;&#160;</a></span>GetGameVersion</h2>
+<a id="a403400a2a46e84df1c3922c6d8c0aa84" name="a403400a2a46e84df1c3922c6d8c0aa84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a403400a2a46e84df1c3922c6d8c0aa84">&#9670;&#160;</a></span>GetPauseDisplayState()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t BASEMOD_CALL(* BaseMod_GameDataApi::GetGameVersion) ()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets the current game version. See enum <span class="tt">GGXXACPR_GameVersion</span>. </p>
-<p>AC or AC+R as selected from the "Main Menu &gt; help &amp; options &gt; Game Settings &gt; "Version" setting. </p>
-
-</div>
-</div>
-<a id="a5bd2efb2ee0b285b09cde74b519c8106" name="a5bd2efb2ee0b285b09cde74b519c8106"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bd2efb2ee0b285b09cde74b519c8106">&#9670;&#160;</a></span>GetMainMenuSelection</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t BASEMOD_CALL(* BaseMod_GameDataApi::GetMainMenuSelection) ()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enum <span class="tt">GGXXACPR_MainMenuItem</span>. Returns the game mode selected from the main menu. </p>
-<p>This value defaults to MAIN_MENU_ITEM_ARCADE and is set when selecting an option on the main menu. </p>
-
-</div>
-</div>
-<a id="abfe830a87fabac1bc835e99f3c863c0d" name="abfe830a87fabac1bc835e99f3c863c0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfe830a87fabac1bc835e99f3c863c0d">&#9670;&#160;</a></span>GetPauseDisplayState</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int32_t *BASEMOD_CALL(* BaseMod_GameDataApi::GetPauseDisplayState) ()</td>
+          <td class="memname"><a class="el" href="#a8a93263211c006ac5a8c1f3c28ad7ecc">int32_t</a> *BASEMOD_CALL * BaseMod_GameDataApi::GetPauseDisplayState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -215,14 +203,17 @@ uint32_t BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><b>Ge
 
 </div>
 </div>
-<a id="ae8ee7178330cc5148e4527136259b0db" name="ae8ee7178330cc5148e4527136259b0db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8ee7178330cc5148e4527136259b0db">&#9670;&#160;</a></span>GetPauseState</h2>
+<a id="a6dc7bdd9f3d1f3dd2cb0747694013f40" name="a6dc7bdd9f3d1f3dd2cb0747694013f40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dc7bdd9f3d1f3dd2cb0747694013f40">&#9670;&#160;</a></span>GetPauseState()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int32_t *BASEMOD_CALL(* BaseMod_GameDataApi::GetPauseState) ()</td>
+          <td class="memname"><a class="el" href="#a8a93263211c006ac5a8c1f3c28ad7ecc">int32_t</a> *BASEMOD_CALL * BaseMod_GameDataApi::GetPauseState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -232,20 +223,23 @@ uint32_t BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><b>Ge
 
 </div>
 </div>
-<a id="ab1be68d4a30c208fbe1f82d68a5945ae" name="ab1be68d4a30c208fbe1f82d68a5945ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1be68d4a30c208fbe1f82d68a5945ae">&#9670;&#160;</a></span>GetPlayer</h2>
+<a id="ae29a1691dabd5372d4946b35230aa26b" name="ae29a1691dabd5372d4946b35230aa26b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae29a1691dabd5372d4946b35230aa26b">&#9670;&#160;</a></span>GetPlayer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_g_g_x_x_a_c_p_r___entity.html">GGXXACPR_Entity</a> *BASEMOD_CALL(* BaseMod_GameDataApi::GetPlayer) (int playerIndex)</td>
+          <td class="memname"><a class="el" href="struct_g_g_x_x_a_c_p_r___entity.html">GGXXACPR_Entity</a> *BASEMOD_CALL * BaseMod_GameDataApi::GetPlayer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>playerIndex</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Gets player data. </p>
-<p>Player entities are not loaded until the first time the battle screen loads. Null checks must be performed on this function's output. Player entities are stored sequentially, so you can treat the player 1 pointer as an array containing both player structs (ex. <span class="tt"><a class="el" href="struct_g_g_x_x_a_c_p_r___entity.html">GGXXACPR_Entity</a> p2 = <a class="el" href="#ab1be68d4a30c208fbe1f82d68a5945ae" title="Gets player data.">GetPlayer(0)</a>[1];</span>).</p>
+<p>Player entities are not loaded until the first time the battle screen loads. Null checks must be performed on this function's output. Player entities are stored sequentially, so you can treat the player 1 pointer as an array containing both player structs (ex. <span class="tt"><a class="el" href="struct_g_g_x_x_a_c_p_r___entity.html">GGXXACPR_Entity</a> p2 = GetPlayer(0)[1];</span>).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">playerIndex</td><td>0 for P1, 1 for P2 </td></tr>
@@ -256,14 +250,17 @@ uint32_t BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><b>Ge
 
 </div>
 </div>
-<a id="ad4064601a68eb52ce3879eb90a1e80e3" name="ad4064601a68eb52ce3879eb90a1e80e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4064601a68eb52ce3879eb90a1e80e3">&#9670;&#160;</a></span>GetPlayerInputStructArr</h2>
+<a id="a27da7e55b435bba159cf80116faf8ac7" name="a27da7e55b435bba159cf80116faf8ac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27da7e55b435bba159cf80116faf8ac7">&#9670;&#160;</a></span>GetPlayerInputStructArr()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_g_g_x_x_a_c_p_r___player_input.html">GGXXACPR_PlayerInput</a> *BASEMOD_CALL(* BaseMod_GameDataApi::GetPlayerInputStructArr) ()</td>
+          <td class="memname"><a class="el" href="struct_g_g_x_x_a_c_p_r___player_input.html">GGXXACPR_PlayerInput</a> *BASEMOD_CALL * BaseMod_GameDataApi::GetPlayerInputStructArr </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -274,20 +271,127 @@ uint32_t BASEMOD_CALL(*&#160;</td><td class="memItemRight" valign="bottom"><b>Ge
 
 </div>
 </div>
-<a id="afdfe4e2de2510ae86d087b2597c70551" name="afdfe4e2de2510ae86d087b2597c70551"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdfe4e2de2510ae86d087b2597c70551">&#9670;&#160;</a></span>GetRootEntity</h2>
+<a id="aabbda7c564d26f4457b628b22a38f659" name="aabbda7c564d26f4457b628b22a38f659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabbda7c564d26f4457b628b22a38f659">&#9670;&#160;</a></span>GetRootEntity()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_g_g_x_x_a_c_p_r___entity.html">GGXXACPR_Entity</a> *BASEMOD_CALL(* BaseMod_GameDataApi::GetRootEntity) ()</td>
+          <td class="memname"><a class="el" href="struct_g_g_x_x_a_c_p_r___entity.html">GGXXACPR_Entity</a> *BASEMOD_CALL * BaseMod_GameDataApi::GetRootEntity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Returns a pointer to the root entity. </p>
 <p>This entity is the root node of the entity linked list. Iterate through it using <span class="tt">GGXXACPR_Entity::nextPtr</span> and <span class="tt">GGXXACPR_Entity::prevPtr</span>. </p>
+
+</div>
+</div>
+<a id="a1610dd6fc8cccab2842b87d701d90db0" name="a1610dd6fc8cccab2842b87d701d90db0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1610dd6fc8cccab2842b87d701d90db0">&#9670;&#160;</a></span>GetVarAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void *BASEMOD_CALL * BaseMod_GameDataApi::GetVarAddress </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a8a93263211c006ac5a8c1f3c28ad7ecc">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>varId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a8a93263211c006ac5a8c1f3c28ad7ecc">int32_t</a> *</td>          <td class="paramname"><span class="paramname"><em>errOut</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the address of the specified game Variable. </p>
+<p>You must cast the pointer yourself. Check the comments on the <span class="tt">BM_GameVariable</span> for type hints.</p>
+<p>usage example: </p><div class="fragment"><div class="line"><a class="code hl_function" href="#a8a93263211c006ac5a8c1f3c28ad7ecc">int32_t</a> err;</div>
+<div class="line">int8_t* battleFlag = (int8_t*)data.GetVarAddress(BM_VAR_BATTLE_FLAG, &amp;err);</div>
+<div class="line"><span class="keywordflow">if</span> (err || !battleFlag) {</div>
+<div class="line">    <span class="comment">// error handling</span></div>
+<div class="line">}</div>
+<div class="ttc" id="astruct_base_mod___game_data_api_html_a8a93263211c006ac5a8c1f3c28ad7ecc"><div class="ttname"><a href="#a8a93263211c006ac5a8c1f3c28ad7ecc">BaseMod_GameDataApi::int32_t</a></div><div class="ttdeci">int32_t(BASEMOD_CALL *IsInGame)()</div><div class="ttdoc">returns a non-zero value if the game is on the battle screen.</div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">varId</td><td>The variable to retrieve. see enum <span class="tt">BM_GameVariable</span>. </td></tr>
+    <tr><td class="paramname">errOut</td><td>Pointer to an int32_t variable to hold the error code. you can pass a null pointer for this parameter to ignore the error code. 0 = No error, 1 = Invalid varId, 2 = Null pointer error </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A generic pointer to the specified variable. </dd></dl>
+
+</div>
+</div>
+<a id="a095d1925f8d303ba3ea1fa6e820883ad" name="a095d1925f8d303ba3ea1fa6e820883ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a095d1925f8d303ba3ea1fa6e820883ad">&#9670;&#160;</a></span>uint32_t() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BaseMod_GameDataApi::uint32_t </td>
+          <td>(</td>
+          <td class="paramtype">BASEMOD_CALL *</td>          <td class="paramname"><span class="paramname"><em>GetGameVersion</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the current game version. See enum <span class="tt">GGXXACPR_GameVersion</span>. </p>
+<p>AC or AC+R as selected from the "Main Menu &gt; help &amp; options &gt; Game Settings &gt; "Version" setting. </p>
+
+</div>
+</div>
+<a id="a8080ed86a65aa271dc5e67ea0c7b949a" name="a8080ed86a65aa271dc5e67ea0c7b949a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8080ed86a65aa271dc5e67ea0c7b949a">&#9670;&#160;</a></span>uint32_t() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BaseMod_GameDataApi::uint32_t </td>
+          <td>(</td>
+          <td class="paramtype">BASEMOD_CALL *</td>          <td class="paramname"><span class="paramname"><em>GetMainMenuSelection</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum <span class="tt">GGXXACPR_MainMenuItem</span>. Returns the game mode selected from the main menu. </p>
+<p>This value defaults to MAIN_MENU_ITEM_ARCADE and is set when selecting an option on the main menu. </p>
+
+</div>
+</div>
+<a id="a59a13645e4e1e4a1d35c024f5c3b2909" name="a59a13645e4e1e4a1d35c024f5c3b2909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59a13645e4e1e4a1d35c024f5c3b2909">&#9670;&#160;</a></span>uint8_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BaseMod_GameDataApi::uint8_t </td>
+          <td>(</td>
+          <td class="paramtype">BASEMOD_CALL *</td>          <td class="paramname"><span class="paramname"><em>GetKeyboardInput</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the state of a keyboard input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keyId</td><td>enum <span class="tt">GGXXACPR_KeyboardInput</span> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A positive value if the key is pressed </dd></dl>
 
 </div>
 </div>

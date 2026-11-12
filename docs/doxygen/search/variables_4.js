@@ -1,25 +1,4 @@
 var searchData=
 [
-  ['gamedata_0',['GameData',['../class_base_mod_1_1_api.html#ad61adf6f956097df397efa4a500ae534',1,'BaseMod::Api::GameData'],['../struct_base_mod___api.html#a44637962a290547c3f1f9e82cfc9f73c',1,'BaseMod_Api::GameData']]],
-  ['getactivecommandgrabid_1',['GetActiveCommandGrabId',['../struct_base_mod___native_functions_api.html#ae3dbbdefcccb6b0ecae98dcaadeb8877',1,'BaseMod_NativeFunctionsApi']]],
-  ['getcamera_2',['GetCamera',['../struct_base_mod___game_data_api.html#ad5686fa3a3635eb41adc07a1644e1558',1,'BaseMod_GameDataApi']]],
-  ['getcommandgrabrangearray_3',['GetCommandGrabRangeArray',['../struct_base_mod___char_data_api.html#a5901c71865b32bb9163c260772af54f7',1,'BaseMod_CharDataApi']]],
-  ['getd3d9device_4',['GetD3D9Device',['../struct_base_mod___game_data_api.html#a1336d859a3c504a9a3c7fa7571c7fd4b',1,'BaseMod_GameDataApi']]],
-  ['getdrawableareadimensions_5',['GetDrawableAreaDimensions',['../struct_base_mod___mod_menu_api.html#a8689a9127804e8dd84e7a1e25b2e84c5',1,'BaseMod_ModMenuApi']]],
-  ['getgamemodefeatureflags_6',['GetGameModeFeatureFlags',['../struct_base_mod___game_data_api.html#a9356c465dd5b711beadc7c7a4f78cfc0',1,'BaseMod_GameDataApi']]],
-  ['getgameversion_7',['GetGameVersion',['../struct_base_mod___game_data_api.html#af01bccab210a5050a0645e7cb9802518',1,'BaseMod_GameDataApi']]],
-  ['getglobalthrowflags_8',['GetGlobalThrowFlags',['../struct_base_mod___game_data_api.html#a2f26116a7a56e1c48509fe9450b920e6',1,'BaseMod_GameDataApi']]],
-  ['getjobmode_9',['GetJobMode',['../struct_base_mod___game_data_api.html#a39ea24271f5a644236866f65a631925a',1,'BaseMod_GameDataApi']]],
-  ['getlocalestate_10',['GetLocaleState',['../struct_base_mod___game_data_api.html#a9c4adba8e9ba97eadf61f01df381e262',1,'BaseMod_GameDataApi']]],
-  ['getmainmenuselection_11',['GetMainMenuSelection',['../struct_base_mod___game_data_api.html#a5bd2efb2ee0b285b09cde74b519c8106',1,'BaseMod_GameDataApi']]],
-  ['getpausedisplaystate_12',['GetPauseDisplayState',['../struct_base_mod___game_data_api.html#abfe830a87fabac1bc835e99f3c863c0d',1,'BaseMod_GameDataApi']]],
-  ['getpausestate_13',['GetPauseState',['../struct_base_mod___game_data_api.html#ae8ee7178330cc5148e4527136259b0db',1,'BaseMod_GameDataApi']]],
-  ['getplayer_14',['GetPlayer',['../struct_base_mod___game_data_api.html#ab1be68d4a30c208fbe1f82d68a5945ae',1,'BaseMod_GameDataApi']]],
-  ['getplayerinputstructarr_15',['GetPlayerInputStructArr',['../struct_base_mod___game_data_api.html#ad4064601a68eb52ce3879eb90a1e80e3',1,'BaseMod_GameDataApi']]],
-  ['getpushboxairborneoffsetarray_16',['GetPushboxAirborneOffsetArray',['../struct_base_mod___char_data_api.html#a72205839389ed471e3f92a934f830b48',1,'BaseMod_CharDataApi']]],
-  ['getpushboxdimensionarray_17',['GetPushboxDimensionArray',['../struct_base_mod___char_data_api.html#a272147ea41a5a0a20af9a8fb9fcdf98d',1,'BaseMod_CharDataApi']]],
-  ['getrootentity_18',['GetRootEntity',['../struct_base_mod___game_data_api.html#afdfe4e2de2510ae86d087b2597c70551',1,'BaseMod_GameDataApi']]],
-  ['getthrowrangearray_19',['GetThrowRangeArray',['../struct_base_mod___char_data_api.html#aa03c621c2742470f99365ae51af8363e',1,'BaseMod_CharDataApi']]],
-  ['getviewheight_20',['GetViewHeight',['../struct_base_mod___game_data_api.html#ace17eda09da2594eeb1b9cbb155273e3',1,'BaseMod_GameDataApi']]],
-  ['getviewwidth_21',['GetViewWidth',['../struct_base_mod___game_data_api.html#a644cd0b423f71ed6837dbdba7f7c6e39',1,'BaseMod_GameDataApi']]]
+  ['label_0',['Label',['../struct_base_mod___mod_menu_entry.html#a9edda03c545dfa16719ce949619ffb52',1,'BaseMod_ModMenuEntry']]]
 ];

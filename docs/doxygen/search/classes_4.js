@@ -39,5 +39,8 @@ var searchData=
   ['ggxxacpr_5fplayerinput_36',['GGXXACPR_PlayerInput',['../struct_g_g_x_x_a_c_p_r___player_input.html',1,'']]],
   ['ggxxacpr_5freversalrecordingstate_37',['GGXXACPR_ReversalRecordingState',['../struct_g_g_x_x_a_c_p_r___reversal_recording_state.html',1,'']]],
   ['ggxxacpr_5fscreenshake_38',['GGXXACPR_Screenshake',['../struct_g_g_x_x_a_c_p_r___screenshake.html',1,'']]],
-  ['ggxxacpr_5fvector_39',['GGXXACPR_Vector',['../struct_g_g_x_x_a_c_p_r___vector.html',1,'']]]
+  ['ggxxacpr_5fsurvivalbossentry_39',['GGXXACPR_SurvivalBossEntry',['../struct_g_g_x_x_a_c_p_r___survival_boss_entry.html',1,'']]],
+  ['ggxxacpr_5fsurvivalextra_40',['GGXXACPR_SurvivalExtra',['../struct_g_g_x_x_a_c_p_r___survival_extra.html',1,'']]],
+  ['ggxxacpr_5fsurvivalinfo_41',['GGXXACPR_SurvivalInfo',['../struct_g_g_x_x_a_c_p_r___survival_info.html',1,'']]],
+  ['ggxxacpr_5fvector_42',['GGXXACPR_Vector',['../struct_g_g_x_x_a_c_p_r___vector.html',1,'']]]
 ];

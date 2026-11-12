@@ -94,7 +94,7 @@ $(function(){initNavTree('md_docs_2_custom_sprites_tutorial.html','',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md10"></a></p>
-<p>This tutorial will be for drawing custom sprites via the <span class="tt"><a class="el" href="struct_base_mod___native_functions_api.html#a425a821052fabc113cf0e0d37eb749b0" title="Registers sprite data to a spriteId to later be rendered with BaseMod_NativeFunctionsApi::DrawSprite.">BaseMod_NativeFunctionsApi::RegisterSprites</a></span> and <span class="tt"><a class="el" href="struct_base_mod___native_functions_api.html#ab092b057ca2792c4560ef340fd51bb4e" title="Draws a sprite to the screen.">BaseMod_NativeFunctionsApi::DrawSprite</a></span> functions, NOT for replacing existing sprites.</p>
+<p>This tutorial will be for drawing custom sprites via the <span class="tt">BaseMod_NativeFunctionsApi::RegisterSprites</span> and <span class="tt">BaseMod_NativeFunctionsApi::DrawSprite</span> functions, NOT for replacing existing sprites.</p>
 <p>We'll be using <a href="https://github.com/saltern/GearStudio">GearStudio</a> to open and edit sprite files.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
 Creating Custom Resource Files</h1>
@@ -108,7 +108,7 @@ Creating Custom Resource Files</h1>
 </li>
 <li>Remove / Replace existing sprites with the "Delete..." / "Import..." buttons respectively<ul>
 <li>resource .bin files can have multiple images</li>
-<li>You can make any pallette adjustments with the "Open palette editor"</li>
+<li>You can make any palette adjustments with the "Open palette editor"</li>
 <li>Note that when using 4bpp sprites, they'll need to have an even numbered width in pixels (Weird +R limitation).</li>
 </ul>
 </li>
@@ -116,14 +116,14 @@ Creating Custom Resource Files</h1>
 </ol>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
 Registering Sprites</h1>
-<p>Now that we have a custom resource file, we need to pass it to +R's internal sprite registry via <span class="tt"><a class="el" href="struct_base_mod___native_functions_api.html#a425a821052fabc113cf0e0d37eb749b0" title="Registers sprite data to a spriteId to later be rendered with BaseMod_NativeFunctionsApi::DrawSprite.">BaseMod_NativeFunctionsApi::RegisterSprites</a></span>.</p>
+<p>Now that we have a custom resource file, we need to pass it to +R's internal sprite registry via <span class="tt">BaseMod_NativeFunctionsApi::RegisterSprites</span>.</p>
 <p>In your mod's code you'll need to open your resource file and load its data into memory. +R's internal sprite registry will reference this data via pointer, so you'll need to keep the data in memory and static for as long as it's registered.</p>
 <p>The first few bytes of file data consists of an array of file address offsets pointing to each image's section in the resource file. This array terminates with the hex value 0xFFFFFFFF.</p>
 <p>In the example binary below, the file address offsets are 0x20, 0x260, 0x4A0, and 0x6E0. Note the next 4 byte value at 0x10 in the file is the terminating value 0xFFFFFFFF. </p><div class="image">
 <img src="ResourceBinaryExample.png" alt=""/>
 </div>
 <p><b>IMPORTANTLY, we must preprocess this data before passing it to +R's native function.</b></p>
-<p>The <span class="tt"><a class="el" href="struct_base_mod___native_functions_api.html#a425a821052fabc113cf0e0d37eb749b0" title="Registers sprite data to a spriteId to later be rendered with BaseMod_NativeFunctionsApi::DrawSprite.">BaseMod_NativeFunctionsApi::RegisterSprites</a></span> function expects an array of data pointers, so the file address offsets need to be converted to data pointers. This can be accomplished by adding the address of the loaded file data to each file offset. For example, say you've stored the example binary above at address 0xABCD0000. Its offsets will need to be changed to 0xABCD0020, 0xABCD0260, 0xABCD04A0, and 0xABCD06E0 respectively.</p>
+<p>The <span class="tt">BaseMod_NativeFunctionsApi::RegisterSprites</span> function expects an array of data pointers, so the file address offsets need to be converted to data pointers. This can be accomplished by adding the address of the loaded file data to each file offset. For example, say you've stored the example binary above at address 0xABCD0000. Its offsets will need to be changed to 0xABCD0020, 0xABCD0260, 0xABCD04A0, and 0xABCD06E0 respectively.</p>
 <p>I've implemented the task in C++ below for my <a href="https://github.com/youknow232/ACPR_FrameMeter">FrameMeter</a> mod: </p><div class="fragment"><div class="line"><span class="keyword">inline</span> <span class="keywordtype">void</span> ProcessFileOffsets(<span class="keywordtype">char</span>* buffer) {</div>
 <div class="line">    int32_t address = <span class="keyword">reinterpret_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(buffer);</div>
 <div class="line">    int32_t* data = <span class="keyword">reinterpret_cast&lt;</span>int32_t*<span class="keyword">&gt;</span>(buffer);</div>
@@ -133,10 +133,10 @@ Registering Sprites</h1>
 <div class="line">    }</div>
 <div class="line">    *data = 0;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>Note that when the <span class="tt">data</span> variable reaches the terminating value 0xFFFFFFFF, it overwrites it to 0. The <span class="tt"><a class="el" href="struct_base_mod___native_functions_api.html#a425a821052fabc113cf0e0d37eb749b0" title="Registers sprite data to a spriteId to later be rendered with BaseMod_NativeFunctionsApi::DrawSprite.">BaseMod_NativeFunctionsApi::RegisterSprites</a></span> function will keep registering sprites until either the <span class="tt">count</span> parameter is reached or a zero (null pointer) is found in the <span class="tt">textureDataArray</span> parameter.</p>
+</div><!-- fragment --><p>Note that when the <span class="tt">data</span> variable reaches the terminating value 0xFFFFFFFF, it overwrites it to 0. The <span class="tt">BaseMod_NativeFunctionsApi::RegisterSprites</span> function will keep registering sprites until either the <span class="tt">count</span> parameter is reached or a zero (null pointer) is found in the <span class="tt">textureDataArray</span> parameter.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
 Drawing Sprites</h1>
-<p>After registering sprites at a <span class="tt">spriteId</span>, drawing them is as simple as calling the <span class="tt"><a class="el" href="struct_base_mod___native_functions_api.html#ab092b057ca2792c4560ef340fd51bb4e" title="Draws a sprite to the screen.">BaseMod_NativeFunctionsApi::DrawSprite</a></span> function with that <span class="tt">spriteId</span> parameter. When registering multiple sprites, each sprite will be registered sequentially starting at the given <span class="tt">spriteId</span> parameter. </p>
+<p>After registering sprites at a <span class="tt">spriteId</span>, drawing them is as simple as calling the <span class="tt">BaseMod_NativeFunctionsApi::DrawSprite</span> function with that <span class="tt">spriteId</span> parameter. When registering multiple sprites, each sprite will be registered sequentially starting at the given <span class="tt">spriteId</span> parameter. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

@@ -2,8 +2,8 @@
 #define BASEMOD_H
 
 #define BASEMOD_NAME "baseMod"
-#define BASEMOD_API_VERSION "1.1.0"
-#define BASEMOD_API_VERSION_NUM 0x010100
+#define BASEMOD_API_VERSION "1.2.0"
+#define BASEMOD_API_VERSION_NUM 0x010200
 #define BASEMOD_CALL __stdcall
 
 #ifdef __cplusplus

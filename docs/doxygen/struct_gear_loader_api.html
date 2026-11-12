@@ -94,56 +94,54 @@ $(function(){initNavTree('struct_gear_loader_api.html','',''); });
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a288d81513b6f603b68e6c7e1d174afbc" id="r_a288d81513b6f603b68e6c7e1d174afbc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a288d81513b6f603b68e6c7e1d174afbc">int32_t</a> (__stdcall *RetrieveModApi)(GearLoaderContext *ctx</td></tr>
+<tr class="memdesc:a288d81513b6f603b68e6c7e1d174afbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves an exported API of another loaded mod.  <br /></td></tr>
+<tr class="memitem:abcc80428cc8d349724f2f9a1b7e2b26b" id="r_abcc80428cc8d349724f2f9a1b7e2b26b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcc80428cc8d349724f2f9a1b7e2b26b">int32_t</a> (__stdcall *RegisterApi)(GearLoaderContext *ctx</td></tr>
+<tr class="memdesc:abcc80428cc8d349724f2f9a1b7e2b26b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an API with the mod loader.  <br /></td></tr>
+<tr class="memitem:af65b4282299af2159b78773ee6ac868f" id="r_af65b4282299af2159b78773ee6ac868f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af65b4282299af2159b78773ee6ac868f">uint32_t</a> (__stdcall *Log)(GearLoaderContext *ctx</td></tr>
+<tr class="memdesc:af65b4282299af2159b78773ee6ac868f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs the given string to the <span class="tt">GearLoader.log</span> file.  <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a6c52b3124f430672075cc896d32a14af" id="r_a6c52b3124f430672075cc896d32a14af"><td class="memItemLeft" align="right" valign="top"><a id="a6c52b3124f430672075cc896d32a14af" name="a6c52b3124f430672075cc896d32a14af"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
+<a class="el" href="#af65b4282299af2159b78773ee6ac868f">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
 <tr class="memdesc:a6c52b3124f430672075cc896d32a14af"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of this struct. <br /></td></tr>
 <tr class="memitem:a9f462ebaa4617dd728d21e79416b8dda" id="r_a9f462ebaa4617dd728d21e79416b8dda"><td class="memItemLeft" align="right" valign="top"><a id="a9f462ebaa4617dd728d21e79416b8dda" name="a9f462ebaa4617dd728d21e79416b8dda"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>version</b></td></tr>
+<a class="el" href="#af65b4282299af2159b78773ee6ac868f">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>version</b></td></tr>
 <tr class="memdesc:a9f462ebaa4617dd728d21e79416b8dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">The version of this struct's layout. <br /></td></tr>
-<tr class="memitem:a01240fffe2bcf407dd0fa61a271b66df" id="r_a01240fffe2bcf407dd0fa61a271b66df"><td class="memItemLeft" align="right" valign="top">int32_t __stdcall(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01240fffe2bcf407dd0fa61a271b66df">RetrieveModApi</a> )(GearLoaderContext *ctx, const char *name, const char *versionConstraint, const void **pApi, <a class="el" href="struct_semantic_version.html">SemanticVersion</a> *retrievedVersion)</td></tr>
-<tr class="memdesc:a01240fffe2bcf407dd0fa61a271b66df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves an exported API of another loaded mod.  <br /></td></tr>
-<tr class="memitem:ac40abf1babefc4ff72e462245f45c7b4" id="r_ac40abf1babefc4ff72e462245f45c7b4"><td class="memItemLeft" align="right" valign="top">int32_t __stdcall(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac40abf1babefc4ff72e462245f45c7b4">RegisterApi</a> )(GearLoaderContext *ctx, const void *api, const char *name, <a class="el" href="struct_semantic_version.html">SemanticVersion</a> <a class="el" href="#a9f462ebaa4617dd728d21e79416b8dda">version</a>)</td></tr>
-<tr class="memdesc:ac40abf1babefc4ff72e462245f45c7b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an API with the mod loader.  <br /></td></tr>
-<tr class="memitem:a660ea7f733730f1c682272bd3cb25d88" id="r_a660ea7f733730f1c682272bd3cb25d88"><td class="memItemLeft" align="right" valign="top">uint32_t __stdcall(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a660ea7f733730f1c682272bd3cb25d88">Log</a> )(GearLoaderContext *ctx, uint32_t logLevel, const char *str)</td></tr>
-<tr class="memdesc:a660ea7f733730f1c682272bd3cb25d88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs the given string to the <span class="tt">GearLoader.log</span> file.  <br /></td></tr>
+<tr class="memitem:a3b5b4d6d8446df67e7b6806a3ee6cae2" id="r_a3b5b4d6d8446df67e7b6806a3ee6cae2"><td class="memItemLeft" align="right" valign="top"><a id="a3b5b4d6d8446df67e7b6806a3ee6cae2" name="a3b5b4d6d8446df67e7b6806a3ee6cae2"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="memitem:a5dbb6b4ec8c4d3ee38bb4e3f06112bfc" id="r_a5dbb6b4ec8c4d3ee38bb4e3f06112bfc"><td class="memItemLeft" align="right" valign="top"><a id="a5dbb6b4ec8c4d3ee38bb4e3f06112bfc" name="a5dbb6b4ec8c4d3ee38bb4e3f06112bfc"></a>
+const char const char *&#160;</td><td class="memItemRight" valign="bottom"><b>versionConstraint</b></td></tr>
+<tr class="memitem:aa26ac779d61de0fd592a9faabff54027" id="r_aa26ac779d61de0fd592a9faabff54027"><td class="memItemLeft" align="right" valign="top"><a id="aa26ac779d61de0fd592a9faabff54027" name="aa26ac779d61de0fd592a9faabff54027"></a>
+const char const char const void **&#160;</td><td class="memItemRight" valign="bottom"><b>pApi</b></td></tr>
+<tr class="memitem:aac3eadb8aa8fd4a0a893fd4d34524496" id="r_aac3eadb8aa8fd4a0a893fd4d34524496"><td class="memItemLeft" align="right" valign="top"><a id="aac3eadb8aa8fd4a0a893fd4d34524496" name="aac3eadb8aa8fd4a0a893fd4d34524496"></a>
+const char const char const void <a class="el" href="struct_semantic_version.html">SemanticVersion</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>retrievedVersion</b></td></tr>
+<tr class="memitem:a5219bc60f144c5acf873a0c80bf0a9c2" id="r_a5219bc60f144c5acf873a0c80bf0a9c2"><td class="memItemLeft" align="right" valign="top"><a id="a5219bc60f144c5acf873a0c80bf0a9c2" name="a5219bc60f144c5acf873a0c80bf0a9c2"></a>
+const void *&#160;</td><td class="memItemRight" valign="bottom"><b>api</b></td></tr>
+<tr class="memitem:ae3abb3b569864ed5f797b4e0349b1475" id="r_ae3abb3b569864ed5f797b4e0349b1475"><td class="memItemLeft" align="right" valign="top"><a id="ae3abb3b569864ed5f797b4e0349b1475" name="ae3abb3b569864ed5f797b4e0349b1475"></a>
+const void const char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="memitem:a600394be09dd994a9285dd71fd0be7e1" id="r_a600394be09dd994a9285dd71fd0be7e1"><td class="memItemLeft" align="right" valign="top"><a id="a600394be09dd994a9285dd71fd0be7e1" name="a600394be09dd994a9285dd71fd0be7e1"></a>
+const void const char <a class="el" href="struct_semantic_version.html">SemanticVersion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>version</b></td></tr>
+<tr class="memitem:ab9783a37c18ae24f9b1351696c8a86fc" id="r_ab9783a37c18ae24f9b1351696c8a86fc"><td class="memItemLeft" align="right" valign="top"><a id="ab9783a37c18ae24f9b1351696c8a86fc" name="ab9783a37c18ae24f9b1351696c8a86fc"></a>
+<a class="el" href="#af65b4282299af2159b78773ee6ac868f">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>logLevel</b></td></tr>
+<tr class="memitem:ad4af63fc28b2688ced827f674f226a80" id="r_ad4af63fc28b2688ced827f674f226a80"><td class="memItemLeft" align="right" valign="top"><a id="ad4af63fc28b2688ced827f674f226a80" name="ad4af63fc28b2688ced827f674f226a80"></a>
+<a class="el" href="#af65b4282299af2159b78773ee6ac868f">uint32_t</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><b>str</b></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
-<a id="a660ea7f733730f1c682272bd3cb25d88" name="a660ea7f733730f1c682272bd3cb25d88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a660ea7f733730f1c682272bd3cb25d88">&#9670;&#160;</a></span>Log</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="abcc80428cc8d349724f2f9a1b7e2b26b" name="abcc80428cc8d349724f2f9a1b7e2b26b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcc80428cc8d349724f2f9a1b7e2b26b">&#9670;&#160;</a></span>int32_t() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t __stdcall(* GearLoaderApi::Log) (GearLoaderContext *ctx, uint32_t logLevel, const char *str)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Logs the given string to the <span class="tt">GearLoader.log</span> file. </p>
-<p>Logs will be prefixed with a timestamp, a [DEBUG] label, and a [mod-name] label where "mod-name" is the calling mod's name provided in its <span class="tt">config.json</span> file.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ctx</td><td>A context pointer owned and used by the mod loader. Simply forward this from the <span class="tt">Init</span> function's parameter of the same name. </td></tr>
-    <tr><td class="paramname">logLevel</td><td>Enum <span class="tt">GearLoaderLogLevel</span>. Verbose calls only get logged when running with the <span class="tt">-GearLoaderVerbose</span> launch option. </td></tr>
-    <tr><td class="paramname">str</td><td>The string to be logged. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>An error code if an error occurred, otherwise <span class="tt">0</span>. </dd></dl>
-
-</div>
-</div>
-<a id="ac40abf1babefc4ff72e462245f45c7b4" name="ac40abf1babefc4ff72e462245f45c7b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac40abf1babefc4ff72e462245f45c7b4">&#9670;&#160;</a></span>RegisterApi</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int32_t __stdcall(* GearLoaderApi::RegisterApi) (GearLoaderContext *ctx, const void *api, const char *name, <a class="el" href="struct_semantic_version.html">SemanticVersion</a> <a class="el" href="#a9f462ebaa4617dd728d21e79416b8dda">version</a>)</td>
+          <td class="memname">GearLoaderApi::int32_t </td>
+          <td>(</td>
+          <td class="paramtype">__stdcall *</td>          <td class="paramname"><span class="paramname"><em>RegisterApi</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -163,14 +161,17 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>version</b></td><
 
 </div>
 </div>
-<a id="a01240fffe2bcf407dd0fa61a271b66df" name="a01240fffe2bcf407dd0fa61a271b66df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01240fffe2bcf407dd0fa61a271b66df">&#9670;&#160;</a></span>RetrieveModApi</h2>
+<a id="a288d81513b6f603b68e6c7e1d174afbc" name="a288d81513b6f603b68e6c7e1d174afbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a288d81513b6f603b68e6c7e1d174afbc">&#9670;&#160;</a></span>int32_t() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int32_t __stdcall(* GearLoaderApi::RetrieveModApi) (GearLoaderContext *ctx, const char *name, const char *versionConstraint, const void **pApi, <a class="el" href="struct_semantic_version.html">SemanticVersion</a> *retrievedVersion)</td>
+          <td class="memname">GearLoaderApi::int32_t </td>
+          <td>(</td>
+          <td class="paramtype">__stdcall *</td>          <td class="paramname"><span class="paramname"><em>RetrieveModApi</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -184,6 +185,35 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>version</b></td><
     <tr><td class="paramname">versionConstraint</td><td>A constraint on the API version to retrieve. Takes the form of "[operator][semanticVersion]" where operator may be any of ["&lt;", "&lt;=", "=", "&gt;=", "&gt;"]. Examples: "&gt;=0.1.0" or "1.0.0" </td></tr>
     <tr><td class="paramname">pApi</td><td>A pointer to a pointer variable that receives the API pointer. </td></tr>
     <tr><td class="paramname">retrievedVersion</td><td>A pointer to a <span class="tt"><a class="el" href="struct_semantic_version.html">SemanticVersion</a></span> structure that receives version information of the received version. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An error code if an error occurred, otherwise <span class="tt">0</span>. </dd></dl>
+
+</div>
+</div>
+<a id="af65b4282299af2159b78773ee6ac868f" name="af65b4282299af2159b78773ee6ac868f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af65b4282299af2159b78773ee6ac868f">&#9670;&#160;</a></span>uint32_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GearLoaderApi::uint32_t </td>
+          <td>(</td>
+          <td class="paramtype">__stdcall *</td>          <td class="paramname"><span class="paramname"><em>Log</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs the given string to the <span class="tt">GearLoader.log</span> file. </p>
+<p>Logs will be prefixed with a timestamp, a [DEBUG] label, and a [mod-name] label where "mod-name" is the calling mod's name provided in its <span class="tt">config.json</span> file.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>A context pointer owned and used by the mod loader. Simply forward this from the <span class="tt">Init</span> function's parameter of the same name. </td></tr>
+    <tr><td class="paramname">logLevel</td><td>Enum <span class="tt">GearLoaderLogLevel</span>. Verbose calls only get logged when running with the <span class="tt">-GearLoaderVerbose</span> launch option. </td></tr>
+    <tr><td class="paramname">str</td><td>The string to be logged. </td></tr>
   </table>
   </dd>
 </dl>

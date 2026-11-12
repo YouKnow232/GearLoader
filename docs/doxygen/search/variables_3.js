@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['device_0',['device',['../struct_base_mod___draw_info.html#a589331a747be0fa20a8da1bdf87742fa',1,'BaseMod_DrawInfo']]],
-  ['drawarrowsprite_1',['DrawArrowSprite',['../struct_base_mod___native_functions_api.html#a71802dac90a5efae3d2be493f4d484c0',1,'BaseMod_NativeFunctionsApi']]],
-  ['drawenumsettingui_2',['DrawEnumSettingUI',['../struct_base_mod___mod_menu___helper_functions_api.html#a8ded57665c204763d4f0970211f4ccb9',1,'BaseMod_ModMenu_HelperFunctionsApi']]],
-  ['drawgaugesettingui_3',['DrawGaugeSettingUI',['../struct_base_mod___mod_menu___helper_functions_api.html#a60e6c4a14ae7550f430e0a4389cc2f24',1,'BaseMod_ModMenu_HelperFunctionsApi']]],
-  ['drawquad_4',['DrawQuad',['../struct_base_mod___native_functions_api.html#a9686caa670ddeb8dddb8eaf54d9c68c8',1,'BaseMod_NativeFunctionsApi']]],
-  ['drawscrollarrow_5',['DrawScrollArrow',['../struct_base_mod___mod_menu___helper_functions_api.html#a5b43fd81ae710dd78dccb103f5abd554',1,'BaseMod_ModMenu_HelperFunctionsApi']]],
-  ['drawsprite_6',['DrawSprite',['../struct_base_mod___native_functions_api.html#ab092b057ca2792c4560ef340fd51bb4e',1,'BaseMod_NativeFunctionsApi']]],
-  ['drawtristrip_7',['DrawTriStrip',['../struct_base_mod___native_functions_api.html#ad7d53828b0ea3b6c89c0d902c3245570',1,'BaseMod_NativeFunctionsApi']]]
+  ['helperfunctions_0',['HelperFunctions',['../struct_base_mod___mod_menu_api.html#a93ecd16e048daeb6eafab26f11f7d035',1,'BaseMod_ModMenuApi']]],
+  ['hooks_1',['Hooks',['../class_base_mod_1_1_api.html#a98dc247d77bbbe958f3c555bb9b75706',1,'BaseMod::Api::Hooks'],['../struct_base_mod___api.html#ae84e5297f0ebfede41e2d8b94d6b284f',1,'BaseMod_Api::Hooks']]],
+  ['hoopdolphintype_2',['HoopDolphinType',['../struct_g_g_x_x_a_c_p_r___character_specific_variables___may.html#a129a6397cc53856138de824a4136c86c',1,'GGXXACPR_CharacterSpecificVariables_May']]],
+  ['hwnd_3',['hWnd',['../struct_base_mod___peek_message_args.html#aa63743b4de2cf6a38e5d5eb712a850ce',1,'BaseMod_PeekMessageArgs']]]
 ];

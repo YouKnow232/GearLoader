@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['maxvalue_0',['MaxValue',['../struct_base_mod___mod_menu_entry.html#a4593e61986f00fed0074f768a3b26316',1,'BaseMod_ModMenuEntry']]],
-  ['minvalue_1',['MinValue',['../struct_base_mod___mod_menu_entry.html#af1f4450bcb381647130403532e4cdf58',1,'BaseMod_ModMenuEntry']]],
-  ['modmenu_2',['ModMenu',['../class_base_mod_1_1_api.html#a63b5705ea03d106c6e5ed8617aff8ba0',1,'BaseMod::Api::ModMenu'],['../struct_base_mod___api.html#a99feaa16ddd85a5ce090dd2e4dc0ca29',1,'BaseMod_Api::ModMenu']]]
+  ['savefilestruct_0',['saveFileStruct',['../struct_base_mod___save_game_info.html#a6548dbeb8da40ef74427f5fca795d193',1,'BaseMod_SaveGameInfo']]],
+  ['secretgardenqueue_1',['SecretGardenQueue',['../struct_g_g_x_x_a_c_p_r___character_specific_variables___millia.html#a59e208b587ae9e2d9577b668c2068287',1,'GGXXACPR_CharacterSpecificVariables_Millia']]],
+  ['size_2',['size',['../struct_base_mod___native_functions_api.html#a82e62f03c328f681058801d175809a98',1,'BaseMod_NativeFunctionsApi::size'],['../struct_base_mod___char_data_api.html#ad1177d77e07c798367ad5349a497c022',1,'BaseMod_CharDataApi::size'],['../struct_base_mod___game_data_api.html#a14e669d97fbb91e87bdc4322bd60c94e',1,'BaseMod_GameDataApi::size'],['../struct_base_mod___hook_api.html#aa8492fc2983787cbe43317a7ef1a927b',1,'BaseMod_HookApi::size'],['../struct_base_mod___mod_menu___helper_functions_api.html#ae3a317840ab23f41c458cf132cf6e9cb',1,'BaseMod_ModMenu_HelperFunctionsApi::size'],['../struct_base_mod___mod_menu_api.html#a60456afc524c8e5ad53d309255f91216',1,'BaseMod_ModMenuApi::size'],['../struct_base_mod___api.html#a0d3de1adbbd71e624f21fcc8bf7e6b6c',1,'BaseMod_Api::size'],['../struct_gear_loader_api.html#a6c52b3124f430672075cc896d32a14af',1,'GearLoaderApi::size']]]
 ];

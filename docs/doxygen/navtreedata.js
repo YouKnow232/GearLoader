@@ -46,6 +46,7 @@ var NAVTREE =
       [ "Inspecting Game Code with Ghidra", "md_docs_2_game_architecture.html#autotoc_md15", null ],
       [ "Fibers", "md_docs_2_game_architecture.html#autotoc_md16", null ]
     ] ],
+    [ "Bin File Mods", "md_docs_2_bin_file_mods.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -65,7 +66,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"struct_g_g_x_x_a_c_p_r___character_specific_variables___robo_ky.html"
+"struct_g_g_x_x_a_c_p_r___character_specific_variables___jam.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['aftergameupdate_0',['AfterGameUpdate',['../struct_base_mod___hook_api.html#ad66ada88e765d1496778c97e9c26d812',1,'BaseMod_HookApi']]],
-  ['afterpeekmessage_1',['AfterPeekMessage',['../struct_base_mod___hook_api.html#af6dfdcba4ce5dc39abe61241db8eb22f',1,'BaseMod_HookApi']]],
-  ['aftersavegame_2',['AfterSaveGame',['../struct_base_mod___hook_api.html#ae86b11aafb0c73a0294d0489bff81926',1,'BaseMod_HookApi']]]
+  ['characterdata_0',['CharacterData',['../class_base_mod_1_1_game_data_api.html#ac4005b1fb23d89bfe6a9613ec188d25c',1,'BaseMod::GameDataApi::CharacterData'],['../struct_base_mod___game_data_api.html#a2922b97e3d529887f7d69ae043138301',1,'BaseMod_GameDataApi::CharacterData']]],
+  ['command_1',['Command',['../struct_base_mod___mod_menu_entry.html#ab0e117ad08a52a7ed94fb02597dba21d',1,'BaseMod_ModMenuEntry']]]
 ];
