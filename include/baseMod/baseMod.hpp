@@ -288,7 +288,8 @@ public:
     /**
      *  \brief Checks if a fiber exists with the given name. See doc on [Plus R's Fibers](https://YouKnow232.github.io/GearLoader/doxygen/md_docs_2_game_architecture).
      * 
-     *  Ex: You can check to see if the game is running netplay by checking the "NTWRK" fiber.
+     *  Example: You can check to see if the game is running netplay by checking the "MMV2" fiber along
+     *      with looking for both the P1 and P2 control `GGXXACPR_GameModeFeatureFlags`.
      * 
      *  \param name the fiber name to lookup.
      */
