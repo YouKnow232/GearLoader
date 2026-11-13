@@ -1258,12 +1258,12 @@ struct GGXXACPR_Entity {
     // Together with the `Next` pointer forms a doubly-linked list. There is
     //  one linked list for projectiles/summons and another for graphical entities.
     //  Each linked-listed has a dummy root entity (unsure about graphic entities).
-    //  These values are nullptr for player entities.
+    //  These are null pointers for player entities.
     struct GGXXACPR_Entity* prevPtr;
     // Together with the `Prev` pointer forms a doubly-linked list. There is
     //  one linked list for projectiles/summons and another for graphical entities.
     //  Each linked-listed has a dummy root entity (unsure about graphic entities).
-    //  These values are nullptr for player entities.
+    //  These are null pointers for player entities.
     struct GGXXACPR_Entity* nextPtr;
     uint32_t actionState; /* enum ACTION_STATE */
     uint16_t bufferedActionId;
@@ -1273,7 +1273,7 @@ struct GGXXACPR_Entity {
     uint16_t actId; /* Current action id. */
     uint16_t localId;
     uint16_t actTimer; /* Frame counter for the current action. */
-    uint16_t health; /* [0 - 460] */
+    uint16_t health; /* usually [0 - 460] */
     GGXXACPR_Entity* parentEntity;
     uint16_t actionIdSv;
     PAD(1, 0x26);
@@ -1372,21 +1372,21 @@ struct GGXXACPR_Entity {
 
     /* OFFSET 0x100 -------------------------------------------------- */
 
-	uint8_t actHitCount;
-	uint8_t maxHitCount;
+    uint8_t actHitCount;
+    uint8_t maxHitCount;
     uint8_t transparency;
     uint8_t transparency2;
-    uint16_t LandBreakActId;
-    uint16_t LandBreakActFlags;
-    uint32_t _ActWork;
-    uint8_t BounceFlags;
+    uint16_t landBreakActId;
+    uint16_t landBreakActFlags;
+    uint32_t UNKNOWN_FIELD(0x108); /* RE note: ActWork? */
+    uint8_t bounceFlags;
     PAD(3, 0x10D);
-    int32_t TransparencyDelta;
-    int32_t AngleDelta;
-    int32_t ScaleDelta;
-    int32_t ScaleYDelta;
-    uint32_t BoostArtsFlags; // BoostArts is internal name for Force Breaks
-    uint16_t BoostArtsInheritActNo; // BoostArts is internal name for Force Breaks
+    int32_t transparencyDelta;
+    int32_t angleDelta;
+    int32_t scaleDelta;
+    int32_t scaleYDelta;
+    uint32_t boostArtsFlags; // BoostArts is internal name for Force Breaks
+    uint16_t boostArtsInheritActNo; // BoostArts is internal name for Force Breaks
     PAD(8, 0x128);
 };
 
