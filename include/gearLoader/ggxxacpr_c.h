@@ -13,8 +13,8 @@
 #ifndef GGXXACPR_H
 #define GGXXACPR_H
 
-#define GGXXACPR_ABI_VERSION "1.1.0"
-#define GGXXACPR_ABI_VERSION_NUM 0x010100
+#define GGXXACPR_ABI_VERSION "1.2.0"
+#define GGXXACPR_ABI_VERSION_NUM 0x010200
 
 #include <assert.h>
 
