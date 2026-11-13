@@ -186,9 +186,9 @@ const <a class="el" href="struct_base_mod___hook_api.html">BaseMod_HookApi</a> *
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A hook id value that can be passed to <span class="tt">RemoveHook</span>. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  612</span>                                                                          {</div>
-<div class="line"><span class="lineno">  613</span>        <span class="keywordflow">return</span> _ref-&gt;AfterGameUpdate(hookFn, userData);</div>
-<div class="line"><span class="lineno">  614</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  613</span>                                                                          {</div>
+<div class="line"><span class="lineno">  614</span>        <span class="keywordflow">return</span> _ref-&gt;AfterGameUpdate(hookFn, userData);</div>
+<div class="line"><span class="lineno">  615</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -231,11 +231,11 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A hook id value that can be passed to <span class="tt">RemoveHook</span>. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  628</span>                                                                  {</div>
-<div class="line"><span class="lineno">  629</span>        <span class="keywordflow">return</span> _ref-&gt;AfterGameUpdate(</div>
-<div class="line"><span class="lineno">  630</span>            <span class="keyword">reinterpret_cast&lt;</span>BaseMod_GameUpdateHook<span class="keyword">&gt;</span>(hookFn),</div>
-<div class="line"><span class="lineno">  631</span>            userData);</div>
-<div class="line"><span class="lineno">  632</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  629</span>                                                                  {</div>
+<div class="line"><span class="lineno">  630</span>        <span class="keywordflow">return</span> _ref-&gt;AfterGameUpdate(</div>
+<div class="line"><span class="lineno">  631</span>            <span class="keyword">reinterpret_cast&lt;</span>BaseMod_GameUpdateHook<span class="keyword">&gt;</span>(hookFn),</div>
+<div class="line"><span class="lineno">  632</span>            userData);</div>
+<div class="line"><span class="lineno">  633</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -276,9 +276,9 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A hook id value that can be passed to <span class="tt">RemoveHook</span>. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  547</span>                                                                            {</div>
-<div class="line"><span class="lineno">  548</span>        <span class="keywordflow">return</span> _ref-&gt;AfterPeekMessage(hookFn, userData);</div>
-<div class="line"><span class="lineno">  549</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  548</span>                                                                            {</div>
+<div class="line"><span class="lineno">  549</span>        <span class="keywordflow">return</span> _ref-&gt;AfterPeekMessage(hookFn, userData);</div>
+<div class="line"><span class="lineno">  550</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -321,11 +321,11 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A hook id value that can be passed to <span class="tt">RemoveHook</span>. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  566</span>                                                                    {</div>
-<div class="line"><span class="lineno">  567</span>        <span class="keywordflow">return</span> _ref-&gt;AfterPeekMessage(</div>
-<div class="line"><span class="lineno">  568</span>            <span class="keyword">reinterpret_cast&lt;</span>BaseMod_PeekMessageHook<span class="keyword">&gt;</span>(hookFn),</div>
-<div class="line"><span class="lineno">  569</span>            userData);</div>
-<div class="line"><span class="lineno">  570</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  567</span>                                                                    {</div>
+<div class="line"><span class="lineno">  568</span>        <span class="keywordflow">return</span> _ref-&gt;AfterPeekMessage(</div>
+<div class="line"><span class="lineno">  569</span>            <span class="keyword">reinterpret_cast&lt;</span>BaseMod_PeekMessageHook<span class="keyword">&gt;</span>(hookFn),</div>
+<div class="line"><span class="lineno">  570</span>            userData);</div>
+<div class="line"><span class="lineno">  571</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -366,9 +366,9 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A hook id value that can be passed to <span class="tt">RemoveHook</span>. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  706</span>                                                                      {</div>
-<div class="line"><span class="lineno">  707</span>        <span class="keywordflow">return</span> _ref-&gt;AfterSaveGame(hookFn, userData);</div>
-<div class="line"><span class="lineno">  708</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  707</span>                                                                      {</div>
+<div class="line"><span class="lineno">  708</span>        <span class="keywordflow">return</span> _ref-&gt;AfterSaveGame(hookFn, userData);</div>
+<div class="line"><span class="lineno">  709</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -411,12 +411,12 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A hook id value that can be passed to <span class="tt">RemoveHook</span>. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  721</span>                                                              {</div>
-<div class="line"><span class="lineno">  722</span>        <span class="keywordflow">return</span> _ref-&gt;AfterSaveGame(</div>
-<div class="line"><span class="lineno">  723</span>            <span class="keyword">reinterpret_cast&lt;</span>BaseMod_SaveGameHook<span class="keyword">&gt;</span>(hookFn),</div>
-<div class="line"><span class="lineno">  724</span>            userData</div>
-<div class="line"><span class="lineno">  725</span>        );</div>
-<div class="line"><span class="lineno">  726</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  722</span>                                                              {</div>
+<div class="line"><span class="lineno">  723</span>        <span class="keywordflow">return</span> _ref-&gt;AfterSaveGame(</div>
+<div class="line"><span class="lineno">  724</span>            <span class="keyword">reinterpret_cast&lt;</span>BaseMod_SaveGameHook<span class="keyword">&gt;</span>(hookFn),</div>
+<div class="line"><span class="lineno">  725</span>            userData</div>
+<div class="line"><span class="lineno">  726</span>        );</div>
+<div class="line"><span class="lineno">  727</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -457,9 +457,9 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A hook id value that can be passed to <span class="tt">RemoveHook</span>. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  643</span>                                                                   {</div>
-<div class="line"><span class="lineno">  644</span>        <span class="keywordflow">return</span> _ref-&gt;BeforeEndScene(hookFn, userData);</div>
-<div class="line"><span class="lineno">  645</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  644</span>                                                                   {</div>
+<div class="line"><span class="lineno">  645</span>        <span class="keywordflow">return</span> _ref-&gt;BeforeEndScene(hookFn, userData);</div>
+<div class="line"><span class="lineno">  646</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -502,11 +502,11 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A hook id value that can be passed to <span class="tt">RemoveHook</span>. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  658</span>                                                           {</div>
-<div class="line"><span class="lineno">  659</span>        <span class="keywordflow">return</span> _ref-&gt;BeforeEndScene(</div>
-<div class="line"><span class="lineno">  660</span>            <span class="keyword">reinterpret_cast&lt;</span>BaseMod_DrawHook<span class="keyword">&gt;</span>(hookFn),</div>
-<div class="line"><span class="lineno">  661</span>            userData);</div>
-<div class="line"><span class="lineno">  662</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  659</span>                                                           {</div>
+<div class="line"><span class="lineno">  660</span>        <span class="keywordflow">return</span> _ref-&gt;BeforeEndScene(</div>
+<div class="line"><span class="lineno">  661</span>            <span class="keyword">reinterpret_cast&lt;</span>BaseMod_DrawHook<span class="keyword">&gt;</span>(hookFn),</div>
+<div class="line"><span class="lineno">  662</span>            userData);</div>
+<div class="line"><span class="lineno">  663</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -547,9 +547,9 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A hook id value that can be passed to <span class="tt">RemoveHook</span>. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  581</span>                                                                           {</div>
-<div class="line"><span class="lineno">  582</span>        <span class="keywordflow">return</span> _ref-&gt;BeforeGameUpdate(hookFn, userData);</div>
-<div class="line"><span class="lineno">  583</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  582</span>                                                                           {</div>
+<div class="line"><span class="lineno">  583</span>        <span class="keywordflow">return</span> _ref-&gt;BeforeGameUpdate(hookFn, userData);</div>
+<div class="line"><span class="lineno">  584</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -592,11 +592,11 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A hook id value that can be passed to <span class="tt">RemoveHook</span>. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  596</span>                                                                   {</div>
-<div class="line"><span class="lineno">  597</span>        <span class="keywordflow">return</span> _ref-&gt;BeforeGameUpdate(</div>
-<div class="line"><span class="lineno">  598</span>            <span class="keyword">reinterpret_cast&lt;</span>BaseMod_GameUpdateHook<span class="keyword">&gt;</span>(hookFn),</div>
-<div class="line"><span class="lineno">  599</span>            userData);</div>
-<div class="line"><span class="lineno">  600</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  597</span>                                                                   {</div>
+<div class="line"><span class="lineno">  598</span>        <span class="keywordflow">return</span> _ref-&gt;BeforeGameUpdate(</div>
+<div class="line"><span class="lineno">  599</span>            <span class="keyword">reinterpret_cast&lt;</span>BaseMod_GameUpdateHook<span class="keyword">&gt;</span>(hookFn),</div>
+<div class="line"><span class="lineno">  600</span>            userData);</div>
+<div class="line"><span class="lineno">  601</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -637,9 +637,9 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A hook id value that can be passed to <span class="tt">RemoveHook</span>. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  674</span>                                                                  {</div>
-<div class="line"><span class="lineno">  675</span>        <span class="keywordflow">return</span> _ref-&gt;BeforePresent(hookFn, userData);</div>
-<div class="line"><span class="lineno">  676</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  675</span>                                                                  {</div>
+<div class="line"><span class="lineno">  676</span>        <span class="keywordflow">return</span> _ref-&gt;BeforePresent(hookFn, userData);</div>
+<div class="line"><span class="lineno">  677</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -682,11 +682,11 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A hook id value that can be passed to <span class="tt">RemoveHook</span>. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  690</span>                                                          {</div>
-<div class="line"><span class="lineno">  691</span>        <span class="keywordflow">return</span> _ref-&gt;BeforePresent(</div>
-<div class="line"><span class="lineno">  692</span>            <span class="keyword">reinterpret_cast&lt;</span>BaseMod_DrawHook<span class="keyword">&gt;</span>(hookFn),</div>
-<div class="line"><span class="lineno">  693</span>            userData);</div>
-<div class="line"><span class="lineno">  694</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  691</span>                                                          {</div>
+<div class="line"><span class="lineno">  692</span>        <span class="keywordflow">return</span> _ref-&gt;BeforePresent(</div>
+<div class="line"><span class="lineno">  693</span>            <span class="keyword">reinterpret_cast&lt;</span>BaseMod_DrawHook<span class="keyword">&gt;</span>(hookFn),</div>
+<div class="line"><span class="lineno">  694</span>            userData);</div>
+<div class="line"><span class="lineno">  695</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -721,9 +721,9 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>zero if no error occurred, otherwise returns the error code. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  530</span>                                   {</div>
-<div class="line"><span class="lineno">  531</span>        <span class="keywordflow">return</span> _ref-&gt;RemoveHook(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  532</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  531</span>                                   {</div>
+<div class="line"><span class="lineno">  532</span>        <span class="keywordflow">return</span> _ref-&gt;RemoveHook(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  533</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
